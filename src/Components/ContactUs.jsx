@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../assets/About-banner.jpg';
+import logo from '../assets/About-Banner.jpg';
 import { Mail, MailCheck } from "lucide-react";
 
 

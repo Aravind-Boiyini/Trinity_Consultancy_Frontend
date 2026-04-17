@@ -1,12 +1,13 @@
-import './App.css'
+
 import { Routes, Route, NavLink, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import Home from './Components/Home'
 import AboutUs from './Components/AboutUs'
 import ContactUs from './Components/ContactUs'
 import Footer from './Components/Footer'
 import logo3 from './assets/white logo.png'
 import Services from './Components/Services'
-import { useEffect, useState } from 'react'
+
 import Blogs from './Components/Blogs'
 import Careers from './Components/Careers'
 
