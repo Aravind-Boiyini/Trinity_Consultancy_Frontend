@@ -1,7 +1,7 @@
 import React from "react";
-import logo from '../assets/About-banner.jpg';
-import img1 from '../assets/About-banner.jpg';
-import img2 from '../assets/About-banner.jpg';
+import logo from '../assets/About-Banner.jpg';
+import img1 from '../assets/About-Banner.jpg';
+import img2 from '../assets/About-Banner.jpg';
 import teamoflogo from '../assets/IT-Image.jpg';
 import teamoflogo1 from '../assets/Product-Image.jpg';
 import { Mail, Trophy } from "lucide-react";
