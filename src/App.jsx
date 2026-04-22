@@ -12,6 +12,10 @@ import Careers from './Components/Careers'
 import ItConsultancy from './Components/OurServices/ItConsultancy'
 import ProductEngineering from './Components/OurServices/ProductEngineering'
 import DatabaseManagement from './Components/OurServices/DatabaseManagement'
+import MobileDevelopment from './Components/OurServices/MobileDevelopment'
+import ItDataEngineering from './Components/OurServices/ITDataEngineering'
+import SoftwareSupport from './Components/OurServices/SoftwareSupport'
+import WebDevelopment from './Components/OurServices/WebDevelopment'
 
 
 function App() {
@@ -46,7 +50,7 @@ function App() {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.02 2.18 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
               </svg>
-              +1-800-555-44-00
+               (682) 392-9824 
             </span>
             <span className="flex items-center gap-2 text-gray-300 font-semibold text-[15px]">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
@@ -56,14 +60,7 @@ function App() {
               info@example.com
             </span>
           </div>
-          <div className="flex gap-2 items-center text-white font-semibold text-[15px]">
-            {["About Us", "Career", "Faqs", "Contact Us"].map((item, i, arr) => (
-              <span key={item} className="flex items-center gap-2">
-                <a href="#" className="hover:text-green-400 transition-colors">{item}</a>
-                {i < arr.length - 1 && <span className="text-gray-500">·</span>}
-              </span>
-            ))}
-          </div>
+          
         </div>
 
         {/* Main Navbar */}
@@ -84,6 +81,10 @@ function App() {
         { name: "IT Consultancy", path: "/ItConsultancy" },
         { name: "Product Engineering", path: "/ProductEngineering" },
         { name: "Database Management", path: "/DatabaseManagement" },
+        { name: "Mobile Development", path: "/MobileDevelopment" },
+        { name: "IT Data Engineering", path: "/ItDataEngineering" },
+        { name: "Software Support", path: "/SoftwareSupport" },
+        { name: "Web Development", path: "/WebDevelopment" },
       ]
     },
     { name: "Blog", path: "/blog" },
@@ -166,6 +167,10 @@ function App() {
           <Route path="/ItConsultancy" element={<ItConsultancy />} />
           <Route path="/ProductEngineering" element={<ProductEngineering />} />
           <Route path="/DatabaseManagement" element={<DatabaseManagement />} />
+          <Route path="/MobileDevelopment" element={<MobileDevelopment />} />
+          <Route path="/ItDataEngineering" element={<ItDataEngineering />} />
+          <Route path="/SoftwareSupport" element={<SoftwareSupport />} />
+          <Route path="/WebDevelopment" element={<WebDevelopment />} />
         </Routes>
       </div>
 

@@ -7,6 +7,7 @@ import { Mail, Trophy } from "lucide-react";
 import { MailCheck } from "lucide-react";
 import { MoveUpRight } from "lucide-react";
 import contactlogo from "../../assets/About-Banner.jpg";
+import img from "../../assets/Database-Image.jpg";
 
 
 
@@ -24,37 +25,46 @@ function DatabaseManagement() {
         />
 
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-          Product <span className="text-green-500">Engineering</span>
+        Database <span className="text-green-500">Management</span>
         </h1>
       </div>
+      <section className="bg-white py-16 px-6">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+        {/* LEFT IMAGE */}
+        <div>
+          <img
+            src={img}
+            alt="Database"
+            className="w-full h-auto rounded-2xl shadow-md"
+          />
+        </div>
+
+        {/* RIGHT TEXT */}
+        <div className="text-gray-700 text-[16px] leading-relaxed space-y-6">
+
+          <p>
+            Developing new database systems can be a labor intensive process and requires
+            a strong foundation of database concepts including normalization, integrity and
+            optimization. Getting the balance between these factors is essential for
+            minimizing problems, maximizing the value from time invested, and creating
+            maintainable and extendable systems while providing effective and responsive
+            support for application systems.
+          </p>
+
+          <p>
+            Databases can be developed on top of a number of database management systems to
+            support many varying application frameworks, but all of these use a common theme
+            and Structured Query Language (SQL).
+          </p>
+
+        </div>
+
+      </div>
+    </section>
 
       {/* Section 1 */}
-      <section className="px-8 py-16">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-          <div>
-            <img
-              src={img1}
-              alt="consulting"
-              className="w-full h-[450px] object-cover rounded-2xl shadow-lg"
-            />
-          </div>
-
-          <div>
-            
-
-            <p className="mt-5 text-gray-600 text-[15px] leading-relaxed">
-              At Gunesh Technologies, our Product Engineering services are designed to transform ideas into innovative, scalable, and market-ready solutions. We combine cutting-edge technology, agile methodologies, and strategic planning to deliver products that not only meet your business goals but also exceed customer expectations.</p>
-
-
-            
-
-
-          </div>
-        </div>
-      </section>
-
-   <section className="bg-[#0B1F3A] text-white py-20 px-8">
+<section className="bg-[#0B1F3A] text-white py-20 px-8">
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
 
@@ -148,6 +158,91 @@ function DatabaseManagement() {
 
       </div>
     </section>
+
+    <section className="bg-[#0B1F3A] py-20 px-8 mt-20 text-white relative overflow-hidden">
+
+  {/* OPTIONAL DECOR (like your design) */}
+  <div className="absolute top-0 left-0 w-40 h-40 border-2 border-green-500 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+  <div className="absolute bottom-0 right-0 w-40 h-40 bg-green-500 rounded-full translate-x-1/2 translate-y-1/2"></div>
+
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+
+    {/* LEFT SIDE */}
+    <div>
+      <h2 className="text-[36px] font-extrabold mb-8">
+        Our <span className="text-green-500">Approach:</span>
+      </h2>
+
+      {/* ITEM 1 */}
+      <div className="mb-6">
+        <h3 className="font-bold text-lg flex items-center gap-2">
+          <span className="text-green-500">✔</span> Ideation & Conceptualization
+        </h3>
+        <p className="text-gray-300 mt-2 text-[15px] leading-relaxed">
+          We start by collaborating with you to understand your vision, target audience,
+          and business goals. Our team conducts in-depth market research and feasibility
+          studies to shape a clear product roadmap.
+        </p>
+      </div>
+
+      {/* ITEM 2 */}
+      <div className="mb-6">
+        <h3 className="font-bold text-lg flex items-center gap-2">
+          <span className="text-green-500">✔</span> Design & Development
+        </h3>
+        <p className="text-gray-300 mt-2 text-[15px] leading-relaxed">
+          Our skilled engineers and designers use the latest technologies to create
+          intuitive user experiences and robust architectures. Whether it’s web, mobile,
+          or enterprise software, we focus on scalability, security, and performance.
+        </p>
+      </div>
+
+      {/* ITEM 3 */}
+      <div className="mb-6">
+        <h3 className="font-bold text-lg flex items-center gap-2">
+          <span className="text-green-500">✔</span> Testing & Quality Assurance
+        </h3>
+        <p className="text-gray-300 mt-2 text-[15px] leading-relaxed">
+          We implement rigorous testing processes to ensure your product is bug-free,
+          reliable, and optimized for seamless functionality guaranteeing a smooth user
+          experience.
+        </p>
+      </div>
+
+      {/* ITEM 4 */}
+      <div>
+        <h3 className="font-bold text-lg flex items-center gap-2">
+          <span className="text-green-500">✔</span> Deployment & Support
+        </h3>
+        <p className="text-gray-300 mt-2 text-[15px] leading-relaxed">
+          From product launch to post-deployment support, we provide continuous monitoring,
+          updates, and enhancements to keep your product competitive and future-proof.
+        </p>
+      </div>
+    </div>
+
+    {/* RIGHT SIDE */}
+    <div>
+      <h2 className="text-[36px] font-extrabold mb-8">
+        Why Choose <span className="text-green-500">Gunesh Technologies?</span>
+      </h2>
+
+      <ul className="space-y-4 text-gray-300 text-[15px] leading-relaxed">
+        <li>
+          • End-to-End Product Development – From concept to launch, we handle every stage of the product lifecycle.
+        </li>
+        <li>
+          • Agile & Scalable Solutions – Our flexible development processes adapt to your evolving business needs.
+        </li>
+        <li>
+          • Innovation-Driven Approach – We leverage the latest technologies to build products that stand out.
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
       {/* ✅ Contact Section (separate, NOT inside above section) */}
       <div className="relative w-full mt-20">
 
