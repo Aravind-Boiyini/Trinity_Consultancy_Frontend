@@ -13,7 +13,7 @@ import ItConsultancy from './Components/OurServices/ItConsultancy'
 import ProductEngineering from './Components/OurServices/ProductEngineering'
 import DatabaseManagement from './Components/OurServices/DatabaseManagement'
 import MobileDevelopment from './Components/OurServices/MobileDevelopment'
-import ItDataEngineering from './Components/OurServices/ITDataEngineering'
+import ItDataEngineering from './Components/OurServices/ItDataEngineering'
 import SoftwareSupport from './Components/OurServices/SoftwareSupport'
 import WebDevelopment from './Components/OurServices/WebDevelopment'
 
