@@ -887,39 +887,7 @@ export default function Home({ onSlideChange }) {
                 </a>
             </div>
 
-            {/* Team */}
-            <h2 className="text-[40px] font-black text-center text-gray-900 leading-[1.2] mt-15">
-                Team of {" "}
-                <span className="text-green-500"> * Proffesionals</span>
-            </h2>
-            <h2 className="text-[20px] text-center text-gray-700 leading-[1.2] mt-5">
-                Ever undertakes laborious physical exercise except obtain some advantage.
-            </h2>
-
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <div className="bg-white overflow-hidden shadow-lg">
-                    <img src={teamoflogo} alt="Who We Are" className="w-full h-60 object-cover" />
-                    <div className="p-6">
-                        <h3 className="text-sm text-[#123E6B]">Ceo & Founder</h3>
-                        <p className="text-xl font-bold mt-1 text-gray-600 leading-relaxed">John Doe</p>
-                    </div>
-                </div>
-                <div className="bg-white overflow-hidden shadow-lg">
-                    <img src={teamoflogo1} alt="Vision" className="w-full h-60 object-cover" />
-                    <div className="p-6">
-                        <h3 className="text-sm text-[#123E6B]">Precident</h3>
-                        <p className="text-xl font-bold mt-1 text-gray-600 leading-relaxed">Samuel Rowan</p>
-                    </div>
-                </div>
-                <div className="bg-white overflow-hidden shadow-lg">
-                    <img src={teamoflogo} alt="What We Do" className="w-full h-60 object-cover" />
-                    <div className="p-6">
-                        <h3 className="text-sm text-[#123E6B]">Vice Precident</h3>
-                        <p className="text-xl font-bold mt-1 text-gray-600 leading-relaxed">Eleanor Alice</p>
-                    </div>
-                </div>
-            </div>
-
+            
             {/* Industries */}
             <h2 className="text-[40px] font-black text-gray-900 leading-[1.2] ml-28 mt-15">
                 Major {" "}

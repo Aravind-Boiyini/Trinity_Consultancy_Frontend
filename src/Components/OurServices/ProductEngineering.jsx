@@ -24,12 +24,37 @@ function ProductEngineering() {
         />
 
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-        Database <span className="text-green-500">Management</span>
+          Product <span className="text-green-500">Engineering</span>
         </h1>
       </div>
 
       {/* Section 1 */}
-<section className="bg-[#0B1F3A] text-white py-20 px-8">
+      <section className="px-8 py-16">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+          <div>
+            <img
+              src={img1}
+              alt="consulting"
+              className="w-full h-[450px] object-cover rounded-2xl shadow-lg"
+            />
+          </div>
+
+          <div>
+            
+
+            <p className="mt-5 text-gray-600 text-[15px] leading-relaxed">
+              At Gunesh Technologies, our Product Engineering services are designed to transform ideas into innovative, scalable, and market-ready solutions. We combine cutting-edge technology, agile methodologies, and strategic planning to deliver products that not only meet your business goals but also exceed customer expectations.</p>
+
+
+            
+
+
+          </div>
+        </div>
+      </section>
+
+   <section className="bg-[#0B1F3A] text-white py-20 px-8">
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
 
@@ -49,7 +74,7 @@ function ProductEngineering() {
             database was poorly maintained. What if you are dealing with someone else’s
             data, for example patient details? The problem just gets bigger.
           </p>
-
+   
           <p className="text-gray-300 text-[15px] leading-relaxed mb-5">
             The ramifications of inadequate database management practices can result in
             businesses falling over or at the very least cause drops in productivity. The
@@ -123,91 +148,6 @@ function ProductEngineering() {
 
       </div>
     </section>
-
-    <section className="bg-[#0B1F3A] py-20 px-8 mt-20 text-white relative overflow-hidden">
-
-  {/* OPTIONAL DECOR (like your design) */}
-  <div className="absolute top-0 left-0 w-40 h-40 border-2 border-green-500 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-  <div className="absolute bottom-0 right-0 w-40 h-40 bg-green-500 rounded-full translate-x-1/2 translate-y-1/2"></div>
-
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-
-    {/* LEFT SIDE */}
-    <div>
-      <h2 className="text-[36px] font-extrabold mb-8">
-        Our <span className="text-green-500">Approach:</span>
-      </h2>
-
-      {/* ITEM 1 */}
-      <div className="mb-6">
-        <h3 className="font-bold text-lg flex items-center gap-2">
-          <span className="text-green-500">✔</span> Ideation & Conceptualization
-        </h3>
-        <p className="text-gray-300 mt-2 text-[15px] leading-relaxed">
-          We start by collaborating with you to understand your vision, target audience,
-          and business goals. Our team conducts in-depth market research and feasibility
-          studies to shape a clear product roadmap.
-        </p>
-      </div>
-
-      {/* ITEM 2 */}
-      <div className="mb-6">
-        <h3 className="font-bold text-lg flex items-center gap-2">
-          <span className="text-green-500">✔</span> Design & Development
-        </h3>
-        <p className="text-gray-300 mt-2 text-[15px] leading-relaxed">
-          Our skilled engineers and designers use the latest technologies to create
-          intuitive user experiences and robust architectures. Whether it’s web, mobile,
-          or enterprise software, we focus on scalability, security, and performance.
-        </p>
-      </div>
-
-      {/* ITEM 3 */}
-      <div className="mb-6">
-        <h3 className="font-bold text-lg flex items-center gap-2">
-          <span className="text-green-500">✔</span> Testing & Quality Assurance
-        </h3>
-        <p className="text-gray-300 mt-2 text-[15px] leading-relaxed">
-          We implement rigorous testing processes to ensure your product is bug-free,
-          reliable, and optimized for seamless functionality guaranteeing a smooth user
-          experience.
-        </p>
-      </div>
-
-      {/* ITEM 4 */}
-      <div>
-        <h3 className="font-bold text-lg flex items-center gap-2">
-          <span className="text-green-500">✔</span> Deployment & Support
-        </h3>
-        <p className="text-gray-300 mt-2 text-[15px] leading-relaxed">
-          From product launch to post-deployment support, we provide continuous monitoring,
-          updates, and enhancements to keep your product competitive and future-proof.
-        </p>
-      </div>
-    </div>
-
-    {/* RIGHT SIDE */}
-    <div>
-      <h2 className="text-[36px] font-extrabold mb-8">
-        Why Choose <span className="text-green-500">Gunesh Technologies?</span>
-      </h2>
-
-      <ul className="space-y-4 text-gray-300 text-[15px] leading-relaxed">
-        <li>
-          • End-to-End Product Development – From concept to launch, we handle every stage of the product lifecycle.
-        </li>
-        <li>
-          • Agile & Scalable Solutions – Our flexible development processes adapt to your evolving business needs.
-        </li>
-        <li>
-          • Innovation-Driven Approach – We leverage the latest technologies to build products that stand out.
-        </li>
-      </ul>
-    </div>
-
-  </div>
-
-</section>
       {/* ✅ Contact Section (separate, NOT inside above section) */}
       <div className="relative w-full mt-20">
 
