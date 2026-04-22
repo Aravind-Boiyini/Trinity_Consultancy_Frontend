@@ -606,19 +606,19 @@ export default function Home({ onSlideChange }) {
     name: "Jessica M.",
     role: "Operations Director, Retail Hub",
     text: "Gunesh Technologies transformed our digital strategy with their custom software development services. Their team is professional, attentive, and always goes above and beyond. We’re extremely satisfied with the results!",
-    image: "https://via.placeholder.com/150",
+    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?cs=srgb&dl=pexels-danxavier-1239291.jpg&fm=jpg",
   },
   {
     name: "Rahul Sharma",
     role: "CEO, TechNova",
     text: "Their development team delivered a scalable and high-performance solution. Communication was excellent and deadlines were always met.",
-    image: "https://via.placeholder.com/150",
+    image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?cs=srgb&dl=pexels-justin-shaifer-501272-1222271.jpg&fm=jpg",
   },
   {
     name: "Anita Verma",
     role: "Marketing Head, GrowthX",
     text: "Amazing experience working with them. They understood our requirements perfectly and executed beyond expectations.",
-    image: "https://via.placeholder.com/150",
+    image: "https://static.vecteezy.com/system/resources/previews/026/497/723/large_2x/businessman-on-isolated-png.png",
   },
 ];
 
@@ -927,7 +927,7 @@ export default function Home({ onSlideChange }) {
         <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
           
           {/* LEFT IMAGE + ORANGE PANEL */}
-          <div className="bg-green-500 md:w-1/3 flex items-center justify-center p-8">
+          <div className="bg-blue-300 md:w-1/3 flex items-center justify-center p-8">
             <img
               src={testimonialsData[current].image}
               alt="user"
