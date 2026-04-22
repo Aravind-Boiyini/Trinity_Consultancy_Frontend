@@ -57,7 +57,7 @@ function App() {
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              info@example.com
+              info@trinityconsultancy.com
             </span>
           </div>
           
@@ -116,8 +116,9 @@ function App() {
               <li key={sub.path}>
                 <NavLink
                   to={sub.path}
+                  onClick={() => setOpenDropdown(null)}  // ✅ CLOSE HERE
                   className="block px-6 py-4 text-[15px] font-semibold hover:bg-white/10 transition-all border-b border-white/5 last:border-0"
-                >
+            >
                   {sub.name}
                 </NavLink>
               </li>

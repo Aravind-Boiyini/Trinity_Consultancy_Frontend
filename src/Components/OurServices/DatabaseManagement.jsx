@@ -8,9 +8,36 @@ import { MailCheck } from "lucide-react";
 import { MoveUpRight } from "lucide-react";
 import contactlogo from "../../assets/About-Banner.jpg";
 import img from "../../assets/Database-Image.jpg";
+import { Code, BarChart3, ShieldCheck, UserCheck, Settings } from "lucide-react";
 
 
-
+const features = [
+    {
+      icon: <Code size={32} />,
+      title: "Responsive & User Friendly Services",
+      desc: "All our IT consulting are friendly and user friendly. Easy navigation and fast services.",
+    },
+    {
+      icon: <BarChart3 size={32} />,
+      title: "Search Engine Optimized",
+      desc: "Every IT Consulting & Product Engineering for you is Data Management and as a result will help you higher levels.",
+    },
+    {
+      icon: <ShieldCheck size={32} />,
+      title: "Highly Secured",
+      desc: "Secured and reliable Data Management is one of the few things we hold high at Web Gen World. With us you are fully secured.",
+    },
+    {
+      icon: <UserCheck size={32} />,
+      title: "Professional Services",
+      desc: "Our best services are delivered in a professional and efficient manner, with you at heart.",
+    },
+    {
+      icon: <Settings size={32} />,
+      title: "Top Rated Support",
+      desc: "For every service we offer, you are sure of quality technical support and customer service.",
+    },
+  ];
 
 function DatabaseManagement() {
   return (
@@ -159,90 +186,39 @@ function DatabaseManagement() {
       </div>
     </section>
 
-    <section className="bg-[#0B1F3A] py-20 px-8 mt-20 text-white relative overflow-hidden">
-
-  {/* OPTIONAL DECOR (like your design) */}
-  <div className="absolute top-0 left-0 w-40 h-40 border-2 border-green-500 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-  <div className="absolute bottom-0 right-0 w-40 h-40 bg-green-500 rounded-full translate-x-1/2 translate-y-1/2"></div>
-
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-
-    {/* LEFT SIDE */}
-    <div>
-      <h2 className="text-[36px] font-extrabold mb-8">
-        Our <span className="text-green-500">Approach:</span>
+    <section className="bg-gray-100 py-16 px-6">
+      
+      {/* Heading */}
+      <h2 className="text-center text-4xl font-extrabold text-gray-800 mb-12">
+        Experience. <span className="text-green-500">Execute.</span> Excellence.
       </h2>
 
-      {/* ITEM 1 */}
-      <div className="mb-6">
-        <h3 className="font-bold text-lg flex items-center gap-2">
-          <span className="text-green-500">✔</span> Ideation & Conceptualization
-        </h3>
-        <p className="text-gray-300 mt-2 text-[15px] leading-relaxed">
-          We start by collaborating with you to understand your vision, target audience,
-          and business goals. Our team conducts in-depth market research and feasibility
-          studies to shape a clear product roadmap.
-        </p>
+      {/* Cards Grid */}
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+        {features.map((item, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition duration-300"
+          >
+            {/* Icon Circle */}
+            <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-green-500 text-white mb-6">
+              {item.icon}
+            </div>
+
+            {/* Title */}
+            <h3 className="text-xl font-bold text-gray-800 mb-3">
+              {item.title}
+            </h3>
+
+            {/* Description */}
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {item.desc}
+            </p>
+          </div>
+        ))}
       </div>
 
-      {/* ITEM 2 */}
-      <div className="mb-6">
-        <h3 className="font-bold text-lg flex items-center gap-2">
-          <span className="text-green-500">✔</span> Design & Development
-        </h3>
-        <p className="text-gray-300 mt-2 text-[15px] leading-relaxed">
-          Our skilled engineers and designers use the latest technologies to create
-          intuitive user experiences and robust architectures. Whether it’s web, mobile,
-          or enterprise software, we focus on scalability, security, and performance.
-        </p>
-      </div>
-
-      {/* ITEM 3 */}
-      <div className="mb-6">
-        <h3 className="font-bold text-lg flex items-center gap-2">
-          <span className="text-green-500">✔</span> Testing & Quality Assurance
-        </h3>
-        <p className="text-gray-300 mt-2 text-[15px] leading-relaxed">
-          We implement rigorous testing processes to ensure your product is bug-free,
-          reliable, and optimized for seamless functionality guaranteeing a smooth user
-          experience.
-        </p>
-      </div>
-
-      {/* ITEM 4 */}
-      <div>
-        <h3 className="font-bold text-lg flex items-center gap-2">
-          <span className="text-green-500">✔</span> Deployment & Support
-        </h3>
-        <p className="text-gray-300 mt-2 text-[15px] leading-relaxed">
-          From product launch to post-deployment support, we provide continuous monitoring,
-          updates, and enhancements to keep your product competitive and future-proof.
-        </p>
-      </div>
-    </div>
-
-    {/* RIGHT SIDE */}
-    <div>
-      <h2 className="text-[36px] font-extrabold mb-8">
-        Why Choose <span className="text-green-500">Gunesh Technologies?</span>
-      </h2>
-
-      <ul className="space-y-4 text-gray-300 text-[15px] leading-relaxed">
-        <li>
-          • End-to-End Product Development – From concept to launch, we handle every stage of the product lifecycle.
-        </li>
-        <li>
-          • Agile & Scalable Solutions – Our flexible development processes adapt to your evolving business needs.
-        </li>
-        <li>
-          • Innovation-Driven Approach – We leverage the latest technologies to build products that stand out.
-        </li>
-      </ul>
-    </div>
-
-  </div>
-
-</section>
+    </section>
       {/* ✅ Contact Section (separate, NOT inside above section) */}
       <div className="relative w-full mt-20">
 

@@ -194,7 +194,7 @@ function AboutUs() {
                     <div className="flex-1">
                         <h2 className="text-[38px] font-black text-gray-900 leading-[1.2] mb-4">
                             The Trinity{" "}
-                            <span className="text-green-500">*Management</span>
+                            <span className="text-green-500"> Management</span>
                             <br />Consultancy
                         </h2>
                         <p className="text-gray-500 text-[15px] leading-[1.8] mb-6 max-w-[500px]">
@@ -224,7 +224,7 @@ function AboutUs() {
 
             <h2 className="text-[40px] font-black text-center text-gray-900 leading-[1.2] mt-20">
                 Team of {" "}
-                <span className="text-green-500"> * Proffesionals</span>
+                <span className="text-green-500">  Proffesionals</span>
             </h2>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
@@ -265,7 +265,7 @@ function AboutUs() {
 
             <h2 className="text-[40px] font-black text-center text-gray-900 leading-[1.2] mt-25">
                 Our Awards & {" "}
-                <span className="text-green-500"> *Achievements</span>
+                <span className="text-green-500"> Achievements</span>
             </h2>
 
             <div className="flex gap-6 mt-6 px-10 justify-center max-w-7xl mx-auto">
