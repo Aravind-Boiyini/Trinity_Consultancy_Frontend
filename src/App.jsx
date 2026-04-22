@@ -7,9 +7,11 @@ import ContactUs from './Components/ContactUs'
 import Footer from './Components/Footer'
 import logo3 from './assets/white logo.png'
 import Services from './Components/Services'
-
 import Blogs from './Components/Blogs'
 import Careers from './Components/Careers'
+import ItConsultancy from './Components/OurServices/ItConsultancy'
+import ProductEngineering from './Components/OurServices/ProductEngineering'
+import DatabaseManagement from './Components/OurServices/DatabaseManagement'
 
 
 function App() {
@@ -77,6 +79,9 @@ function App() {
               { name: "Services", path: "/services" },
               { name: "Blog", path: "/blog" },
               { name: "Careers", path: "/careers" },
+              { name: "IT Consultancy", path: "/ItConsultancy" },
+              { name: "Product Engineering", path: "/ProductEngineering" },
+              { name: "Database Management", path: "/DatabaseManagement" },
               // { name: "Shop", path: "/shop" },
             ].map((item) => (
               <NavLink
@@ -117,6 +122,9 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/ItConsultancy" element={<ItConsultancy />} />
+          <Route path="/ProductEngineering" element={<ProductEngineering />} />
+          <Route path="/DatabaseManagement" element={<DatabaseManagement />} />
         </Routes>
       </div>
 
