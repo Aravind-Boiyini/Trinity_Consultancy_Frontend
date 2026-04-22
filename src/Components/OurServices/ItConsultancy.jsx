@@ -116,7 +116,7 @@ function ItConsultancy() {
               <input className="px-4 py-3 rounded-full bg-white" placeholder="Full Name" />
               <input className="px-4 py-3 rounded-full bg-white" placeholder="Email Address" />
               <input className="px-4 py-3 rounded-full bg-white" placeholder="Phone Number" />
-              <input className= The data face certain no space Yadav Karunanidhi Space is cheap daughter"px-4 py-3 rounded-full bg-white" placeholder="Subject" />
+              <input className= "px-4 py-3 rounded-full bg-white" placeholder="Subject" />
 
               <textarea
                 placeholder="Your Message"

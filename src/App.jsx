@@ -72,31 +72,72 @@ function App() {
             <img src={logo3} alt="Logo" className="h-18 w-30" />
             {/* Trinity Consultancy */}
           </div>
-          <nav className="flex items-center h-16">
-            {[
-              { name: "Home", path: "/" },
-              { name: "About Us", path: "/about" },
-              { name: "Services", path: "/services" },
-              { name: "Blog", path: "/blog" },
-              { name: "Careers", path: "/careers" },
-              { name: "IT Consultancy", path: "/ItConsultancy" },
-              { name: "Product Engineering", path: "/ProductEngineering" },
-              { name: "Database Management", path: "/DatabaseManagement" },
-              // { name: "Shop", path: "/shop" },
-            ].map((item) => (
-              <NavLink
-                key={item.name}
-                to={item.path}
-                className={({ isActive }) =>
-                  `flex items-center gap-1 px-5 h-full text-[16px] font-semibold transition-colors hover:text-green-300 ${isActive ? "text-green-400" : "text-white"
-                  }`
-                }
-              >
-                {item.name}
-                {/* <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
-                  <path d="M2 3.5l3 3 3-3" stroke="currentColor" strokeWidth="1.2" fill="none" strokeLinecap="round" />
-                </svg> */}
-              </NavLink>
+         <nav className="flex items-center h-16">
+  {[
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { 
+      name: "Our Services", 
+      path: "/services", 
+      isDropdown: true,
+      subMenu: [
+        { name: "IT Consultancy", path: "/ItConsultancy" },
+        { name: "Product Engineering", path: "/ProductEngineering" },
+        { name: "Database Management", path: "/DatabaseManagement" },
+      ]
+    },
+    { name: "Blog", path: "/blog" },
+    { name: "Careers", path: "/careers" },
+  ].map((item) => (
+    item.isDropdown ? (
+      /* 🔹 DROPDOWN WRAPPER */
+      <div key={item.name} className="relative group h-full">
+        <NavLink
+          to={item.path}
+          className={({ isActive }) =>
+            `flex items-center gap-1 px-5 h-full text-[16px] font-semibold transition-colors hover:text-green-300 ${
+              isActive ? "text-green-400" : "text-white"
+            }`
+          }
+        >
+          {item.name}
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </NavLink>
+
+        {/* 🔹 DROPDOWN MENU - Matching your specific image style */}
+        <div className="absolute left-0 top-full hidden group-hover:block z-50">
+          {/* Transparent bridge to prevent closing on hover move */}
+          <div className="h-0 w-full" /> 
+          <ul className="w-72 bg-[#0A335C] text-white shadow-2xl py-2">
+            {item.subMenu.map((sub) => (
+              <li key={sub.path}>
+                <NavLink
+                  to={sub.path}
+                  className="block px-6 py-4 text-[15px] font-semibold hover:bg-white/10 transition-all border-b border-white/5 last:border-0"
+                >
+                  {sub.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ) : (
+      /* 🔹 REGULAR LINK */
+      <NavLink
+        key={item.name}
+        to={item.path}
+        className={({ isActive }) =>
+          `flex items-center gap-1 px-5 h-full text-[16px] font-semibold transition-colors hover:text-green-300 ${
+            isActive ? "text-green-400" : "text-white"
+          }`
+        }
+      >
+        {item.name}
+      </NavLink>
+    )
             ))}
           </nav>
           <NavLink

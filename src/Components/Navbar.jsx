@@ -35,71 +35,69 @@ function Navbar() {
           <Link to="/about" className="hover:text-orange-500">About Us</Link>
 
           {/* 🔹 SERVICES DROPDOWN */}
-          <div className="relative group">
+      <div className="relative group">
+  <button className="hover:text-orange-500 flex items-center gap-1 transition-colors">
+    Our Services
+  </button>
 
-            <button className="hover:text-orange-500">
-              Services
-            </button>
+  {/* Hover bridge to keep dropdown open */}
+  <div className="absolute top-full left-0 w-full h-4"></div>
 
-            {/* Hover bridge (prevents flicker) */}
-            <div className="absolute top-full left-0 w-full h-2"></div>
+  {/* Dropdown Menu */}
+  <div className="absolute left-0 top-full mt-2 hidden group-hover:block z-50">
+    <ul className="w-64 bg-[#0A335C] text-white shadow-2xl py-2">
+      
+      <li>
+        <Link to="/it-consulting" className="block px-6 py-3 font-semibold hover:bg-white/10 transition-all border-b border-white/5">
+          IT Consulting
+        </Link>
+      </li>
 
-            {/* Dropdown */}
-            <div className="absolute left-0 top-full mt-2 hidden group-hover:block z-50">
-              <ul className="w-72 bg-blue-900 text-white shadow-lg rounded-md py-4">
+      <li>
+        <Link to="/product-engineering" className="block px-6 py-3 font-semibold hover:bg-white/10 transition-all border-b border-white/5">
+          Product Engineering
+        </Link>
+      </li>
 
-                <li>
-                  <Link to="/it-consulting" className="block px-6 py-2 hover:bg-blue-800 text-orange-400">
-                    IT Consulting
-                  </Link>
-                </li>
+      <li>
+        <Link to="/database-management" className="block px-6 py-3 font-semibold hover:bg-white/10 transition-all border-b border-white/5">
+          Database Management
+        </Link>
+      </li>
 
-                <li>
-                  <Link to="/product-engineering" className="block px-6 py-2 hover:bg-blue-800">
-                    Product Engineering
-                  </Link>
-                </li>
+      <li>
+        <Link to="/mobile-development" className="block px-6 py-3 font-semibold hover:bg-white/10 transition-all border-b border-white/5">
+          Mobile Development
+        </Link>
+      </li>
 
-                <li>
-                  <Link to="/database-management" className="block px-6 py-2 hover:bg-blue-800">
-                    Database Management
-                  </Link>
-                </li>
+      <li>
+        <Link to="/data-engineering" className="block px-6 py-3 font-semibold hover:bg-white/10 transition-all border-b border-white/5">
+          IT Data Engineering
+        </Link>
+      </li>
 
-                <li>
-                  <Link to="/mobile-development" className="block px-6 py-2 hover:bg-blue-800">
-                    Mobile Development
-                  </Link>
-                </li>
+      <li>
+        <Link to="/software-support" className="block px-6 py-3 font-semibold hover:bg-white/10 transition-all border-b border-white/5">
+          Software Support
+        </Link>
+      </li>
 
-                <li>
-                  <Link to="/data-engineering" className="block px-6 py-2 hover:bg-blue-800">
-                    IT Data Engineering
-                  </Link>
-                </li>
+      <li>
+        <Link to="/web-development" className="block px-6 py-3 font-semibold hover:bg-white/10 transition-all border-b border-white/5">
+          Web Development
+        </Link>
+      </li>
 
-                <li>
-                  <Link to="/software-support" className="block px-6 py-2 hover:bg-blue-800">
-                    Software Support
-                  </Link>
-                </li>
+      <li>
+        <Link to="/digital-marketing" className="block px-6 py-3 font-semibold hover:bg-white/10 transition-all">
+          Digital Marketing
+        </Link>
+      </li>
 
-                <li>
-                  <Link to="/web-development" className="block px-6 py-2 hover:bg-blue-800">
-                    Web Development
-                  </Link>
-                </li>
-
-                <li>
-                  <Link to="/digital-marketing" className="block px-6 py-2 hover:bg-blue-800">
-                    Digital Marketing
-                  </Link>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
+    </ul>
+  </div>
+</div>
 
           <Link to="/portfolio" className="hover:text-orange-500">Portfolios</Link>
           <Link to="/careers" className="hover:text-orange-500">Careers</Link>
