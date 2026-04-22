@@ -2,6 +2,9 @@ import React from "react";
 import Logo2 from "../assets/white logo.png";
 import { Mail, MapPin, Phone } from "lucide-react";
 
+
+
+
 function Footer() {
   return (
     <>
@@ -50,9 +53,9 @@ function Footer() {
 
               <p className="mt-3 flex gap-2 text-sm leading-relaxed">
                 <MapPin size={16} />
-                HIG-68, near HDFC Bank,<br />
-                KPHB 5th Phase, Kukatpally,<br />
-                Hyderabad, Telangana 500072, India
+                 1416 Shady Hollow Ct,<br />
+                 Keller,<br />
+                 TX 76244
               </p>
 
               <p className="mt-3 flex items-center gap-2 text-sm">
@@ -62,7 +65,7 @@ function Footer() {
 
               <p className="mt-2 flex items-center gap-2 text-sm">
                 <Phone size={16} />
-                +1 (123) 456-7890
+                (682) 392-9824
               </p>
             </div>
 
@@ -80,7 +83,7 @@ function Footer() {
             {/* LEFT - PHONE */}
             <div className="flex items-center gap-2">
               <Phone size={14} />
-              <span>980-890-1234</span>
+              <span>(682) 392-9824</span>
             </div>
 
             {/* EMPTY SPACE (keeps alignment clean) */}

@@ -601,13 +601,42 @@ export default function Home({ onSlideChange }) {
             }, 50);
         }, 380);
     };
+    const testimonialsData = [
+  {
+    name: "Jessica M.",
+    role: "Operations Director, Retail Hub",
+    text: "Gunesh Technologies transformed our digital strategy with their custom software development services. Their team is professional, attentive, and always goes above and beyond. We’re extremely satisfied with the results!",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Rahul Sharma",
+    role: "CEO, TechNova",
+    text: "Their development team delivered a scalable and high-performance solution. Communication was excellent and deadlines were always met.",
+    image: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Anita Verma",
+    role: "Marketing Head, GrowthX",
+    text: "Amazing experience working with them. They understood our requirements perfectly and executed beyond expectations.",
+    image: "https://via.placeholder.com/150",
+  },
+];
+
+  
+  // Auto slide
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % testimonialsData.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
     const next = () => goTo((current + 1) % slides.length);
     const prev = () => goTo((current - 1 + slides.length) % slides.length);
 
     const resetTimer = () => {
         clearInterval(timerRef.current);
-        timerRef.current = setInterval(next, 3000);
+        timerRef.current = setInterval(next, 4000);
     };
 
     useEffect(() => {
@@ -616,7 +645,7 @@ export default function Home({ onSlideChange }) {
                 const nxt = (current + 1) % slides.length;
                 goTo(nxt);
             }
-        }, 3000);
+        }, 4000);
         return () => clearInterval(timerRef.current);
     }, [current]);
 
@@ -789,7 +818,7 @@ export default function Home({ onSlideChange }) {
                     <div className="flex-1">
                         <h2 className="text-[38px] font-black text-gray-900 leading-[1.2] mb-4">
                             The Trinity{" "}
-                            <span className="text-green-500">*Management</span>
+                            <span className="text-green-500">Management</span>
                             <br />Consultancy
                         </h2>
                         <p className="text-gray-500 text-[15px] leading-[1.8] mb-6 max-w-[500px]">
@@ -820,7 +849,7 @@ export default function Home({ onSlideChange }) {
             {/* Awards */}
             <h2 className="text-[40px] font-black text-center text-gray-900 leading-[1.2] mt-25">
                 Our Awards & {" "}
-                <span className="text-green-500"> *Achievements</span>
+                <span className="text-green-500"> Achievements</span>
             </h2>
             <h2 className="text-[20px] text-center text-gray-700 leading-[1.2] mt-5">
                 Laborious physical exercise except obtain some advantage.
@@ -887,11 +916,66 @@ export default function Home({ onSlideChange }) {
                 </a>
             </div>
 
-            
+    
+
+    <section className="bg-gray-100 py-16">
+      <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+        Testimonials
+      </h2>
+
+      <div className="max-w-5xl mx-auto relative">
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+          
+          {/* LEFT IMAGE + ORANGE PANEL */}
+          <div className="bg-green-500 md:w-1/3 flex items-center justify-center p-8">
+            <img
+              src={testimonialsData[current].image}
+              alt="user"
+              className="w-40 h-40 rounded-full border-4 border-white object-cover"
+            />
+          </div>
+
+          {/* RIGHT CONTENT */}
+          <div className="md:w-2/3 p-8">
+            <p className="text-gray-700 leading-relaxed text-[16px]">
+              {testimonialsData[current].text}
+            </p>
+
+            {/* STARS */}
+            <div className="flex gap-1 text-green-500 mt-4 text-xl">
+              ★ ★ ★ ★ ★
+            </div>
+
+            {/* NAME */}
+            <h3 className="mt-4 text-xl font-bold text-gray-800">
+              {testimonialsData[current].name}
+            </h3>
+
+            <p className="text-green-500 text-sm">
+              {testimonialsData[current].role}
+            </p>
+          </div>
+        </div>
+
+        {/* DOTS */}
+        <div className="flex justify-center mt-6 gap-3">
+          {testimonialsData.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              className={`w-3 h-3 rounded-full ${
+                current === index ? "bg-green-500 scale-125" : "bg-gray-400"
+              }`}
+            ></button>
+          ))}
+        </div>
+      </div>
+    </section>
+
             {/* Industries */}
             <h2 className="text-[40px] font-black text-gray-900 leading-[1.2] ml-28 mt-15">
                 Major {" "}
-                <span className="text-green-500"> * Industries </span> We Served
+                <span className="text-green-500">  Industries </span> We Served
             </h2>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
