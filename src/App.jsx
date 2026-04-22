@@ -16,6 +16,7 @@ import MobileDevelopment from './Components/OurServices/MobileDevelopment'
 import ItDataEngineering from './Components/OurServices/ItDataEngineering'
 import SoftwareSupport from './Components/OurServices/SoftwareSupport'
 import WebDevelopment from './Components/OurServices/WebDevelopment'
+import ScrollToTop from './Components/Services/ScrollToTop'
 
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
   }, []);
   return (
     <div>
+
+      <ScrollToTop/>
 
       {/* Fixed Navbar — transparent so hero image shows through */}
       <div className={`w-full z-50 ${showTopBar ? "absolute top-0" : "fixed -top-16 "}`}>
