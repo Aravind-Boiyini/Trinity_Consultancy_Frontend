@@ -1,6 +1,8 @@
 import React from "react";
 import Logo2 from "../assets/white logo.png";
+
 import { Mail, MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 
@@ -26,25 +28,25 @@ function Footer() {
             {/* QUICK LINKS */}
             <div>
               <h1 className="font-bold text-green-500">Quick Links</h1>
-              <p className="mt-3 text-sm">Home</p>
-              <p className="mt-2 text-sm">About Us</p>
-              <p className="mt-2 text-sm">Services</p>
-              <p className="mt-2 text-sm">Portfolios</p>
-              <p className="mt-2 text-sm">Careers</p>
-              <p className="mt-2 text-sm">Blog</p>
-              <p className="mt-2 text-sm">Contact Us</p>
+              <Link to="/" className="mt-3 text-sm block hover:text-green-300">Home</Link>
+              <Link to="/about" className="mt-2 text-sm block hover:text-green-300">About Us</Link>
+              <Link to="/services" className="mt-2 text-sm block hover:text-green-300">Services</Link>
+              {/* <Link to="/portfolio" className="mt-2 text-sm block hover:text-green-300">Portfolios</Link> */}
+              <Link to="/careers" className="mt-2 text-sm block hover:text-green-300">Careers</Link>
+              <Link to="/blog" className="mt-2 text-sm block hover:text-green-300">Blog</Link>
+              <Link to="/contactus" className="mt-2 text-sm block hover:text-green-300">Contact Us</Link>
             </div>
 
             {/* SERVICES */}
             <div>
               <h1 className="font-bold text-green-500">Services</h1>
-              <p className="mt-3 text-sm">IT Consulting</p>
-              <p className="mt-2 text-sm">Product Engineering</p>
-              <p className="mt-2 text-sm">Database Management</p>
-              <p className="mt-2 text-sm">Mobile Management</p>
-              <p className="mt-2 text-sm">IT Data Engineering</p>
-              <p className="mt-2 text-sm">Software Support</p>
-              <p className="mt-2 text-sm">Digital Marketing</p>
+              <Link to="/ItConsultancy" className="mt-3 text-sm block hover:text-green-300">IT Consulting</Link>
+              <Link to="/ProductEngineering" className="mt-2 text-sm block hover:text-green-300">Product Engineering</Link>
+              <Link to="/DatabaseManagement" className="mt-2 text-sm block hover:text-green-300">Database Management</Link>
+              <Link to="/MobileDevelopment" className="mt-2 text-sm block hover:text-green-300">Mobile Development</Link>
+              <Link to="/ItDataEngineering" className="mt-2 text-sm block hover:text-green-300">IT Data Engineering</Link>
+              <Link to="/SoftwareSupport" className="mt-2 text-sm block hover:text-green-300">Software Support</Link>
+              {/* <Link to="/digital-marketing" className="mt-2 text-sm block hover:text-green-300">Digital Marketing</Link> */}
             </div>
 
             {/* CONTACT */}
