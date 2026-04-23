@@ -44,7 +44,7 @@ function WebDevelopment() {
         <div className="text-gray-700 text-[16px] leading-relaxed space-y-6">
 
           <p>
-            At Gunesh Technologies, we specialize in custom web development solutions
+            At Trinity Consultancy, we specialize in custom web development solutions
             that help businesses establish a strong digital presence. Whether you need a
             responsive website, web application, or e-commerce platform, our expert team
             delivers scalable, secure, and high-performance web solutions tailored to your
@@ -139,7 +139,7 @@ function WebDevelopment() {
               Development <span className="text-green-500">Stage</span>
             </h2>
             <p className="text-gray-200 leading-relaxed">
-              Our software engineers create your web solution. Gunesh Technologies
+              Our software engineers create your web solution. Trinity Consultancy
               uses the agile methodology, so you will review results every two
               weeks/month. Then, our team perform user Acceptance Testing and
               deploy your web solution.

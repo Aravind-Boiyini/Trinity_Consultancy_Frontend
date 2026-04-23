@@ -16,7 +16,10 @@ import MobileDevelopment from './Components/OurServices/MobileDevelopment'
 import ItDataEngineering from './Components/OurServices/ItDataEngineering'
 import SoftwareSupport from './Components/OurServices/SoftwareSupport'
 import WebDevelopment from './Components/OurServices/WebDevelopment'
+import CyberSecurity from './Components/OurServices/CyberSecurity'
+import NetworkSecurity from './Components/OurServices/NetworkSecurity'
 import ScrollToTop from './Components/Services/ScrollToTop'
+
 
 
 function App() {
@@ -88,6 +91,8 @@ function App() {
         { name: "IT Data Engineering", path: "/ItDataEngineering" },
         { name: "Software Support", path: "/SoftwareSupport" },
         { name: "Web Development", path: "/WebDevelopment" },
+        { name: "Cyber Security", path: "/CyberSecurity" },
+        { name: "Network Security", path: "/NetworkSecurity" },
       ]
     },
     { name: "Blog", path: "/blog" },
@@ -175,6 +180,8 @@ function App() {
           <Route path="/ItDataEngineering" element={<ItDataEngineering />} />
           <Route path="/SoftwareSupport" element={<SoftwareSupport />} />
           <Route path="/WebDevelopment" element={<WebDevelopment />} />
+          <Route path="/CyberSecurity" element={<CyberSecurity />} />
+          <Route path="/NetworkSecurity" element={<NetworkSecurity />} />
         </Routes>
       </div>
 

@@ -46,9 +46,7 @@ function ItConsultancy() {
             </h2>
 
             <p className="mt-5 text-gray-600 text-[15px] leading-relaxed">
-            Yes, we can! At Gunesh Technologies, we offer expert IT consulting by analyzing your business needs and providing tailored, scalable solutions. Our approach includes assessing your IT infrastructure, identifying challenges, and implementing the best strategies for growth. From web and software development to cloud management and database design, we ensure businesses get the right technology solutions to drive success, efficiency, and innovation.</p>
-
-            
+            Yes, we can! At Trinity Consultancy, we offer expert IT consulting by analyzing your business needs and providing tailored, scalable solutions. Our approach includes assessing your IT infrastructure, identifying challenges, and implementing the best strategies for growth. From web and software development to cloud management and database design, we ensure businesses get the right technology solutions to drive success, efficiency, and innovation.</p>
 
 
             <h2 className="text-[32px] font-extrabold text-gray-800 mt-8">
@@ -56,7 +54,7 @@ function ItConsultancy() {
             </h2>
 
            <p className="mt-4 text-gray-600 text-[15px] leading-relaxed">
-            At Gunesh Technologies, we believe that true success starts with deep understanding. Before offering a solution, we take the time to analyze business goals, industry challenges, and market trends. This helps us develop custom IT strategies that align with long-term objectives. By focusing on clarity, precision, and collaboration, we create solutions that not only solve problems but also drive sustainable growth and innovation./</p>
+            At Trinity Consultancy, we believe that true success starts with deep understanding. Before offering a solution, we take the time to analyze business goals, industry challenges, and market trends. This helps us develop custom IT strategies that align with long-term objectives. By focusing on clarity, precision, and collaboration, we create solutions that not only solve problems but also drive sustainable growth and innovation./</p>
            
           </div>
 
@@ -73,7 +71,7 @@ function ItConsultancy() {
             </h2>
 
             <p className="mt-6 text-gray-300 text-[15px]">
-            At Gunesh Technologies, we take a structured approach to business analysis for B2B projects. We start by conducting detailed discussions with stakeholders to understand their objectives, pain points, and challenges. Our team then evaluates existing workflows, IT infrastructure, and industry trends to develop data-driven insights. This ensures that our solutions are strategic, cost-effective, and aligned with business goals. By bridging the gap between technology and business needs, we deliver IT solutions that enhance productivity, streamline operations, and provide measurable ROI./</p>
+            At Trinity Consultancy, we take a structured approach to business analysis for B2B projects. We start by conducting detailed discussions with stakeholders to understand their objectives, pain points, and challenges. Our team then evaluates existing workflows, IT infrastructure, and industry trends to develop data-driven insights. This ensures that our solutions are strategic, cost-effective, and aligned with business goals. By bridging the gap between technology and business needs, we deliver IT solutions that enhance productivity, streamline operations, and provide measurable ROI./</p>
 
 
           </div>
@@ -84,7 +82,7 @@ function ItConsultancy() {
             </h2>
 
             <p className="mt-6 text-gray-300 text-[15px]">
-            At Gunesh Technologies, solution design is about precision and innovation. We analyze your business needs, industry trends, and future scalability to create a robust IT strategy. Our experts provide custom software, cloud architecture, and database solutions that integrate seamlessly into your operations. Unlike one-size-fits-all approaches, we focus on efficiency, adaptability, and long-term impact. With a strong emphasis on collaboration and future-proofing, we ensure your business gets the best solution not just any solution.</p>
+            At Trinity Consultancy, solution design is about precision and innovation. We analyze your business needs, industry trends, and future scalability to create a robust IT strategy. Our experts provide custom software, cloud architecture, and database solutions that integrate seamlessly into your operations. Unlike one-size-fits-all approaches, we focus on efficiency, adaptability, and long-term impact. With a strong emphasis on collaboration and future-proofing, we ensure your business gets the best solution not just any solution.</p>
 
 
           </div>

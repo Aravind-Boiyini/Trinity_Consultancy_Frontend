@@ -47,6 +47,9 @@ function Footer() {
               <Link to="/ItDataEngineering" className="mt-2 text-sm block hover:text-green-300">IT Data Engineering</Link>
               <Link to="/SoftwareSupport" className="mt-2 text-sm block hover:text-green-300">Software Support</Link>
               {/* <Link to="/digital-marketing" className="mt-2 text-sm block hover:text-green-300">Digital Marketing</Link> */}
+              <Link to="/WebDevelopment" className="mt-2 text-sm block hover:text-green-300">Web Development</Link>
+              <Link to="/CyberSecurity" className="mt-2 text-sm block hover:text-green-300">Cyber Security</Link>
+              <Link to="/NetworkSecurity" className="mt-2 text-sm block hover:text-green-300">Network Security</Link>
             </div>
 
             {/* CONTACT */}

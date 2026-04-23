@@ -546,19 +546,19 @@ import contactlogo from '../assets/About-Banner.jpg';
 
 const slides = [
     {
-        tag: "* Welcome to Trinity Consultancy",
+        tag: " Welcome to Trinity Consultancy",
         title: ["Planning for the", "Future Creates the", "Present!.."],
         desc: "Ever undertakes laborious physical exercise, except to obtain some advantage from it but who has any right.",
         img: Slider_home_31,
     },
     {
-        tag: "* Innovation at its Best",
+        tag: " Innovation at its Best",
         title: ["Building Tomorrow's", "Solutions with", "Today's Vision!"],
         desc: "We deliver cutting-edge strategies that empower businesses to grow faster, smarter, and more sustainably.",
         img: Slider_home_32,
     },
     {
-        tag: "* Trusted by Leaders",
+        tag: " Trusted by Leaders",
         title: ["Transforming Ideas", "into Powerful", "Realities!.."],
         desc: "Our expert team partners with you to craft innovative solutions that drive measurable impact and lasting success.",
         img: Slider_home_33,
@@ -605,8 +605,8 @@ export default function Home({ onSlideChange }) {
   {
     name: "Jessica M.",
     role: "Operations Director, Retail Hub",
-    text: "Gunesh Technologies transformed our digital strategy with their custom software development services. Their team is professional, attentive, and always goes above and beyond. We’re extremely satisfied with the results!",
-    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?cs=srgb&dl=pexels-danxavier-1239291.jpg&fm=jpg",
+    text: "Trinity Consultancy transformed our digital strategy with their custom software development services. Their team is professional, attentive, and always goes above and beyond. We’re extremely satisfied with the results!",
+    image: "https://via.placeholder.com/150",
   },
   {
     name: "Rahul Sharma",
