@@ -3,42 +3,14 @@ import img1 from "../../assets/About-Banner.jpg";
 import img2 from "../../assets/About-Banner.jpg";
 import teamoflogo from "../../assets/IT-Image.jpg";
 import teamoflogo1 from "../../assets/Product-Image.jpg";
-import { Mail, Trophy } from "lucide-react";
+import { Mail, Network, Trophy } from "lucide-react";
 import { MailCheck , Check} from "lucide-react";
 import { MoveUpRight } from "lucide-react";
 import contactlogo from "../../assets/About-Banner.jpg";
-import {Code, BarChart3, ShieldCheck, UserCheck, Settings, } from "lucide-react";
 
 
-const features = [
-    {
-      icon: <Code size={32} />,
-      title: "Responsive & User Friendly Services",
-      desc: "All our IT consulting are friendly and user friendly. Easy navigation and fast services.",
-    },
-    {
-      icon: <BarChart3 size={32} />,
-      title: "Search Engine Optimized",
-      desc: "Every IT Consulting & Product Engineering for you is Data Management and as a result will help you higher levels.",
-    },
-    {
-      icon: <ShieldCheck size={32} />,
-      title: "Highly Secured",
-      desc: "Secured and reliable Data Management is one of the few things we hold high at Web Gen World. With us you are fully secured.",
-    },
-    {
-      icon: <UserCheck size={32} />,
-      title: "Professional Services",
-      desc: "Our best services are delivered in a professional and efficient manner, with you at heart.",
-    },
-    {
-      icon: <Settings size={32} />,
-      title: "Top Rated Support",
-      desc: "For every service we offer, you are sure of quality technical support and customer service.",
-    },
-  ];
 
-function ProductEngineering() {
+function NetworkSecurity() {
   return (
     <div>
 
@@ -51,7 +23,7 @@ function ProductEngineering() {
         />
 
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-          Product <span className="text-green-500">Engineering</span>
+          Network <span className="text-green-500">Security</span>
         </h1>
       </div>
 
@@ -71,7 +43,7 @@ function ProductEngineering() {
             
 
             <p className="mt-5 text-gray-600 text-[15px] leading-relaxed">
-              At Trinity Consultancy, our Product Engineering services are designed to transform ideas into innovative, scalable, and market-ready solutions. We combine cutting-edge technology, agile methodologies, and strategic planning to deliver products that not only meet your business goals but also exceed customer expectations.</p>
+              At Trinity Consultancy, our Network Security services are designed to protect your digital assets and ensure compliance. We provide comprehensive security solutions that safeguard your infrastructure, data, and applications from evolving threats.</p>
 
 
             
@@ -101,12 +73,10 @@ function ProductEngineering() {
               <span className="bg-green-500 p-1 rounded">
                 <Check size={16} />
               </span>
-              Ideation & Conceptualization
+              Assessment & Risk Analysis
             </div>
             <p className="text-gray-200 mt-2 text-sm leading-relaxed">
-              We start by collaborating with you to understand your vision, target audience,
-              and business goals. Our team conducts in-depth market research and feasibility
-              studies to shape a clear product roadmap.
+              We begin by evaluating your existing network infrastructure, identifying vulnerabilities, and understanding potential threats. Our team performs detailed risk assessments to design a secure and resilient network strategy.
             </p>
           </div>
 
@@ -115,11 +85,10 @@ function ProductEngineering() {
               <span className="bg-green-500 p-1 rounded">
                 <Check size={16} />
               </span>
-              Design & Development
+              Secure Network Design & Implementation
             </div>
             <p className="text-gray-200 mt-2 text-sm leading-relaxed">
-              Our skilled engineers and designers use the latest technologies to create
-              intuitive user experiences and robust architectures.
+              Our experts design and deploy secure network architectures using firewalls, intrusion detection systems (IDS), and encryption protocols to protect your data and systems from unauthorized access.
             </p>
           </div>
 
@@ -128,11 +97,10 @@ function ProductEngineering() {
               <span className="bg-green-500 p-1 rounded">
                 <Check size={16} />
               </span>
-              Testing & Quality Assurance
+              Monitoring & Threat Detection
             </div>
             <p className="text-gray-200 mt-2 text-sm leading-relaxed">
-              We implement rigorous testing processes to ensure your product is bug-free,
-              reliable, and optimized for seamless functionality.
+              We implement continuous network monitoring solutions to detect suspicious activities in real time. Our proactive approach ensures threats are identified and mitigated before they impact your operations.
             </p>
           </div>
 
@@ -141,11 +109,10 @@ function ProductEngineering() {
               <span className="bg-green-500 p-1 rounded">
                 <Check size={16} />
               </span>
-              Deployment & Support
+              Maintenance & Incident Response
             </div>
             <p className="text-gray-200 mt-2 text-sm leading-relaxed">
-              From product launch to post-deployment support, we provide continuous monitoring,
-              updates, and enhancements to keep your product competitive.
+              From regular security updates to rapid incident response, we ensure your network remains protected at all times. Our team provides ongoing support to handle breaches, minimize downtime, and maintain business continuity.
             </p>
           </div>
         </div>
@@ -159,54 +126,22 @@ function ProductEngineering() {
           <ul className="space-y-4 text-gray-200 text-sm leading-relaxed">
             <li className="flex gap-3">
               <span>•</span>
-              End-to-End Product Development – From concept to launch, we handle every stage of the product lifecycle.
+              End-to-End Network Security Solutions – From assessment to implementation and monitoring, we secure every layer of your network infrastructure.
             </li>
             <li className="flex gap-3">
               <span>•</span>
-              Agile & Scalable Solutions – Our flexible development processes adapt to your evolving business needs.
+              Scalable & Adaptive Security – Our solutions grow with your business and adapt to evolving cyber threats.
             </li>
             <li className="flex gap-3">
               <span>•</span>
-              Innovation-Driven Approach – We leverage the latest technologies to build products that stand out.
+              Advanced Threat Protection – We use modern tools and technologies to defend against malware, ransomware, and cyber attacks.
             </li>
           </ul>
         </div>
 
       </div>
     </section>
-    <section className="bg-gray-100 py-16 px-6">
-      
-      {/* Heading */}
-      <h2 className="text-center text-4xl font-extrabold text-gray-800 mb-12">
-        Experience. <span className="text-green-500">Execute.</span> Excellence.
-      </h2>
-
-      {/* Cards Grid */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-        {features.map((item, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition duration-300"
-          >
-            {/* Icon Circle */}
-            <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-green-500 text-white mb-6">
-              {item.icon}
-            </div>
-
-            {/* Title */}
-            <h3 className="text-xl font-bold text-gray-800 mb-3">
-              {item.title}
-            </h3>
-
-            {/* Description */}
-            <p className="text-gray-600 text-sm leading-relaxed">
-              {item.desc}
-            </p>
-          </div>
-        ))}
-      </div>
-
-    </section>
+    
       {/* ✅ Contact Section (separate, NOT inside above section) */}
       <div className="relative w-full mt-20">
 
@@ -254,4 +189,4 @@ function ProductEngineering() {
   );
 }
 
-export default ProductEngineering;
+export default NetworkSecurity;

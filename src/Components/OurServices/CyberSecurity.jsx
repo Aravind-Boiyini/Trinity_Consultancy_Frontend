@@ -12,7 +12,7 @@ import img from "../../assets/Database-Image.jpg";
 
 
 
-function ItDataEngineering() {
+function CyberSecurity() {
   return (
     <div>
 
@@ -25,10 +25,10 @@ function ItDataEngineering() {
         />
 
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-        IT{" "}
-          <span className="text-green-500">Data</span>{" "}
-          Engineering{" "}
-          <span className="text-green-500">Services</span>
+        Cyber{" "}
+          <span className="text-green-500">Security</span>{" "}
+          -{" "}
+          <span className="text-green-500">(IAM)</span>
         </h1>
       </div>
      <section className="bg-white py-16 px-6">
@@ -50,14 +50,12 @@ function ItDataEngineering() {
           <div>
 
             <p className="text-gray-700 text-[15px] leading-relaxed mb-6">
-              At Trinity Consultancy, we provide end-to-end Data Engineering solutions to help businesses transform raw data into actionable insights. 
-              Our expertise in data architecture, ETL processes, cloud integration, and big data technologies ensures that your business can efficiently 
-              collect, process, and analyze data for informed decision-making.
-            </p>
+              At Gunesh Technologies, we provide advanced Identity and Access Management (IAM) solutions to help organizations secure their digital assets and control user access with precision. Our IAM services ensure that the right individuals have the right access to the right resources—at the right time—while maintaining strict security standards.</p>
+
 
             <h2 className="text-3xl font-extrabold mb-6">
-              <span className="text-[#0B1F3A]">Our Data </span>
-              <span className="text-green-500">Engineering Services :</span>
+              <span className="text-[#0B1F3A]">Our IAM </span>
+              <span className="text-green-500">Services :</span>
             </h2>
 
             {/* POINT 1 */}
@@ -69,11 +67,10 @@ function ItDataEngineering() {
               </div>
               <div>
                 <h3 className="font-semibold text-[#0B1F3A]">
-                  Data Architecture & Modeling
+                  User Identity Lifecycle Management:
                 </h3>
                 <p className="text-gray-700 text-[15px] leading-relaxed">
-                  We design scalable and high-performance data architectures tailored to your business needs. 
-                  Our structured and unstructured data models ensure optimal data storage, accessibility, and management.
+                  We streamline the management of user identities from onboarding to offboarding, ensuring secure and efficient access control throughout the user lifecycle.
                 </p>
               </div>
             </div>
@@ -87,11 +84,10 @@ function ItDataEngineering() {
               </div>
               <div>
                 <h3 className="font-semibold text-[#0B1F3A]">
-                  ETL (Extract, Transform, Load) Pipelines
+                  Authentication & Authorization
                 </h3>
                 <p className="text-gray-700 text-[15px] leading-relaxed">
-                  We develop robust ETL workflows to automate data extraction, transformation, and loading processes, 
-                  ensuring clean, reliable, and real-time data availability.
+                  We implement Multi-Factor Authentication (MFA), Single Sign-On (SSO), and Role-Based Access Control (RBAC) to enhance security and simplify user access.
                 </p>
               </div>
             </div>
@@ -114,34 +110,15 @@ function ItDataEngineering() {
               </div>
               <div>
                 <h3 className="font-semibold text-[#0B1F3A]">
-                  Big Data Processing & Analytics
+                  Privileged Access Management (PAM):
                 </h3>
                 <p className="text-gray-700 text-[15px] leading-relaxed">
-                  Our expertise in big data frameworks like Apache Spark and Hadoop allows us to process large datasets efficiently, 
-                  enabling businesses to derive meaningful insights from vast amounts of information.
+                  We safeguard critical systems by controlling and monitoring privileged accounts, reducing the risk of insider threats and unauthorized access.
                 </p>
               </div>
             </div>
 
             {/* POINT 4 */}
-            <div className="flex gap-3">
-              <div className="mt-1">
-                <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
-                  ✓
-                </div>
-              </div>
-              <div>
-                <h3 className="font-semibold text-[#0B1F3A]">
-                  Cloud Data Engineering
-                </h3>
-                <p className="text-gray-700 text-[15px] leading-relaxed">
-                  We help businesses migrate and manage data on cloud platforms such as AWS, Google Cloud, and Azure, 
-                  ensuring scalability, security, and cost efficiency.
-                </p>
-              </div>
-            </div>
-
-            {/* POINT 5*/}
             <div className="mb-5 flex gap-3">
               <div className="mt-1">
                 <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
@@ -150,19 +127,31 @@ function ItDataEngineering() {
               </div>
               <div>
                 <h3 className="font-semibold text-[#0B1F3A]">
-                    Data Governance & Security
+                  Cloud IAM Solutions:
                 </h3>
                 <p className="text-gray-700 text-[15px] leading-relaxed">
-                   We implement best practices in data governance to ensure compliance, security, and data quality, protecting 
-                   sensitive business information.
-                </p>
+                We secure access to cloud platforms such as AWS, Azure, and Google Cloud with scalable and centralized identity management solutions.                </p>
+              </div>
+            </div>
+
+            {/* POINT 5 */}
+            <div className="mb-5 flex gap-3">
+              <div className="mt-1">
+                <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
+                  ✓
+                </div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-[#0B1F3A]">
+                  Zero Trust Security Implementation
+                </h3>
                 <p className="text-gray-700 text-[15px] leading-relaxed">
-                  At Trinity Consultancy, we turn data into a strategic asset, helping businesses gain a competitive edge through
-                   seamless data management and analytics. Let’s build a data-driven future together! 🚀
+                  We adopt a Zero Trust approach, ensuring continuous verification of users and devices before granting access to any resource.
                 </p>
               </div>
             </div>
 
+            
             
 
           </div>
@@ -230,4 +219,4 @@ function ItDataEngineering() {
   );
 }
 
-export default ItDataEngineering;
+export default CyberSecurity;

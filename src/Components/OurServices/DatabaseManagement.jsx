@@ -129,12 +129,12 @@ function DatabaseManagement() {
           </p>
 
           <h2 className="text-[32px] font-extrabold mt-10">
-            The Gunesh{" "}
-            <span className="text-green-500">Technologies Method</span>
+            The Trinity{" "}
+            <span className="text-green-500">Counsultancy Method</span>
           </h2>
 
           <p className="text-gray-300 text-[15px] leading-relaxed mt-4">
-            The team at Gunesh Technologies has a solid foundation in database design,
+            The team at Trinity Consultancy has a solid foundation in database design,
             implementation and management. We can ensure that your database systems are
             running smoothly giving your business the best results possible.
           </p>

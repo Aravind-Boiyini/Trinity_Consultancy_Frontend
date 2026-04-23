@@ -72,13 +72,13 @@ function MobileDevelopment() {
             </p>
 
             <p className="text-gray-700 text-[15px] mb-4 leading-relaxed">
-              <span className="font-semibold">IOS:</span> Gunesh Technologies has been creating impactful apps for all Apple devices,
+              <span className="font-semibold">IOS:</span> Trinity Consultancy has been creating impactful apps for all Apple devices,
               helping the world’s leading brands go mobile. Leverage our rich expertise in IOS app development to build a beautiful,
               engaging, and consistent app for your industry, regardless of complexity.
             </p>
 
             <p className="text-gray-700 text-[15px] mb-4 leading-relaxed">
-              <span className="font-semibold">Android:</span> Our more than a decade on the market, Gunesh Technologies has gained a
+              <span className="font-semibold">Android:</span> Our more than a decade on the market, Trinity Consultancy has gained a
               reputation of one of the most reliable Android app development companies. Weather you a need an app for an android smartphone,
               wearable, or TV, we can help you build a solid solution that works on every device regardless of brand and your industry operation.
             </p>
@@ -91,7 +91,7 @@ function MobileDevelopment() {
 
              <p className="text-gray-700 text-[15px] mb-4 leading-relaxed">
               <span className="font-semibold">Hybrid platform:</span> Make your software available to your clients and customers regardless of 
-              the platform they prefer to use.Gunesh Technologies can help your business create software that will bring consistent 
+              the platform they prefer to use. Trinity Consultancy can help your business create software that will bring consistent 
               functionality and intuitive UI/UX on any device.
             </p>
 
