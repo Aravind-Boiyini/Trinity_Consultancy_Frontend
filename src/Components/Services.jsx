@@ -118,6 +118,30 @@ function Services() {
                             </div>
                         </div>
                     </div>
+                    <div className="bg-white overflow-hidden shadow-lg rounded-lg">
+                        <img src={teamlogo2} alt="Product" className="w-full h-60 object-cover" />
+                        <div onClick={() => navigate("/SoftwareSupport")} className="p-6 text-center">
+                            <h3 className="text-lg font-bold text-[#123E6B]">Cyber Security</h3>
+                            <p className="mt-2 text-sm ">Yes, we can! At Trinity Consultancy, we offer expert IT consulting by analyzing your business needs and providing tailored.</p>
+                            <hr className="mt-4 border border-gray-200" />
+                            <div className="flex items-center justify-center gap-4 mt-2 border border-gray-200 w-50 mx-auto rounded-full bg-green-500 py-3">
+                                <MoveUpRight size={20} className="text-white" />
+                                <h1 className="font-semibold text-[16px] text-white">Read More</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bg-white overflow-hidden shadow-lg rounded-lg">
+                        <img src={teamlogo2} alt="Product" className="w-full h-60 object-cover" />
+                        <div onClick={() => navigate("/SoftwareSupport")} className="p-6 text-center">
+                            <h3 className="text-lg font-bold text-[#123E6B]">Network Security</h3>
+                            <p className="mt-2 text-sm ">Yes, we can! At Trinity Consultancy, we offer expert IT consulting by analyzing your business needs and providing tailored.</p>
+                            <hr className="mt-4 border border-gray-200" />
+                            <div className="flex items-center justify-center gap-4 mt-2 border border-gray-200 w-50 mx-auto rounded-full bg-green-500 py-3">
+                                <MoveUpRight size={20} className="text-white" />
+                                <h1 className="font-semibold text-[16px] text-white">Read More</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

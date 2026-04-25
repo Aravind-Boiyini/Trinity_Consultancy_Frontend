@@ -544,6 +544,11 @@ import teamoflogo from '../assets/team_img_6.jpg';
 import teamoflogo1 from '../assets/team_img_7.jpg';
 import contactlogo from '../assets/About-Banner.jpg';
 
+
+
+  
+  
+
 const slides = [
     {
         tag: " Welcome to Trinity Consultancy",
@@ -657,6 +662,53 @@ export default function Home({ onSlideChange }) {
             : animState === "leaving"
                 ? "opacity-0 -translate-y-5"
                 : "opacity-0 translate-y-5";
+    
+const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: ""
+  });
+
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby41cpL4OpuFxZaIoLHUCxu5l93xOQ8FAqGvqrV6aBAYGzXCp4CjtkSHUA54CetpGOW/exec"; // 👈 your /exec link
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      // clear form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: ""
+      });
+
+      alert("Message sent successfully!");
+
+    } catch (error) {
+      console.error(error);
+      alert("Error submitting form");
+    }
+    };
 
     return (
         <div className="w-full font-sans overflow-hidden select-none">
@@ -1027,70 +1079,113 @@ export default function Home({ onSlideChange }) {
 
 
             {/* contact us */}
-
-
-            <div className="relative w-full mt-15">
-
-
+        <section>
+              <div className="relative w-full mt-20">
+                
+                {/* Background Image */}
                 <img
-                    src={contactlogo}
-                    alt="Home Banner"
-                    className="w-full h-[600px] object-cover"
+                  src={contactlogo}
+                  alt="Contact Banner"
+                  className="w-full h-[600px] object-cover"
                 />
-
+        
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50"></div>
-
-                {/* Form Container */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center px-4 mt-20">
-
-
-                    <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
-                        Contact <span className="text-green-400">Us</span>
-                    </h1>
-
-                    <div className="p-6 rounded-xl w-full max-w-3xl">
-
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-                            <input
-                                type="text"
-                                placeholder="Full Name"
-                                className="px-4 py-3 rounded-full border border-gray-100 bg-white shadow outline-none focus:ring-2 focus:ring-green-500"
-                            />
-                            <input
-                                type="email"
-                                placeholder="Email Address"
-                                className="px-4 py-3 rounded-full border border-gray-100 bg-white shadow outline-none focus:ring-2 focus:ring-green-500"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Phone Number"
-                                className="px-4 py-3 rounded-full border border-gray-100 bg-white shadow outline-none focus:ring-2 focus:ring-green-500"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Subject"
-                                className="px-4 py-3 rounded-full border border-gray-100 bg-white shadow outline-none focus:ring-2 focus:ring-green-500"
-                            />
-
-                            <textarea
-                                placeholder="Your Message"
-                                className="col-span-1 md:col-span-2 px-4 py-3 rounded-xl border border-gray-100 bg-white shadow outline-none focus:ring-2 focus:ring-green-500 resize-none h-32"
-                            ></textarea>
-
-                        </div>
-
-                        {/* Button */}
-                        <div className="mt-6 text-center">
-                            <button className="bg-green-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-600 transition">
-                                Submit
-                            </button>
-                        </div>
+        
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
+        
+                  <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
+                    Contact <span className="text-green-400">Us</span>
+                  </h1>
+        
+                  <form onSubmit={handleSubmit} className="w-full max-w-3xl">
+                    <div className="p-6 rounded-xl">
+        
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        
+                        <input
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          className="px-4 py-3 rounded-full bg-white"
+                          placeholder="Name"
+                          required
+                        />
+        
+                        <input
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          className="px-4 py-3 rounded-full bg-white"
+                          placeholder="Email"
+                          required
+                        />
+        
+                        <input
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className="px-4 py-3 rounded-full bg-white"
+                          placeholder="Phone"
+                          required
+                        />
+        
+                        <input
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleChange}
+                          className="px-4 py-3 rounded-full bg-white"
+                          placeholder="Subject"
+                          required
+                        />
+        
+                        <textarea
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          placeholder="Message"
+                          className="col-span-2 px-4 py-3 rounded-xl bg-white h-32"
+                          required
+                        />
+        
+                      </div>
+        
+                      {/* Submit Button */}
+                      <div className="mt-6 text-center">
+                        <button
+                          type="submit"
+                          className="bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700 transition"
+                        >
+                          Submit
+                        </button>
+                      </div>
+        
+                      {/* Status Messages */}
+                      <div className="mt-4 text-center">
+                        {status === "submitting" && (
+                          <p className="text-white">Submitting...</p>
+                        )}
+                        {status === "success" && (
+                          <p className="text-green-400 font-semibold">
+                            ✅ Message sent successfully!
+                          </p>
+                        )}
+                        {status === "error" && (
+                          <p className="text-red-400 font-semibold">
+                            ❌ Failed to send message. Try again.
+                          </p>
+                        )}
+                      </div>
+        
                     </div>
+                  </form>
+        
                 </div>
-            </div>
+              </div>
+            </section>
+
+           
 
         </div>
     );

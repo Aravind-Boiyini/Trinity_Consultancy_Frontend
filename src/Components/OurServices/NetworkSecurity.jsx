@@ -7,10 +7,57 @@ import { Mail, Network, Trophy } from "lucide-react";
 import { MailCheck , Check} from "lucide-react";
 import { MoveUpRight } from "lucide-react";
 import contactlogo from "../../assets/About-Banner.jpg";
+import React, { useState } from "react";
 
 
 
 function NetworkSecurity() {
+  const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: ""
+    });
+  
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby41cpL4OpuFxZaIoLHUCxu5l93xOQ8FAqGvqrV6aBAYGzXCp4CjtkSHUA54CetpGOW/exec"; // 👈 your /exec link
+  
+    const handleChange = (e) => {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value
+      });
+    };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+  
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(formData)
+        });
+  
+        // ✅ clear form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: ""
+        });
+  
+        alert("Message sent successfully!");
+  
+      } catch (error) {
+        console.error(error);
+        alert("Error submitting form");
+      }
+    };
   return (
     <div>
 
@@ -143,6 +190,7 @@ function NetworkSecurity() {
     </section>
     
       {/* ✅ Contact Section (separate, NOT inside above section) */}
+      <section>
       <div className="relative w-full mt-20">
 
         <img
@@ -184,7 +232,7 @@ function NetworkSecurity() {
           </div>
         </div>
       </div>
-
+    </section>
     </div>
   );
 }
