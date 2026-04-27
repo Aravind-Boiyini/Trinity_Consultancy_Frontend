@@ -17,44 +17,53 @@ function Footer() {
           <div className="flex flex-col md:flex-row justify-between gap-12">
 
             {/* LOGO */}
-            <div>
+            {/* <div>
               <img
                 src={Logo2}
                 alt="Footer Logo"
                 className="h-20 w-60 object-contain"
               />
-            </div>
+            </div> */}
+            <div>
+          <Link to="/">
+          <img
+          src={Logo2}
+          alt="Footer Logo"
+          className="h-20 w-60 object-contain cursor-pointer"
+          />
+          </Link>
+           </div>
 
             {/* QUICK LINKS */}
             <div>
-              <h1 className="font-bold text-green-500">Quick Links</h1>
-              <Link to="/" className="mt-3 text-sm block hover:text-green-300">Home</Link>
-              <Link to="/about" className="mt-2 text-sm block hover:text-green-300">About Us</Link>
-              <Link to="/services" className="mt-2 text-sm block hover:text-green-300">Services</Link>
-              {/* <Link to="/portfolio" className="mt-2 text-sm block hover:text-green-300">Portfolios</Link> */}
-              <Link to="/careers" className="mt-2 text-sm block hover:text-green-300">Careers</Link>
-              <Link to="/blog" className="mt-2 text-sm block hover:text-green-300">Blog</Link>
-              <Link to="/contactus" className="mt-2 text-sm block hover:text-green-300">Contact Us</Link>
+              <h1 className="font-bold text-pink-500">Quick Links</h1>
+              <Link to="/" className="mt-3 text-sm block hover:text-pink-300">Home</Link>
+              <Link to="/about" className="mt-2 text-sm block hover:text-pink-300">About Us</Link>
+              <Link to="/services" className="mt-2 text-sm block hover:text-pink-300">Services</Link>
+              {/* <Link to="/portfolio" className="mt-2 text-sm block hover:text-pink-300">Portfolios</Link> */}
+              <Link to="/careers" className="mt-2 text-sm block hover:text-pink-300">Careers</Link>
+              <Link to="/blog" className="mt-2 text-sm block hover:text-pink-300">Blog</Link>
+              <Link to="/contactus" className="mt-2 text-sm block hover:text-pink-300">Contact Us</Link>
             </div>
 
             {/* SERVICES */}
             <div>
-              <h1 className="font-bold text-green-500">Services</h1>
-              <Link to="/ItConsultancy" className="mt-3 text-sm block hover:text-green-300">IT Consulting</Link>
-              <Link to="/ProductEngineering" className="mt-2 text-sm block hover:text-green-300">Product Engineering</Link>
-              <Link to="/DatabaseManagement" className="mt-2 text-sm block hover:text-green-300">Database Management</Link>
-              <Link to="/MobileDevelopment" className="mt-2 text-sm block hover:text-green-300">Mobile Development</Link>
-              <Link to="/ItDataEngineering" className="mt-2 text-sm block hover:text-green-300">IT Data Engineering</Link>
-              <Link to="/SoftwareSupport" className="mt-2 text-sm block hover:text-green-300">Software Support</Link>
-              {/* <Link to="/digital-marketing" className="mt-2 text-sm block hover:text-green-300">Digital Marketing</Link> */}
-              <Link to="/WebDevelopment" className="mt-2 text-sm block hover:text-green-300">Web Development</Link>
-              <Link to="/CyberSecurity" className="mt-2 text-sm block hover:text-green-300">Cyber Security</Link>
-              <Link to="/NetworkSecurity" className="mt-2 text-sm block hover:text-green-300">Network Security</Link>
+              <h1 className="font-bold text-pink-500">Services</h1>
+              <Link to="/ItConsultancy" className="mt-3 text-sm block hover:text-pink-300">IT Consulting</Link>
+              <Link to="/ProductEngineering" className="mt-2 text-sm block hover:text-pink-300">Product Engineering</Link>
+              <Link to="/DatabaseManagement" className="mt-2 text-sm block hover:text-pink-300">Database Management</Link>
+              <Link to="/MobileDevelopment" className="mt-2 text-sm block hover:text-pink-300">Mobile Development</Link>
+              <Link to="/ItDataEngineering" className="mt-2 text-sm block hover:text-pink-300">IT Data Engineering</Link>
+              <Link to="/SoftwareSupport" className="mt-2 text-sm block hover:text-pink-300">Software Support</Link>
+              {/* <Link to="/digital-marketing" className="mt-2 text-sm block hover:text-pink-300">Digital Marketing</Link> */}
+              <Link to="/WebDevelopment" className="mt-2 text-sm block hover:text-pink-300">Web Development</Link>
+              <Link to="/CyberSecurity" className="mt-2 text-sm block hover:text-pink-300">Cyber Security</Link>
+              <Link to="/NetworkSecurity" className="mt-2 text-sm block hover:text-pink-300">Network Security</Link>
             </div>
 
             {/* CONTACT */}
             <div>
-              <h1 className="font-bold text-green-500">Contact Us</h1>
+              <h1 className="font-bold text-pink-500">Contact Us</h1>
 
               <p className="mt-3 flex gap-2 text-sm leading-relaxed">
                 <MapPin size={16} />
@@ -65,7 +74,7 @@ function Footer() {
 
               <p className="mt-3 flex items-center gap-2 text-sm">
                 <Mail size={16} />
-                info@trinityconsultancy.com
+                hr@trinitytxconsulting.com
               </p>
 
               <p className="mt-2 flex items-center gap-2 text-sm">
@@ -87,8 +96,8 @@ function Footer() {
 
             {/* LEFT - PHONE */}
             <div className="flex items-center gap-2">
-              <Phone size={14} />
-              <span>(682) 392-9824</span>
+              
+            <span></span>
             </div>
 
             {/* EMPTY SPACE (keeps alignment clean) */}
@@ -104,10 +113,10 @@ function Footer() {
             clipPath: "polygon(18% 0, 100% 0, 100% 100%, 0% 100%)",
           }}
         >
-          <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-end">
+          {/* <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-end">
             <Mail size={14} className="mr-2" />
             <span>info@trinityconsultancy.com</span>
-          </div>
+          </div> */}
         </div>
 
       </div>

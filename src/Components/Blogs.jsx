@@ -14,7 +14,7 @@ function Blogs() {
 
                 {/* Overlay Text */}
                 <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-                    Our <span className="text-green-500">Blogs</span>
+                    Our <span className="text-blue-500 ml-3">Blogs</span>
                 </h1>
             </div>
         </div>

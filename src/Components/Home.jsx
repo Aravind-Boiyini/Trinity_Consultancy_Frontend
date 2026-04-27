@@ -544,9 +544,14 @@ import teamoflogo from '../assets/team_img_6.jpg';
 import teamoflogo1 from '../assets/team_img_7.jpg';
 import contactlogo from '../assets/About-Banner.jpg';
 
+
+
+  
+  
+
 const slides = [
     {
-        tag: " Welcome to Trinity Consultancy",
+        tag: " Welcome to Trinity TX Consulting",
         title: ["Planning for the", "Future Creates the", "Present!.."],
         desc: "Ever undertakes laborious physical exercise, except to obtain some advantage from it but who has any right.",
         img: Slider_home_31,
@@ -605,7 +610,7 @@ export default function Home({ onSlideChange }) {
   {
     name: "Jessica M.",
     role: "Operations Director, Retail Hub",
-    text: "Trinity Consultancy transformed our digital strategy with their custom software development services. Their team is professional, attentive, and always goes above and beyond. We’re extremely satisfied with the results!",
+    text: "Trinity TX Consulting transformed our digital strategy with their custom software development services. Their team is professional, attentive, and always goes above and beyond. We’re extremely satisfied with the results!",
     image: "https://via.placeholder.com/150",
   },
   {
@@ -657,6 +662,53 @@ export default function Home({ onSlideChange }) {
             : animState === "leaving"
                 ? "opacity-0 -translate-y-5"
                 : "opacity-0 translate-y-5";
+    
+const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: ""
+  });
+
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby41cpL4OpuFxZaIoLHUCxu5l93xOQ8FAqGvqrV6aBAYGzXCp4CjtkSHUA54CetpGOW/exec"; // 👈 your /exec link
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      // clear form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: ""
+      });
+
+      alert("Message sent successfully!");
+
+    } catch (error) {
+      console.error(error);
+      alert("Error submitting form");
+    }
+    };
 
     return (
         <div className="w-full font-sans overflow-hidden select-none">
@@ -685,17 +737,17 @@ export default function Home({ onSlideChange }) {
                         <div className="flex flex-col items-center mr-7 gap-0 shrink-0">
                             <button
                                 onClick={() => { resetTimer(); prev(); }}
-                                className="w-8 h-8 flex items-center justify-center text-gray-300 hover:text-green-500 transition-colors"
+                                className="w-8 h-8 flex items-center justify-center text-gray-300 hover:text-blue-500 transition-colors"
                             />
                             <div className="flex flex-col items-center py-2 gap-2">
                                 <span className="text-[15px] font-bold text-white tracking-wide leading-none">
                                     {String(current + 1).padStart(2, "0")}
                                 </span>
-                                <div className="w-[2px] h-10 bg-green-500 rounded-full" />
+                                <div className="w-[2px] h-10 bg-blue-500 rounded-full" />
                             </div>
                             <button
                                 onClick={() => { resetTimer(); next(); }}
-                                className="w-8 h-8 flex items-center justify-center text-gray-300 hover:text-green-500 transition-colors"
+                                className="w-8 h-8 flex items-center justify-center text-gray-300 hover:text-blue-500 transition-colors"
                             >
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <polyline points="4,6 10,14 16,6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -706,7 +758,7 @@ export default function Home({ onSlideChange }) {
                         {/* Slide Content */}
                         <div className="flex-1 relative min-h-[500px] flex items-center pt-[130px]">
                             <div className={`transition-all duration-[420ms] ease-in-out ${textTransition}`}>
-                                <p className="text-green-400 text-[14px] font-semibold mb-3 tracking-wide">
+                                <p className="text-blue-400 text-[14px] font-semibold mb-3 tracking-wide">
                                     {slide.tag}
                                 </p>
                                 <h1 className="text-[42px] font-black text-white leading-[1.15] mb-4">
@@ -717,7 +769,7 @@ export default function Home({ onSlideChange }) {
                                 <p className="text-gray-300 text-[15px] leading-[1.7] mb-8 max-w-[460px]">
                                     {slide.desc}
                                 </p>
-                                <button className="bg-green-500 hover:bg-green-600 transition-colors text-white px-8 py-4 text-[15px] font-bold tracking-wide rounded-[2px]">
+                                <button className="bg-blue-500 hover:bg-blue-600 transition-colors text-white px-8 py-4 text-[15px] font-bold tracking-wide rounded-[2px]">
                                     Let's Get Started
                                 </button>
                             </div>
@@ -733,7 +785,7 @@ export default function Home({ onSlideChange }) {
                             <button
                                 key={i}
                                 onClick={() => { resetTimer(); goTo(i); }}
-                                className={`h-2 rounded-full transition-all duration-300 ${i === current ? "w-6 bg-green-500" : "w-2 bg-gray-400 hover:bg-gray-300"}`}
+                                className={`h-2 rounded-full transition-all duration-300 ${i === current ? "w-6 bg-blue-500" : "w-2 bg-gray-400 hover:bg-gray-300"}`}
                             />
                         ))}
                     </div>
@@ -745,11 +797,11 @@ export default function Home({ onSlideChange }) {
                 <div className="flex gap-6 mt-6 px-10 justify-center max-w-6xl mx-auto">
                     <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center">
-                            <Mail size={28} className="text-green-600" />
+                            <Mail size={28} className="text-blue-600" />
                         </div>
                         <h1 className="font-semibold text-[18px]">Our Vision</h1>
                         <p className="text-gray-600 text-[13px] font-semibold leading-relaxed">
-                            At Trinity Consultancy Informatics, we believe in building long-term relationships with our clients. We are committed to providing exceptional service and support to ensure your satisfaction.
+                            At Trinity TX Consulting, we believe in building long-term relationships with our clients. We are committed to providing exceptional service and support to ensure your satisfaction.
                         </p>
                         <div className="flex gap-4 items-center font-semibold">
                             <MoveUpRight size={20} />
@@ -758,11 +810,11 @@ export default function Home({ onSlideChange }) {
                     </div>
                     <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center">
-                            <Mail size={28} className="text-green-600" />
+                            <Mail size={28} className="text-blue-600" />
                         </div>
                         <h1 className="font-semibold text-[18px]">Our Plan</h1>
                         <p className="text-gray-600 text-[13px] font-semibold leading-relaxed">
-                            At Trinity Consultancy Informatics, we believe in building long-term relationships with our clients. We are committed to providing exceptional service and support to ensure your satisfaction.
+                            At Trinity TX Consultancy Informatics, we believe in building long-term relationships with our clients. We are committed to providing exceptional service and support to ensure your satisfaction.
                         </p>
                         <div className="flex gap-4 items-center font-semibold">
                             <MoveUpRight size={20} />
@@ -771,11 +823,11 @@ export default function Home({ onSlideChange }) {
                     </div>
                     <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center">
-                            <MailCheck size={28} className="text-green-600" />
+                            <MailCheck size={28} className="text-blue-600" />
                         </div>
                         <h1 className="font-semibold text-[18px]">Design</h1>
                         <p className="text-gray-600 text-[13px] font-semibold leading-relaxed">
-                            At Trinity Consultancy Informatics, we believe in building long-term relationships with our clients. We are committed to providing exceptional service and support to ensure your satisfaction.
+                            At Trinity TX Consulting, we believe in building long-term relationships with our clients. We are committed to providing exceptional service and support to ensure your satisfaction.
                         </p>
                         <div className="flex gap-4 items-center font-semibold">
                             <MoveUpRight size={20} />
@@ -784,11 +836,11 @@ export default function Home({ onSlideChange }) {
                     </div>
                     <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center">
-                            <Mail size={28} className="text-green-600" />
+                            <Mail size={28} className="text-blue-600" />
                         </div>
                         <h1 className="font-semibold text-[18px]">Quality</h1>
                         <p className="text-gray-600 text-[13px] font-semibold leading-relaxed">
-                            At Trinity Consultancy Informatics, we believe in building long-term relationships with our clients. We are committed to providing exceptional service and support to ensure your satisfaction.
+                            At Trinity TX Consulting, we believe in building long-term relationships with our clients. We are committed to providing exceptional service and support to ensure your satisfaction.
                         </p>
                         <div className="flex gap-4 items-center font-semibold">
                             <MoveUpRight size={20} />
@@ -806,7 +858,7 @@ export default function Home({ onSlideChange }) {
                         <div className="absolute left-[200px] top-0 w-[240px] h-[260px] overflow-hidden z-10">
                             <img src={img1} alt="consultant 1" className="w-full h-full object-cover" />
                         </div>
-                        <div className="absolute left-0 top-[80px] z-20 bg-green-500 text-white p-5 w-[190px]">
+                        <div className="absolute left-0 top-[80px] z-20 bg-blue-500 text-white p-5 w-[190px]">
                             <p className="text-[36px] font-black leading-none">11<span className="text-[22px]">+</span></p>
                             <p className="text-[14px] font-semibold">Years</p>
                             <p className="text-[12px] mt-2 leading-snug">Experience in Consulting Service</p>
@@ -818,11 +870,11 @@ export default function Home({ onSlideChange }) {
                     <div className="flex-1">
                         <h2 className="text-[38px] font-black text-gray-900 leading-[1.2] mb-4">
                             The Trinity{" "}
-                            <span className="text-green-500">Management</span>
+                            <span className="text-blue-500">Management</span>
                             <br />Consultancy
                         </h2>
                         <p className="text-gray-500 text-[15px] leading-[1.8] mb-6 max-w-[500px]">
-                            Beguiled & demoralized by the charms of pleasure of the moment so
+                            Captivated & demoralized by the charms of pleasure of the moment so
                             blinded desire, that they cannot foresee the pain and trouble frequently
                             occur that pleasures have to be repudiated annoyances accepted the wise
                             man therefore always holds in these matters.
@@ -831,12 +883,12 @@ export default function Home({ onSlideChange }) {
                         <div className="grid grid-cols-2 gap-4 mb-8">
                             {points.map((point, i) => (
                                 <div key={i} className={`flex items-start gap-3 ${i === 2 ? "col-span-1" : ""}`}>
-                                    <div className="mt-1 shrink-0 w-3 h-3 bg-green-500 rotate-45" />
+                                    <div className="mt-1 shrink-0 w-3 h-3 bg-blue-500 rotate-45" />
                                     <p className="text-gray-500 text-[14px] leading-[1.7]">{point}</p>
                                 </div>
                             ))}
                         </div>
-                        <a href="#" className="flex items-center gap-2 text-gray-900 font-bold text-[15px] border border-gray-300 w-fit px-4 py-3 hover:border-green-500 transition-colors">
+                        <a href="#" className="flex items-center gap-2 text-gray-900 font-bold text-[15px] border border-gray-300 w-fit px-4 py-3 hover:border-blue-500 transition-colors">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                                 <path d="M7 17L17 7M7 7h10v10" />
                             </svg>
@@ -847,7 +899,7 @@ export default function Home({ onSlideChange }) {
             </section>
 
             {/* Awards */}
-            <h2 className="text-[40px] font-black text-center text-gray-900 leading-[1.2] mt-25">
+            {/* <h2 className="text-[40px] font-black text-center text-gray-900 leading-[1.2] mt-25">
                 Our Awards & {" "}
                 <span className="text-green-500"> Achievements</span>
             </h2>
@@ -914,7 +966,7 @@ export default function Home({ onSlideChange }) {
                 <a href="#" className="flex items-center gap-2 text-gray-900 font-bold text-[19px] w-fit px-4 py-3 hover:border-green-500 transition-colors">
                     <MoveUpRight size={20} /> More About Us
                 </a>
-            </div>
+            </div> */}
 
     
 
@@ -942,7 +994,7 @@ export default function Home({ onSlideChange }) {
             </p>
 
             {/* STARS */}
-            <div className="flex gap-1 text-green-500 mt-4 text-xl">
+            <div className="flex gap-1 text-blue-500 mt-4 text-xl">
               ★ ★ ★ ★ ★
             </div>
 
@@ -951,7 +1003,7 @@ export default function Home({ onSlideChange }) {
               {testimonialsData[current].name}
             </h3>
 
-            <p className="text-green-500 text-sm">
+            <p className="text-blue-500 text-sm">
               {testimonialsData[current].role}
             </p>
           </div>
@@ -964,7 +1016,7 @@ export default function Home({ onSlideChange }) {
               key={index}
               onClick={() => setCurrent(index)}
               className={`w-3 h-3 rounded-full ${
-                current === index ? "bg-green-500 scale-125" : "bg-gray-400"
+                current === index ? "bg-blue-500 scale-125" : "bg-gray-400"
               }`}
             ></button>
           ))}
@@ -975,7 +1027,7 @@ export default function Home({ onSlideChange }) {
             {/* Industries */}
             <h2 className="text-[40px] font-black text-gray-900 leading-[1.2] ml-28 mt-15">
                 Major {" "}
-                <span className="text-green-500">  Industries </span> We Served
+                <span className="text-blue-500">  Industries </span> We Served
             </h2>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
@@ -1027,70 +1079,113 @@ export default function Home({ onSlideChange }) {
 
 
             {/* contact us */}
-
-
-            <div className="relative w-full mt-15">
-
-
+        <section>
+              <div className="relative w-full mt-20">
+                
+                {/* Background Image */}
                 <img
-                    src={contactlogo}
-                    alt="Home Banner"
-                    className="w-full h-[600px] object-cover"
+                  src={contactlogo}
+                  alt="Contact Banner"
+                  className="w-full h-[600px] object-cover"
                 />
-
+        
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/50"></div>
-
-                {/* Form Container */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center px-4 mt-20">
-
-
-                    <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
-                        Contact <span className="text-green-400">Us</span>
-                    </h1>
-
-                    <div className="p-6 rounded-xl w-full max-w-3xl">
-
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-                            <input
-                                type="text"
-                                placeholder="Full Name"
-                                className="px-4 py-3 rounded-full border border-gray-100 bg-white shadow outline-none focus:ring-2 focus:ring-green-500"
-                            />
-                            <input
-                                type="email"
-                                placeholder="Email Address"
-                                className="px-4 py-3 rounded-full border border-gray-100 bg-white shadow outline-none focus:ring-2 focus:ring-green-500"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Phone Number"
-                                className="px-4 py-3 rounded-full border border-gray-100 bg-white shadow outline-none focus:ring-2 focus:ring-green-500"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Subject"
-                                className="px-4 py-3 rounded-full border border-gray-100 bg-white shadow outline-none focus:ring-2 focus:ring-green-500"
-                            />
-
-                            <textarea
-                                placeholder="Your Message"
-                                className="col-span-1 md:col-span-2 px-4 py-3 rounded-xl border border-gray-100 bg-white shadow outline-none focus:ring-2 focus:ring-green-500 resize-none h-32"
-                            ></textarea>
-
-                        </div>
-
-                        {/* Button */}
-                        <div className="mt-6 text-center">
-                            <button className="bg-green-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-green-600 transition">
-                                Submit
-                            </button>
-                        </div>
+        
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
+        
+                  <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
+                    Contact <span className="text-blue-400">Us</span>
+                  </h1>
+        
+                  <form onSubmit={handleSubmit} className="w-full max-w-3xl">
+                    <div className="p-6 rounded-xl">
+        
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        
+                        <input
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          className="px-4 py-3 rounded-full bg-white"
+                          placeholder="Name"
+                          required
+                        />
+        
+                        <input
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          className="px-4 py-3 rounded-full bg-white"
+                          placeholder="Email"
+                          required
+                        />
+        
+                        <input
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className="px-4 py-3 rounded-full bg-white"
+                          placeholder="Phone"
+                          required
+                        />
+        
+                        <input
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleChange}
+                          className="px-4 py-3 rounded-full bg-white"
+                          placeholder="Subject"
+                          required
+                        />
+        
+                        <textarea
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          placeholder="Message"
+                          className="col-span-2 px-4 py-3 rounded-xl bg-white h-32"
+                          required
+                        />
+        
+                      </div>
+        
+                      {/* Submit Button */}
+                      <div className="mt-6 text-center">
+                        <button
+                          type="submit"
+                          className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition"
+                        >
+                          Submit
+                        </button>
+                      </div>
+        
+                      {/* Status Messages */}
+                      <div className="mt-4 text-center">
+                        {status === "submitting" && (
+                          <p className="text-white">Submitting...</p>
+                        )}
+                        {status === "success" && (
+                          <p className="text-blue-400 font-semibold">
+                            ✅ Message sent successfully!
+                          </p>
+                        )}
+                        {status === "error" && (
+                          <p className="text-red-400 font-semibold">
+                            ❌ Failed to send message. Try again.
+                          </p>
+                        )}
+                      </div>
+        
                     </div>
+                  </form>
+        
                 </div>
-            </div>
+              </div>
+            </section>
+
+           
 
         </div>
     );

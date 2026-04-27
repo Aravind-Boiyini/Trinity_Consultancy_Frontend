@@ -9,6 +9,7 @@ import { MoveUpRight } from "lucide-react";
 import contactlogo from "../../assets/About-Banner.jpg";
 import img from "../../assets/Database-Image.jpg";
 import { Code, BarChart3, ShieldCheck, UserCheck, Settings } from "lucide-react";
+import React, { useState } from "react";
 
 
 const features = [
@@ -40,6 +41,52 @@ const features = [
   ];
 
 function DatabaseManagement() {
+  const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: ""
+    });
+  
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby41cpL4OpuFxZaIoLHUCxu5l93xOQ8FAqGvqrV6aBAYGzXCp4CjtkSHUA54CetpGOW/exec"; // 👈 your /exec link
+  
+    const handleChange = (e) => {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value
+      });
+    };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+  
+      try {
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(formData)
+        });
+  
+        // ✅ clear form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: ""
+        });
+  
+        alert("Message sent successfully!");
+  
+      } catch (error) {
+        console.error(error);
+        alert("Error submitting form");
+      }
+    };
   return (
     <div>
 
@@ -52,7 +99,7 @@ function DatabaseManagement() {
         />
 
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-        Database <span className="text-green-500">Management</span>
+        Database <span className="text-blue-500">Management</span>
         </h1>
       </div>
       <section className="bg-white py-16 px-6">
@@ -99,8 +146,8 @@ function DatabaseManagement() {
         <div>
           <h2 className="text-[36px] font-extrabold leading-snug mb-6">
             Why Should You Pay{" "}
-            <span className="text-green-500">Attention To</span>{" "}
-            Your <span className="text-green-500">Database?</span>
+            <span className="text-blue-500">Attention To</span>{" "}
+            Your <span className="text-blue-500">Database?</span>
           </h2>
 
           <p className="text-gray-300 text-[15px] leading-relaxed mb-5">
@@ -130,11 +177,11 @@ function DatabaseManagement() {
 
           <h2 className="text-[32px] font-extrabold mt-10">
             The Trinity{" "}
-            <span className="text-green-500">Counsultancy Method</span>
+            <span className="text-blue-500">Counsultancy Method</span>
           </h2>
 
           <p className="text-gray-300 text-[15px] leading-relaxed mt-4">
-            The team at Trinity Consultancy has a solid foundation in database design,
+            The team at Trinity TX Consulting has a solid foundation in database design,
             implementation and management. We can ensure that your database systems are
             running smoothly giving your business the best results possible.
           </p>
@@ -150,7 +197,7 @@ function DatabaseManagement() {
         <div>
           <h2 className="text-[36px] font-extrabold leading-snug mb-6">
             Database{" "}
-            <span className="text-green-500">
+            <span className="text-blue-500">
               Management & Uses
             </span>
           </h2>
@@ -190,7 +237,7 @@ function DatabaseManagement() {
       
       {/* Heading */}
       <h2 className="text-center text-4xl font-extrabold text-gray-800 mb-12">
-        Experience. <span className="text-green-500">Execute.</span> Excellence.
+        Experience. <span className="text-blue-500 ml-3">Execute.</span> Excellence.
       </h2>
 
       {/* Cards Grid */}
@@ -201,7 +248,7 @@ function DatabaseManagement() {
             className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition duration-300"
           >
             {/* Icon Circle */}
-            <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-green-500 text-white mb-6">
+            <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-blue-500 text-white mb-6">
               {item.icon}
             </div>
 
@@ -219,7 +266,9 @@ function DatabaseManagement() {
       </div>
 
     </section>
+    
       {/* ✅ Contact Section (separate, NOT inside above section) */}
+      {/* <section>
       <div className="relative w-full mt-20">
 
         <img
@@ -261,7 +310,91 @@ function DatabaseManagement() {
           </div>
         </div>
       </div>
-
+        </section> */}
+        <section>
+              <div className="relative w-full mt-20">
+        
+                <img
+                  src={contactlogo}
+                  alt="Contact Banner"
+                  className="w-full h-[600px] object-cover"
+                />
+        
+                <div className="absolute inset-0 bg-black/50"></div>
+        
+                <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
+        
+                  <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
+                    Contact <span className="text-blue-400">Us</span>
+                  </h1>
+        
+                  {/* ✅ FORM START */}
+                  <form onSubmit={handleSubmit} className="p-6 rounded-xl w-full max-w-3xl">
+        
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        
+                      <input
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="px-4 py-3 rounded-full bg-white"
+                        placeholder="Full Name"
+                        required
+                      />
+        
+                      <input
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="px-4 py-3 rounded-full bg-white"
+                        placeholder="Email Address"
+                        required
+                      />
+        
+                      <input
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="px-4 py-3 rounded-full bg-white"
+                        placeholder="Phone Number"
+                        required
+                      />
+        
+                      <input
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        className="px-4 py-3 rounded-full bg-white"
+                        placeholder="Subject"
+                        required
+                      />
+        
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="Your Message"
+                        className="col-span-2 px-4 py-3 rounded-xl bg-white h-32"
+                        required
+                      />
+        
+                    </div>
+        
+                    <div className="mt-6 text-center">
+                      <button
+                        type="submit"
+                        className="bg-blue-600 text-white px-8 py-3 rounded-full"
+                      >
+                        Submit
+                      </button>
+                    </div>
+        
+                  </form>
+                  {/* ✅ FORM END */}
+        
+                </div>
+              </div>
+            </section>
     </div>
   );
 }

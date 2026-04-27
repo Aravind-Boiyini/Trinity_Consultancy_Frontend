@@ -4,7 +4,7 @@ import img1 from '../assets/About-Banner.jpg';
 import img2 from '../assets/About-Banner.jpg';
 import teamoflogo from '../assets/IT-Image.jpg';
 import teamoflogo1 from '../assets/Product-Image.jpg';
-import { Mail, Trophy } from "lucide-react";
+import { Handshake, Mail, Trophy, Users,  FilesIcon, Monitor, Files } from "lucide-react";
 import { MailCheck } from "lucide-react";
 import { MoveUpRight } from "lucide-react";
 
@@ -29,8 +29,11 @@ function AboutUs() {
                 />
 
                 {/* Overlay Text */}
+                {/* <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
+                    About <span className="text-blue-500">{" "} Us</span>
+                </h1> */}
                 <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-                    About <span className="text-green-500"> Us</span>
+                About <span className="text-blue-500 ml-3">Us</span>
                 </h1>
             </div>
             {/* <div className="max-w-8xl mx-auto flex justify-center items-center relative -top-30">
@@ -182,7 +185,7 @@ function AboutUs() {
                         <div className="absolute left-[200px] top-0 w-[240px] h-[260px] overflow-hidden z-10">
                             <img src={img1} alt="consultant 1" className="w-full h-full object-cover" />
                         </div>
-                        <div className="absolute left-0 top-[80px] z-20 bg-green-500 text-white p-5 w-[190px]">
+                        <div className="absolute left-0 top-[80px] z-20 bg-blue-500 text-white p-5 w-[190px]">
                             <p className="text-[36px] font-black leading-none">11<span className="text-[22px]">+</span></p>
                             <p className="text-[14px] font-semibold">Years</p>
                             <p className="text-[12px] mt-2 leading-snug">Experience in Consulting Service</p>
@@ -194,11 +197,11 @@ function AboutUs() {
                     <div className="flex-1">
                         <h2 className="text-[38px] font-black text-gray-900 leading-[1.2] mb-4">
                             The Trinity{" "}
-                            <span className="text-green-500"> Management</span>
+                            <span className="text-blue-500"> Management</span>
                             <br />Consultancy
                         </h2>
                         <p className="text-gray-500 text-[15px] leading-[1.8] mb-6 max-w-[500px]">
-                            Beguiled & demoralized by the charms of pleasure of the moment so
+                            Captivated & demoralized by the charms of pleasure of the moment so
                             blinded desire, that they cannot foresee the pain and trouble frequently
                             occur that pleasures have to be repudiated annoyances accepted the wise
                             man therefore always holds in these matters.
@@ -207,12 +210,12 @@ function AboutUs() {
                         <div className="grid grid-cols-2 gap-4 mb-8">
                             {points.map((point, i) => (
                                 <div key={i} className={`flex items-start gap-3 ${i === 2 ? "col-span-1" : ""}`}>
-                                    <div className="mt-1 shrink-0 w-3 h-3 bg-green-500 rotate-45" />
+                                    <div className="mt-1 shrink-0 w-3 h-3 bg-blue-500 rotate-45" />
                                     <p className="text-gray-500 text-[14px] leading-[1.7]">{point}</p>
                                 </div>
                             ))}
                         </div>
-                        <a href="#" className="flex items-center gap-2 text-gray-900 font-bold text-[15px] border border-gray-300 w-fit px-4 py-3 hover:border-green-500 transition-colors">
+                        <a href="#" className="flex items-center gap-2 text-gray-900 font-bold text-[15px] border border-gray-300 w-fit px-4 py-3 hover:border-blue-500 transition-colors">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                                 <path d="M7 17L17 7M7 7h10v10" />
                             </svg>
@@ -222,87 +225,101 @@ function AboutUs() {
                 </div>
             </section>
 
-            <h2 className="text-[40px] font-black text-center text-gray-900 leading-[1.2] mt-20">
-                Team of {" "}
-                <span className="text-green-500">  Proffesionals</span>
-            </h2>
-
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <div className="bg-white overflow-hidden shadow-lg">
-                    <img src={teamoflogo} alt="Who We Are" className="w-full h-60 object-cover" />
-                    <div className="p-6">
-                        <h3 className="text-md text-[#123E6B]">Ceo & Founder</h3>
-                        <p className="text-xl font-bold mt-1 text-gray-600 leading-relaxed">John Doe</p>
-                        <h3 className="text-md text-[#123E6B] mt-2 flex items-center gap-2"><Mail size={18} /> Info@trinityconsultancy.com</h3>
-                    </div>
-                </div>
-                <div className="bg-white overflow-hidden shadow-lg">
-                    <img src={teamoflogo1} alt="Vision" className="w-full h-60 object-cover" />
-                    <div className="p-6">
-                        <h3 className="text-sm text-[#123E6B]">Precident</h3>
-                        <p className="text-xl font-bold mt-1 text-gray-600 leading-relaxed">Samuel Rowan</p>
-                        <h3 className="text-md text-[#123E6B] mt-2 flex items-center gap-2"><Mail size={18} /> Info@trinityconsultancy.com</h3>
-                    </div>
-                </div>
-                <div className="bg-white overflow-hidden shadow-lg">
-                    <img src={teamoflogo} alt="Who We Are" className="w-full h-60 object-cover" />
-                    <div className="p-6">
-                        <h3 className="text-md text-[#123E6B]">Ceo & Founder</h3>
-                        <p className="text-xl font-bold mt-1 text-gray-600 leading-relaxed">John Doe</p>
-                        <h3 className="text-md text-[#123E6B] mt-2 flex items-center gap-2"><Mail size={18} /> Info@trinityconsultancy.com</h3>
-                    </div>
-                </div>
-                <div className="bg-white overflow-hidden shadow-lg">
-                    <img src={teamoflogo} alt="What We Do" className="w-full h-60 object-cover" />
-                    <div className="p-6">
-                        <h3 className="text-sm text-[#123E6B]">Vice Precident</h3>
-                        <p className="text-xl font-bold mt-1 text-gray-600 leading-relaxed">Eleanor Alice</p>
-                        <h3 className="text-md text-[#123E6B] mt-2 flex items-center gap-2"><Mail size={18} /> Info@trinityconsultancy.com</h3>
-
-                    </div>
-                </div>
-            </div>
 
             <h2 className="text-[40px] font-black text-center text-gray-900 leading-[1.2] mt-25">
                 Our Awards & {" "}
-                <span className="text-green-500"> Achievements</span>
+                <span className="text-blue-500"> Achievements</span>
             </h2>
 
-            <div className="flex gap-6 mt-6 px-10 justify-center max-w-7xl mx-auto">
-                <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col w-[100%] pb-10 h-full gap-4">
-                    <div className="p-5 bg-gray-100 w-fit">
-                        <Trophy size={28} className="text-green-600" />
-                    </div>
-                    <h3 className="font-semibold text-[17px] text-blue-500">MCA's AWARD</h3>
-                    <h1 className="font-semibold text-[24px]">Best Consulting Firm In Germany</h1>
-                   
-                   <h1 className="font-semibold text-[17px] text-gray-600">2022</h1>
-                </div>
+            <div className="flex gap-20 mt-6 px-10 justify-center max-w-7xl mx-auto">
+                
                 <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col w-[100%] pb-14 h-full gap-4">
                     <div className="p-5 bg-gray-100 w-fit">
-                        <Trophy size={28} className="text-green-600" />
+                        <Trophy size={28} className="text-blue-600" />
                     </div>
                     <h3 className="font-semibold text-[17px] text-blue-500">USA's AWARD</h3>
                     <h1 className="font-semibold text-[18px]">Best International Consulting Firm IN USA</h1>
                    
-                    <h1 className="font-semibold text-[17px] text-gray-600">2023</h1>
+                    <h1 className="font-semibold text-[17px] text-gray-600">2025</h1>
                 </div>
                 <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col w-[100%] pb-14 h-full gap-4">
                     <div className="p-5 bg-gray-100 w-fit">
-                        <Trophy size={28} className="text-green-600" />
+                        <Trophy size={28} className="text-blue-600" />
                     </div>
                     <h1 className="font-semibold text-[18px] text-blue-500">Innovation Award</h1>
                     <h1 className="font-semibold text-[18px]">Best International Consulting Firm IN USA</h1>
-                    <h1 className="font-semibold text-[17px] text-gray-600">2023</h1>
+                    <h1 className="font-semibold text-[17px] text-gray-600">2025</h1>
                    
                 </div>
-                <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col w-[100%] pb-14 h-full gap-4">
+                {/* <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col w-[100%] pb-14 h-full gap-4">
                     <div className="p-5 bg-gray-100 w-fit">
                         <Trophy size={28} className="text-green-600" />
                     </div>
                     <h1 className="font-semibold text-[18px] text-blue-500">UK AWARD</h1>
                     <h1 className="font-semibold text-[18px]">Best International Consulting Firm IN UK</h1>
-                    <h1 className="font-semibold text-[17px] text-gray-600">2023</h1>
+                    <h1 className="font-semibold text-[17px] text-gray-600">2025</h1>
+                </div> */}
+            </div>
+
+            <h2 className="text-[40px] font-black text-center text-gray-900 leading-[1.2] mt-25">
+                Our {" "}
+                <span className="text-blue-500"> Features </span>
+            </h2>
+
+            <div className="">
+                <div className="flex gap-6 mt-6 px-10 justify-center max-w-7xl mx-auto">
+                    <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4 rounded-2xl">
+                        <div className="border border-black p-6 rounded-full flex items-center justify-center ">
+                            <Handshake size={28} className="text-blue-600" />
+                        </div>
+                        <h1 className="font-semibold text-[18px]">We Value Our Clients</h1>
+                        <p className="text-gray-600 text-[13px] font-semibold leading-relaxed">
+                            Trinity TX Consulting is committed to delivering exceptional value to our clients. We prioritize understanding your unique needs and goals, and we work closely with you to develop tailored solutions that drive success and growth for your business.
+                        </p>
+                        <div className="flex gap-4 items-center font-semibold">
+                            <MoveUpRight size={20} />
+                            <h1 className="font-semibold text-[18px]">Read More</h1>
+                        </div>
+                    </div>
+                    <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4 rounded-2xl">
+                        <div className="border border-black p-6 rounded-full flex items-center justify-center">
+                            <Users size={28} className="text-blue-600" />
+                        </div>
+                        <h1 className="font-semibold text-[18px]">Our Team</h1>
+                        <p className="text-gray-600 text-[13px] font-semibold leading-relaxed">
+                            At Trinity TX Consulting, we have a team of highly skilled and experienced professionals who are passionate about delivering exceptional IT consulting and development services. Our team consists of experts in various domains, including software engineering, web development, database management, cloud computing, and digital marketing.
+                        </p>
+                        <div className="flex gap-4 items-center font-semibold">
+                            <MoveUpRight size={20} />
+                            <h1 className="font-semibold text-[18px]">Read More</h1>
+                        </div>
+                    </div>
+                    <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4 rounded-2xl">
+                        <div className="border border-black p-6 rounded-full flex items-center justify-center">
+                            <Monitor size={28} className="text-blue-600" />
+                        </div>
+                        <h1 className="font-semibold text-[18px]">Optimized Your IT Services</h1>
+                        <p className="text-gray-600 text-[13px] font-semibold leading-relaxed">
+                            At Trinity TX Consulting, we specialize in optimizing IT services to help businesses enhance their operational efficiency and achieve their goals. Our team of experts works closely with clients to understand their unique needs and challenges, and we develop tailored solutions that streamline processes, improve performance, and drive growth.
+                        </p>
+                        <div className="flex gap-4 items-center font-semibold">
+                            <MoveUpRight size={20} />
+                            <h1 className="font-semibold text-[18px]">Read More</h1>
+                        </div>
+                    </div>
+                    <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4">
+                        <div className="border border-black p-6 rounded-full flex items-center justify-center">
+                            <Files size={28} className="text-blue-600" />
+                        </div>
+                        <h1 className="font-semibold text-[18px]">Our Work</h1>
+                        <p className="text-gray-600 text-[13px] font-semibold leading-relaxed">
+                            At Trinity TX Consulting, we take pride in our work and are committed to delivering exceptional results for our clients. Our team of experts is dedicated to providing innovative IT consulting and development services that help businesses achieve their goals and drive growth.
+                        </p>
+                        <div className="flex gap-4 items-center font-semibold">
+                            <MoveUpRight size={20} />
+                            <h1 className="font-semibold text-[18px]">Read More</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
 
