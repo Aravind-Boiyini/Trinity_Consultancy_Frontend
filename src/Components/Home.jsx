@@ -611,7 +611,7 @@ export default function Home({ onSlideChange }) {
     name: "Jessica M.",
     role: "Operations Director, Retail Hub",
     text: "Trinity TX Consulting transformed our digital strategy with their custom software development services. Their team is professional, attentive, and always goes above and beyond. We’re extremely satisfied with the results!",
-    image: "https://via.placeholder.com/150",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5BKPyVgwi0Gm130HqeOGysQRnB56argEQMA&s",
   },
   {
     name: "Rahul Sharma",
