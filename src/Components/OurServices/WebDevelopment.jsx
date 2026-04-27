@@ -75,7 +75,7 @@ function WebDevelopment() {
         />
 
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-        Web <span className="text-green-500">Development</span>
+        Web <span className="text-blue-500 ml-3">Development</span>
         </h1>
       </div>
       <section className="bg-white py-16 px-6">
@@ -94,7 +94,7 @@ function WebDevelopment() {
         <div className="text-gray-700 text-[16px] leading-relaxed space-y-6">
 
           <p>
-            At Trinity Consultancy, we specialize in custom web development solutions
+            At Trinity TX Consulting, we specialize in custom web development solutions
             that help businesses establish a strong digital presence. Whether you need a
             responsive website, web application, or e-commerce platform, our expert team
             delivers scalable, secure, and high-performance web solutions tailored to your
@@ -118,7 +118,7 @@ function WebDevelopment() {
           {/* TITLE */}
           <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
             Types Of{" "}
-            <span className="text-green-500">Web Development Services</span>
+            <span className="text-blue-500">Web Development Services</span>
           </h2>
 
           {/* SUBTITLE */}
@@ -173,7 +173,7 @@ function WebDevelopment() {
           {/* KICK OFF */}
           <div>
             <h2 className="text-3xl font-extrabold mb-3">
-              Kick-Of <span className="text-green-500">Stage</span>
+              Kick-Of <span className="text-blue-500">Stage</span>
             </h2>
             <p className="text-gray-200 leading-relaxed">
               On this stage, our experts translate your business requirements
@@ -186,10 +186,10 @@ function WebDevelopment() {
           {/* DEVELOPMENT */}
           <div>
             <h2 className="text-3xl font-extrabold mb-3">
-              Development <span className="text-green-500">Stage</span>
+              Development <span className="text-blue-500">Stage</span>
             </h2>
             <p className="text-gray-200 leading-relaxed">
-              Our software engineers create your web solution. Trinity Consultancy
+              Our software engineers create your web solution. Trinity TX Consulting
               uses the agile methodology, so you will review results every two
               weeks/month. Then, our team perform user Acceptance Testing and
               deploy your web solution.
@@ -199,7 +199,7 @@ function WebDevelopment() {
           {/* SUPPORT */}
           <div>
             <h2 className="text-3xl font-extrabold mb-3">
-              Support <span className="text-green-500">Stage</span>
+              Support <span className="text-blue-500">Stage</span>
             </h2>
             <p className="text-gray-200 leading-relaxed">
               After your web solution is released, we perform continuous server
@@ -211,7 +211,7 @@ function WebDevelopment() {
           {/* TECHNOLOGIES */}
           <div>
             <h2 className="text-3xl font-extrabold mb-3">
-              Our <span className="text-green-500">Technologies</span>
+              Our <span className="text-blue-500">Technologies</span>
             </h2>
             <p className="text-gray-200 leading-relaxed">
               Our software engineers have expertise in all the technologies needed
@@ -224,7 +224,7 @@ function WebDevelopment() {
           <div>
             <h2 className="text-3xl font-extrabold mb-3">
               E-Commerce Web{" "}
-              <span className="text-green-500">Development Services</span>
+              <span className="text-blue-500">Development Services</span>
             </h2>
             <p className="text-gray-200 leading-relaxed">
               Build an online store with seamless and user-friendly experience,
@@ -247,7 +247,7 @@ function WebDevelopment() {
           {/* TITLE */}
           <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
             <span className="text-[#0B1F3A]">Web Application </span>
-            <span className="text-green-500">Development Process</span>
+            <span className="text-blue-500">Development Process</span>
           </h2>
 
           {/* JAVA SECTION */}
@@ -275,7 +275,7 @@ function WebDevelopment() {
           {/* TECHNOLOGIES */}
           <h2 className="text-3xl font-extrabold mb-4">
             <span className="text-[#0B1F3A]">Our </span>
-            <span className="text-green-500">Technologies</span>
+            <span className="text-blue-500">Technologies</span>
           </h2>
 
           <h3 className="font-semibold text-[#0B1F3A] mb-3">
@@ -372,7 +372,7 @@ function WebDevelopment() {
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
 
           <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
-            Contact <span className="text-green-400">Us</span>
+            Contact <span className="text-blue-400">Us</span>
           </h1>
 
           {/* ✅ FORM START */}
@@ -430,7 +430,7 @@ function WebDevelopment() {
             <div className="mt-6 text-center">
               <button
                 type="submit"
-                className="bg-green-600 text-white px-8 py-3 rounded-full"
+                className="bg-blue-600 text-white px-8 py-3 rounded-full"
               >
                 Submit
               </button>

@@ -174,43 +174,43 @@ function ContactUs() {
         <img src={logo} alt="Home Banner" className="w-full h-full object-cover" />
 
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-          Contact <span className="text-green-500"> Us</span>
+          Contact <span className="text-blue-500 ml-3 "> Us</span>
         </h1>
       </div>
 
       {/* Get In Touch */}
-      <h2 className="text-[40px] font-black text-center text-blue-900 mt-10">
-        Get In <span className="text-green-500">Touch</span>
+      <h2 className="text-[40px] font-black text-center text-black mt-10">
+        Get In <span className="text-blue-500">Touch</span>
       </h2>
 
       {/* Cards */}
       <div className="flex gap-6 mt-6 px-10 justify-center max-w-5xl mx-auto">
 
         <div className="border w-full bg-white rounded-xl shadow-lg p-6 mt-10 text-center">
-          <Mail className="mx-auto text-green-600" size={28} />
+          <Mail className="mx-auto text-blue-600" size={28} />
           <h1 className="font-bold mt-2">Address</h1>
           <p className="text-gray-600 text-sm">
-            HIG-68, KPHB, Hyderabad
+            1416 Shady Hollow Ct, Keller, TX 76248
           </p>
         </div>
 
         <div className="border w-full bg-white rounded-xl shadow-lg p-6 mt-10 text-center">
-          <Mail className="mx-auto text-green-600" size={28} />
+          <Mail className="mx-auto text-blue-600" size={28} />
           <h1 className="font-bold mt-2">Phone</h1>
-          <p className="text-gray-600 text-sm">980-890-1234</p>
+          <p className="text-gray-600 text-sm"> (682) 392-9824</p>
         </div>
 
         <div className="border w-full bg-white rounded-xl shadow-lg p-6 mt-10 text-center">
-          <MailCheck className="mx-auto text-green-600" size={28} />
+          <MailCheck className="mx-auto text-blue-600" size={28} />
           <h1 className="font-bold mt-2">Email</h1>
-          <p className="text-gray-600 text-sm">info@trinityconsultancy.com</p>
+          <p className="text-gray-600 text-sm">hr@trinitytxconsulting.com</p>
         </div>
 
       </div>
 
       {/* Enquiry Form */}
-      <h2 className="text-[40px] font-black text-center text-blue-900 mt-10">
-        Enquiry <span className="text-green-500">Form</span>
+      <h2 className="text-[40px] font-black text-center text-black mt-10">
+        Enquiry <span className="text-blue-500">Form</span>
       </h2>
 
       {/* FORM START */}
@@ -270,7 +270,7 @@ function ContactUs() {
           <div className="mt-6 text-center">
             <button
               type="submit"
-              className="bg-green-600 text-white px-8 py-3 rounded-full"
+              className="bg-blue-600 text-white px-8 py-3 rounded-full"
             >
               Submit
             </button>

@@ -16,7 +16,7 @@ function Careers() {
 
                 {/* Overlay Text */}
                 <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-                    Our <span className="text-green-500">Careers</span>
+                    Our <span className="text-blue-500 ml-3">Careers</span>
                 </h1>
             </div>
 
@@ -36,16 +36,16 @@ function Careers() {
                     </div>
                     <div>
 
-                        <h2 className="text-3xl md:text-3xl font-extrabold text-[#123E6B] leading-snug">
+                        <h2 className="text-3xl md:text-3xl font-extrabold text-black leading-snug">
                             Get To Know Us{" "}
-                            <span className="text-green-500">A Little Better</span>
+                            <span className="text-blue-500">A Little Better</span>
                         </h2>
 
 
                         <p className="mt-5 text-gray-600 text-sm md:text-base leading-relaxed ">
-                            Trinity Consultancy Informatics is global Digital Technology
-                            developing company headquartered in Hyderabad, Telangana with offices
-                            around the world. Gunesh Technologies Informatics, Inc. was formed to
+                            Trinity TX Consulting is global Digital Technologydeveloping 
+                            company headquartered in Keller, TX 76248  with offices around 
+                            the world. Trinity TX Consulting Informatics, Inc. was formed to
                             provide professional web & mobile based services to businesses and
                             non-for-profit organizations. We offer a wide range of design and
                             development services that are all delivered using the latest and
@@ -55,12 +55,12 @@ function Careers() {
 
                         {/* <h3 className="mt-8 text-2xl md:text-3xl font-extrabold text-[#123E6B]">
                             Leaders, Engineers,{" "}
-                            <span className="text-green-500">Innovators</span>
+                            <span className="text-blue-500">Innovators</span>
                         </h3> */}
 
 
                         <p className="mt-4 text-gray-600 text-sm md:text-base leading-relaxed">
-                            Trinity Consultancy Informatics is an innovative team of engineers,
+                            Trinity TX Consulting  is an innovative team of engineers,
                             developers and technology experts. We specialize in Custom business
                             software, mobile application development, web design & development,
                             Database management, Reporting, Dashboards, BI, Digital marketing and
@@ -79,7 +79,7 @@ function Careers() {
                         {/* LEFT SIDE */}
                         <div className="text-white">
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                                Why Work <span className="text-green-400">With Us?</span>
+                                Why Work <span className="text-blue-400">With Us?</span>
                             </h2>
 
                             <ul className="space-y-4 text-[15px] leading-relaxed">
@@ -113,7 +113,7 @@ function Careers() {
                         {/* RIGHT SIDE */}
                         <div className="text-white">
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                                Current <span className="text-green-400">Openings</span>
+                                Current <span className="text-blue-400">Openings</span>
                             </h2>
 
                             {/* Highlight Box */}
@@ -135,7 +135,7 @@ function Careers() {
             </div>
 
             <h1 className=" flex items-center justify-center text-black text-3xl font-extrabold mt-15">
-                How To <span className="text-green-500">Apply</span>
+                How To <span className="text-blue-500">Apply</span>
 
 
             </h1>
@@ -143,7 +143,7 @@ function Careers() {
                 <p className="font-normal mt-4">
                     Send your cover letter and resume to <span className="font-semibold">trinityconsultancy.com</span> and tell us how you can contribute to our team.
                 </p>
-                <p className="font-normal mt-2">Join us at Trinity Consultancy and help shape the future of technology!</p>
+                <p className="font-normal mt-2">Join us at Trinity TX Consulting and help shape the future of technology!</p>
             </div>
 
         </div>

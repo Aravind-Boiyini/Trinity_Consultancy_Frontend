@@ -72,7 +72,7 @@ function MobileDevelopment() {
         />
 
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-        Mobile <span className="text-green-500">Development</span>
+        Mobile <span className="text-blue-500 ml-3">Development</span>
         </h1>
       </div>
        <section className="bg-white py-16 px-6">
@@ -108,7 +108,7 @@ function MobileDevelopment() {
 
             <h2 className="text-3xl font-extrabold mb-6">
               <span className="text-[#0B1F3A]">Our Mobile App </span>
-              <span className="text-green-500">Development Services:</span>
+              <span className="text-blue-500">Development Services:</span>
             </h2>
 
             <p className="text-gray-700 text-[15px] leading-relaxed mb-6">
@@ -119,13 +119,13 @@ function MobileDevelopment() {
             </p>
 
             <p className="text-gray-700 text-[15px] mb-4 leading-relaxed">
-              <span className="font-semibold">IOS:</span> Trinity Consultancy has been creating impactful apps for all Apple devices,
+              <span className="font-semibold">IOS:</span> Trinity TX Consulting has been creating impactful apps for all Apple devices,
               helping the world’s leading brands go mobile. Leverage our rich expertise in IOS app development to build a beautiful,
               engaging, and consistent app for your industry, regardless of complexity.
             </p>
 
             <p className="text-gray-700 text-[15px] mb-4 leading-relaxed">
-              <span className="font-semibold">Android:</span> Our more than a decade on the market, Trinity Consultancy has gained a
+              <span className="font-semibold">Android:</span> Our more than a decade on the market, Trinity TX Consulting has gained a
               reputation of one of the most reliable Android app development companies. Weather you a need an app for an android smartphone,
               wearable, or TV, we can help you build a solid solution that works on every device regardless of brand and your industry operation.
             </p>
@@ -138,7 +138,7 @@ function MobileDevelopment() {
 
              <p className="text-gray-700 text-[15px] mb-4 leading-relaxed">
               <span className="font-semibold">Hybrid platform:</span> Make your software available to your clients and customers regardless of 
-              the platform they prefer to use. Trinity Consultancy can help your business create software that will bring consistent 
+              the platform they prefer to use. Trinity TX Consulting can help your business create software that will bring consistent 
               functionality and intuitive UI/UX on any device.
             </p>
 
@@ -208,7 +208,7 @@ function MobileDevelopment() {
             <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
     
               <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
-                Contact <span className="text-green-400">Us</span>
+                Contact <span className="text-blue-400">Us</span>
               </h1>
     
               {/* ✅ FORM START */}
@@ -266,7 +266,7 @@ function MobileDevelopment() {
                 <div className="mt-6 text-center">
                   <button
                     type="submit"
-                    className="bg-green-600 text-white px-8 py-3 rounded-full"
+                    className="bg-blue-600 text-white px-8 py-3 rounded-full"
                   >
                     Submit
                   </button>

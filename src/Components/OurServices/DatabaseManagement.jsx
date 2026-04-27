@@ -99,7 +99,7 @@ function DatabaseManagement() {
         />
 
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-        Database <span className="text-green-500">Management</span>
+        Database <span className="text-blue-500">Management</span>
         </h1>
       </div>
       <section className="bg-white py-16 px-6">
@@ -146,8 +146,8 @@ function DatabaseManagement() {
         <div>
           <h2 className="text-[36px] font-extrabold leading-snug mb-6">
             Why Should You Pay{" "}
-            <span className="text-green-500">Attention To</span>{" "}
-            Your <span className="text-green-500">Database?</span>
+            <span className="text-blue-500">Attention To</span>{" "}
+            Your <span className="text-blue-500">Database?</span>
           </h2>
 
           <p className="text-gray-300 text-[15px] leading-relaxed mb-5">
@@ -177,11 +177,11 @@ function DatabaseManagement() {
 
           <h2 className="text-[32px] font-extrabold mt-10">
             The Trinity{" "}
-            <span className="text-green-500">Counsultancy Method</span>
+            <span className="text-blue-500">Counsultancy Method</span>
           </h2>
 
           <p className="text-gray-300 text-[15px] leading-relaxed mt-4">
-            The team at Trinity Consultancy has a solid foundation in database design,
+            The team at Trinity TX Consulting has a solid foundation in database design,
             implementation and management. We can ensure that your database systems are
             running smoothly giving your business the best results possible.
           </p>
@@ -197,7 +197,7 @@ function DatabaseManagement() {
         <div>
           <h2 className="text-[36px] font-extrabold leading-snug mb-6">
             Database{" "}
-            <span className="text-green-500">
+            <span className="text-blue-500">
               Management & Uses
             </span>
           </h2>
@@ -237,7 +237,7 @@ function DatabaseManagement() {
       
       {/* Heading */}
       <h2 className="text-center text-4xl font-extrabold text-gray-800 mb-12">
-        Experience. <span className="text-green-500">Execute.</span> Excellence.
+        Experience. <span className="text-blue-500 ml-3">Execute.</span> Excellence.
       </h2>
 
       {/* Cards Grid */}
@@ -248,7 +248,7 @@ function DatabaseManagement() {
             className="bg-white rounded-xl shadow-md p-8 text-center hover:shadow-xl transition duration-300"
           >
             {/* Icon Circle */}
-            <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-green-500 text-white mb-6">
+            <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-blue-500 text-white mb-6">
               {item.icon}
             </div>
 
@@ -325,7 +325,7 @@ function DatabaseManagement() {
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
         
                   <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
-                    Contact <span className="text-green-400">Us</span>
+                    Contact <span className="text-blue-400">Us</span>
                   </h1>
         
                   {/* ✅ FORM START */}
@@ -383,7 +383,7 @@ function DatabaseManagement() {
                     <div className="mt-6 text-center">
                       <button
                         type="submit"
-                        className="bg-green-600 text-white px-8 py-3 rounded-full"
+                        className="bg-blue-600 text-white px-8 py-3 rounded-full"
                       >
                         Submit
                       </button>

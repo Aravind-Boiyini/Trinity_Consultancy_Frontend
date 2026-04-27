@@ -71,11 +71,17 @@ function ItDataEngineering() {
           className="w-full h-full object-cover"
         />
 
-        <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
+        {/* <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
         IT{" "}
-          <span className="text-green-500">Data</span>{" "}
+          <span className="text-blue-500 ml-3">Data</span>{" "}
           Engineering{" "}
-          <span className="text-green-500">Services</span>
+          <span className="text-blue-500 ml-3">Services</span>
+        </h1> */}
+        <h1 className="absolute inset-0 flex items-center justify-center gap-3 text-white text-6xl font-extrabold">
+        <span>IT</span>
+        <span className="text-blue-500">Data</span>
+        <span>Engineering</span>
+        <span className="text-blue-500">Services</span>
         </h1>
       </div>
      <section className="bg-white py-16 px-6">
@@ -97,20 +103,20 @@ function ItDataEngineering() {
           <div>
 
             <p className="text-gray-700 text-[15px] leading-relaxed mb-6">
-              At Trinity Consultancy, we provide end-to-end Data Engineering solutions to help businesses transform raw data into actionable insights. 
+              At Trinity TX Consulting, we provide end-to-end Data Engineering solutions to help businesses transform raw data into actionable insights. 
               Our expertise in data architecture, ETL processes, cloud integration, and big data technologies ensures that your business can efficiently 
               collect, process, and analyze data for informed decision-making.
             </p>
 
             <h2 className="text-3xl font-extrabold mb-6">
               <span className="text-[#0B1F3A]">Our Data </span>
-              <span className="text-green-500">Engineering Services :</span>
+              <span className="text-blue-500">Engineering Services :</span>
             </h2>
 
             {/* POINT 1 */}
             <div className="mb-5 flex gap-3">
               <div className="mt-1">
-                <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
+                <div className="w-5 h-5 bg-blue-500 text-white flex items-center justify-center text-xs rounded">
                   ✓
                 </div>
               </div>
@@ -128,7 +134,7 @@ function ItDataEngineering() {
             {/* POINT 2 */}
             <div className="flex gap-3">
               <div className="mt-1">
-                <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
+                <div className="w-5 h-5 bg-blue-500 text-white flex items-center justify-center text-xs rounded">
                   ✓
                 </div>
               </div>
@@ -155,7 +161,7 @@ function ItDataEngineering() {
             {/* POINT 3 */}
             <div className="mb-5 flex gap-3">
               <div className="mt-1">
-                <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
+                <div className="w-5 h-5 bg-blue-500 text-white flex items-center justify-center text-xs rounded">
                   ✓
                 </div>
               </div>
@@ -173,7 +179,7 @@ function ItDataEngineering() {
             {/* POINT 4 */}
             <div className="flex gap-3">
               <div className="mt-1">
-                <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
+                <div className="w-5 h-5 bg-blue-500 text-white flex items-center justify-center text-xs rounded">
                   ✓
                 </div>
               </div>
@@ -191,7 +197,7 @@ function ItDataEngineering() {
             {/* POINT 5*/}
             <div className="mb-5 flex gap-3">
               <div className="mt-1">
-                <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
+                <div className="w-5 h-5 bg-blue-500 text-white flex items-center justify-center text-xs rounded">
                   ✓
                 </div>
               </div>
@@ -204,7 +210,7 @@ function ItDataEngineering() {
                    sensitive business information.
                 </p>
                 <p className="text-gray-700 text-[15px] leading-relaxed">
-                  At Trinity Consultancy, we turn data into a strategic asset, helping businesses gain a competitive edge through
+                  At Trinity TX Consulting, we turn data into a strategic asset, helping businesses gain a competitive edge through
                    seamless data management and analytics. Let’s build a data-driven future together! 🚀
                 </p>
               </div>
@@ -288,7 +294,7 @@ function ItDataEngineering() {
             <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
     
               <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
-                Contact <span className="text-green-400">Us</span>
+                Contact <span className="text-blue-400">Us</span>
               </h1>
     
               {/* ✅ FORM START */}
@@ -346,7 +352,7 @@ function ItDataEngineering() {
                 <div className="mt-6 text-center">
                   <button
                     type="submit"
-                    className="bg-green-600 text-white px-8 py-3 rounded-full"
+                    className="bg-blue-600 text-white px-8 py-3 rounded-full"
                   >
                     Submit
                   </button>

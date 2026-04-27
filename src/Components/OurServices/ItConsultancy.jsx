@@ -70,7 +70,7 @@ function ItConsultancy() {
         />
 
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-          IT <span className="text-green-500">Consultancy</span>
+          IT <span className="text-blue-500 ml-3">Consultancy</span>
         </h1>
       </div>
 
@@ -88,19 +88,19 @@ function ItConsultancy() {
 
           <div>
             <h2 className="text-[32px] font-extrabold text-gray-800 mt-8">
-              Can We? <span className="text-green-500">How Do We Do That?</span>
+              Can We? <span className="text-blue-500">How Do We Do That?</span>
             </h2>
 
             <p className="mt-5 text-gray-600 text-[15px] leading-relaxed">
-            Yes, we can! At Trinity Consultancy, we offer expert IT consulting by analyzing your business needs and providing tailored, scalable solutions. Our approach includes assessing your IT infrastructure, identifying challenges, and implementing the best strategies for growth. From web and software development to cloud management and database design, we ensure businesses get the right technology solutions to drive success, efficiency, and innovation.</p>
+            Yes, we can! At Trinity TX Consulting, we offer expert IT consulting by analyzing your business needs and providing tailored, scalable solutions. Our approach includes assessing your IT infrastructure, identifying challenges, and implementing the best strategies for growth. From web and software development to cloud management and database design, we ensure businesses get the right technology solutions to drive success, efficiency, and innovation.</p>
 
 
             <h2 className="text-[32px] font-extrabold text-gray-800 mt-8">
-              Understanding Is <span className="text-green-500">Everything</span>
+              Understanding Is <span className="text-blue-500">Everything</span>
             </h2>
 
            <p className="mt-4 text-gray-600 text-[15px] leading-relaxed">
-            At Trinity Consultancy, we believe that true success starts with deep understanding. Before offering a solution, we take the time to analyze business goals, industry challenges, and market trends. This helps us develop custom IT strategies that align with long-term objectives. By focusing on clarity, precision, and collaboration, we create solutions that not only solve problems but also drive sustainable growth and innovation./</p>
+            At Trinity TX Consulting, we believe that true success starts with deep understanding. Before offering a solution, we take the time to analyze business goals, industry challenges, and market trends. This helps us develop custom IT strategies that align with long-term objectives. By focusing on clarity, precision, and collaboration, we create solutions that not only solve problems but also drive sustainable growth and innovation./</p>
            
           </div>
 
@@ -113,22 +113,22 @@ function ItConsultancy() {
 
           <div>
             <h2 className="text-[36px] font-extrabold">
-              Business <span className="text-green-500">Analysis</span>
+              Business <span className="text-blue-500">Analysis</span>
             </h2>
 
             <p className="mt-6 text-gray-300 text-[15px]">
-            At Trinity Consultancy, we take a structured approach to business analysis for B2B projects. We start by conducting detailed discussions with stakeholders to understand their objectives, pain points, and challenges. Our team then evaluates existing workflows, IT infrastructure, and industry trends to develop data-driven insights. This ensures that our solutions are strategic, cost-effective, and aligned with business goals. By bridging the gap between technology and business needs, we deliver IT solutions that enhance productivity, streamline operations, and provide measurable ROI./</p>
+            At Trinity TX Consulting, we take a structured approach to business analysis for B2B projects. We start by conducting detailed discussions with stakeholders to understand their objectives, pain points, and challenges. Our team then evaluates existing workflows, IT infrastructure, and industry trends to develop data-driven insights. This ensures that our solutions are strategic, cost-effective, and aligned with business goals. By bridging the gap between technology and business needs, we deliver IT solutions that enhance productivity, streamline operations, and provide measurable ROI./</p>
 
 
           </div>
 
           <div>
             <h2 className="text-[36px] font-extrabold">
-              Solution <span className="text-green-500">Design</span>
+              Solution <span className="text-blue-500">Design</span>
             </h2>
 
             <p className="mt-6 text-gray-300 text-[15px]">
-            At Trinity Consultancy, solution design is about precision and innovation. We analyze your business needs, industry trends, and future scalability to create a robust IT strategy. Our experts provide custom software, cloud architecture, and database solutions that integrate seamlessly into your operations. Unlike one-size-fits-all approaches, we focus on efficiency, adaptability, and long-term impact. With a strong emphasis on collaboration and future-proofing, we ensure your business gets the best solution not just any solution.</p>
+            At Trinity TX Consulting, solution design is about precision and innovation. We analyze your business needs, industry trends, and future scalability to create a robust IT strategy. Our experts provide custom software, cloud architecture, and database solutions that integrate seamlessly into your operations. Unlike one-size-fits-all approaches, we focus on efficiency, adaptability, and long-term impact. With a strong emphasis on collaboration and future-proofing, we ensure your business gets the best solution not just any solution.</p>
 
 
           </div>
@@ -194,7 +194,7 @@ function ItConsultancy() {
             <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
     
               <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
-                Contact <span className="text-green-400">Us</span>
+                Contact <span className="text-blue-400">Us</span>
               </h1>
     
               {/* ✅ FORM START */}
@@ -252,7 +252,7 @@ function ItConsultancy() {
                 <div className="mt-6 text-center">
                   <button
                     type="submit"
-                    className="bg-green-600 text-white px-8 py-3 rounded-full"
+                    className="bg-blue-600 text-white px-8 py-3 rounded-full"
                   >
                     Submit
                   </button>

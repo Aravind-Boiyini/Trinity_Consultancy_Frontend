@@ -74,9 +74,9 @@ function CyberSecurity() {
 
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
         Cyber{" "}
-          <span className="text-green-500">Security</span>{" "}
+          <span className="text-blue-500 ml-3">Security</span>{" "}
           -{" "}
-          <span className="text-green-500">(IAM)</span>
+          <span className="text-blue-500">(IAM)</span>
         </h1>
       </div>
      <section className="bg-white py-16 px-6">
@@ -98,18 +98,18 @@ function CyberSecurity() {
           <div>
 
             <p className="text-gray-700 text-[15px] leading-relaxed mb-6">
-              At Gunesh Technologies, we provide advanced Identity and Access Management (IAM) solutions to help organizations secure their digital assets and control user access with precision. Our IAM services ensure that the right individuals have the right access to the right resources—at the right time—while maintaining strict security standards.</p>
+              At Trinity Tx Consulting, we provide advanced Identity and Access Management (IAM) solutions to help organizations secure their digital assets and control user access with precision. Our IAM services ensure that the right individuals have the right access to the right resources—at the right time—while maintaining strict security standards.</p>
 
 
             <h2 className="text-3xl font-extrabold mb-6">
               <span className="text-[#0B1F3A]">Our IAM </span>
-              <span className="text-green-500">Services :</span>
+              <span className="text-blue-500">Services :</span>
             </h2>
 
             {/* POINT 1 */}
             <div className="mb-5 flex gap-3">
               <div className="mt-1">
-                <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
+                <div className="w-5 h-5 bg-blue-500 text-white flex items-center justify-center text-xs rounded">
                   ✓
                 </div>
               </div>
@@ -126,7 +126,7 @@ function CyberSecurity() {
             {/* POINT 2 */}
             <div className="flex gap-3">
               <div className="mt-1">
-                <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
+                <div className="w-5 h-5 bg-blue-500 text-white flex items-center justify-center text-xs rounded">
                   ✓
                 </div>
               </div>
@@ -152,7 +152,7 @@ function CyberSecurity() {
             {/* POINT 3 */}
             <div className="mb-5 flex gap-3">
               <div className="mt-1">
-                <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
+                <div className="w-5 h-5 bg-blue-500 text-white flex items-center justify-center text-xs rounded">
                   ✓
                 </div>
               </div>
@@ -169,7 +169,7 @@ function CyberSecurity() {
             {/* POINT 4 */}
             <div className="mb-5 flex gap-3">
               <div className="mt-1">
-                <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
+                <div className="w-5 h-5 bg-blue-500 text-white flex items-center justify-center text-xs rounded">
                   ✓
                 </div>
               </div>
@@ -185,7 +185,7 @@ function CyberSecurity() {
             {/* POINT 5 */}
             <div className="mb-5 flex gap-3">
               <div className="mt-1">
-                <div className="w-5 h-5 bg-green-500 text-white flex items-center justify-center text-xs rounded">
+                <div className="w-5 h-5 bg-blue-500 text-white flex items-center justify-center text-xs rounded">
                   ✓
                 </div>
               </div>
@@ -279,7 +279,7 @@ function CyberSecurity() {
                <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
        
                  <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
-                   Contact <span className="text-green-400">Us</span>
+                   Contact <span className="text-blue-400">Us</span>
                  </h1>
        
                  {/* ✅ FORM START */}
@@ -337,7 +337,7 @@ function CyberSecurity() {
                    <div className="mt-6 text-center">
                      <button
                        type="submit"
-                       className="bg-green-600 text-white px-8 py-3 rounded-full"
+                       className="bg-blue-600 text-white px-8 py-3 rounded-full"
                      >
                        Submit
                      </button>

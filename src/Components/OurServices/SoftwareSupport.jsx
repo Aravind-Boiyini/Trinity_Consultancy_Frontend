@@ -72,7 +72,7 @@ function SoftwareSupport() {
         />
 
         <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-        Software <span className="text-green-500">Support</span>
+        Software <span className="text-blue-500 ml-3">Support</span>
         </h1>
       </div>
        <section className="bg-white py-16 px-6">
@@ -154,7 +154,7 @@ function SoftwareSupport() {
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
 
           <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
-            Contact <span className="text-green-400">Us</span>
+            Contact <span className="text-blue-400">Us</span>
           </h1>
 
           <div className="p-6 rounded-xl w-full max-w-3xl">
@@ -174,7 +174,7 @@ function SoftwareSupport() {
             </div>
 
             <div className="mt-6 text-center">
-              <button className="bg-green-600 text-white px-8 py-3 rounded-full">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-full">
                 Submit
               </button>
             </div>
@@ -198,7 +198,7 @@ function SoftwareSupport() {
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
 
           <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
-            Contact <span className="text-green-400">Us</span>
+            Contact <span className="text-blue-400">Us</span>
           </h1>
 
           {/* ✅ FORM START */}
@@ -256,7 +256,7 @@ function SoftwareSupport() {
             <div className="mt-6 text-center">
               <button
                 type="submit"
-                className="bg-green-600 text-white px-8 py-3 rounded-full"
+                className="bg-blue-600 text-white px-8 py-3 rounded-full"
               >
                 Submit
               </button>
