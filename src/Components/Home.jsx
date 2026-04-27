@@ -543,6 +543,7 @@ import teamlogo4 from '../assets/Database-Image.jpg';
 import teamoflogo from '../assets/team_img_6.jpg';
 import teamoflogo1 from '../assets/team_img_7.jpg';
 import contactlogo from '../assets/About-Banner.jpg';
+import { Routes, Route, NavLink, Link, useNavigate } from 'react-router-dom'
 
 
 
@@ -1031,7 +1032,7 @@ const [formData, setFormData] = useState({
             </h2>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <div className="bg-white overflow-hidden shadow-lg">
+                {/* <div className="bg-white overflow-hidden shadow-lg">
                     <img src={teamlogo1} alt="IT" className="w-full h-60 object-cover" />
                     <div className="p-6 text-center">
                         <h3 className="text-lg font-bold text-[#123E6B]">IT Consulting</h3>
@@ -1041,8 +1042,28 @@ const [formData, setFormData] = useState({
                             <h1 className="font-semibold text-[13px]">Read More</h1>
                         </div>
                     </div>
-                </div>
-                <div className="bg-white overflow-hidden shadow-lg">
+                </div> */}
+                <Link to="/ItConsultancy">
+  <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
+    
+    <img src={teamlogo1} alt="IT" className="w-full h-60 object-cover" />
+    
+    <div className="p-6 text-center">
+      <h3 className="text-lg font-bold text-[#123E6B]">IT Consulting</h3>
+      
+      <hr className="mt-4 border border-gray-200" />
+      
+      <div className="flex items-center justify-center gap-4 mt-2">
+        <MoveUpRight size={20} />
+        <h1 className="font-semibold text-[13px]">Read More</h1>
+      </div>
+    </div>
+
+  </div>
+</Link>
+
+                <Link to="/ProductEngineering">
+  <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
                     <img src={teamlogo2} alt="Product" className="w-full h-60 object-cover" />
                     <div className="p-6 text-center">
                         <h3 className="text-lg font-bold text-[#123E6B]">Product Engineering</h3>
@@ -1053,7 +1074,10 @@ const [formData, setFormData] = useState({
                         </div>
                     </div>
                 </div>
-                <div className="bg-white overflow-hidden shadow-lg">
+                </Link>
+
+                <Link to="/DatabaseManagement">
+  <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
                     <img src={teamlogo3} alt="Database" className="w-full h-60 object-cover" />
                     <div className="p-6 text-center">
                         <h3 className="text-lg font-bold text-[#123E6B]">Database Management</h3>
@@ -1064,7 +1088,9 @@ const [formData, setFormData] = useState({
                         </div>
                     </div>
                 </div>
-                <div className="bg-white overflow-hidden shadow-lg">
+                </Link>
+                <Link to="/MobileDevelopment">
+  <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
                     <img src={teamlogo4} alt="Mobile" className="w-full h-60 object-cover" />
                     <div className="p-6 text-center">
                         <h3 className="text-lg font-bold text-[#123E6B]">Mobile Development</h3>
@@ -1075,6 +1101,7 @@ const [formData, setFormData] = useState({
                         </div>
                     </div>
                 </div>
+                </Link>
             </div>
 
 
