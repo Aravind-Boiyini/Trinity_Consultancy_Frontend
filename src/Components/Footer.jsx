@@ -99,12 +99,18 @@ function Footer() {
               
             <span></span>
             </div>
+            <div className="text-white text-sm">
+  <div className="max-w-7xl mx-auto px-6 text-center">
+    © {new Date().getFullYear()} TrinityTxConsultancy. All rights reserved.
+  </div>
+</div>
 
             {/* EMPTY SPACE (keeps alignment clean) */}
             <div></div>
 
           </div>
         </div>
+        
 
         {/* PINK ANGLED SECTION */}
         <div
@@ -113,6 +119,7 @@ function Footer() {
             clipPath: "polygon(18% 0, 100% 0, 100% 100%, 0% 100%)",
           }}
         >
+          
           {/* <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-end">
             <Mail size={14} className="mr-2" />
             <span>info@trinityconsultancy.com</span>
@@ -120,6 +127,7 @@ function Footer() {
         </div>
 
       </div>
+      
     </>
   );
 }
