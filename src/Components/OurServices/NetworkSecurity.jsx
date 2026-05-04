@@ -66,10 +66,10 @@ function NetworkSecurity() {
         <img
           src={logo}
           alt="Home Banner"
-          className="w-full h-full object-cover"
+          className="md:w-full md:h-full w-full h-100 object-cover"
         />
 
-        <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
+        <h1 className="absolute inset-0 flex items-center justify-center text-white md:text-6xl text-4xl font-extrabold">
           Network <span className="text-blue-500 ml-3">Security</span>
         </h1>
       </div>
@@ -203,7 +203,7 @@ function NetworkSecurity() {
 
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
 
-          <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
+          <h1 className="text-white text-4xl md:text-5xl font-bold mb-8 md:mt-0 mt-10">
             Contact <span className="text-blue-400">Us</span>
           </h1>
 
@@ -211,14 +211,14 @@ function NetworkSecurity() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-              <input className="px-4 py-3 rounded-full bg-white" placeholder="Full Name" />
-              <input className="px-4 py-3 rounded-full bg-white" placeholder="Email Address" />
-              <input className="px-4 py-3 rounded-full bg-white" placeholder="Phone Number" />
-              <input className="px-4 py-3 rounded-full bg-white" placeholder="Subject" />
+              <input className="w-full block px-4 py-3 rounded-full bg-white" placeholder="Full Name" />
+              <input className="w-full block px-4 py-3 rounded-full bg-white" placeholder="Email Address" />
+              <input className="w-full block px-4 py-3 rounded-full bg-white" placeholder="Phone Number" />
+              <input className="w-full block px-4 py-3 rounded-full bg-white" placeholder="Subject" />
 
               <textarea
                 placeholder="Your Message"
-                className="col-span-2 px-4 py-3 rounded-xl bg-white h-32"
+                className="w-full md:col-span-2 px-4 py-3 rounded-xl bg-white h-32"
               />
 
             </div>

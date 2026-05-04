@@ -547,8 +547,8 @@ import { Routes, Route, NavLink, Link, useNavigate } from 'react-router-dom'
 
 
 
-  
-  
+
+
 
 const slides = [
     {
@@ -608,34 +608,34 @@ export default function Home({ onSlideChange }) {
         }, 380);
     };
     const testimonialsData = [
-  {
-    name: "Jessica M.",
-    role: "Operations Director, Retail Hub",
-    text: "Trinity TX Consulting transformed our digital strategy with their custom software development services. Their team is professional, attentive, and always goes above and beyond. We’re extremely satisfied with the results!",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5BKPyVgwi0Gm130HqeOGysQRnB56argEQMA&s",
-  },
-  {
-    name: "Rahul Sharma",
-    role: "CEO, TechNova",
-    text: "Their development team delivered a scalable and high-performance solution. Communication was excellent and deadlines were always met.",
-    image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?cs=srgb&dl=pexels-justin-shaifer-501272-1222271.jpg&fm=jpg",
-  },
-  {
-    name: "Anita Verma",
-    role: "Marketing Head, GrowthX",
-    text: "Amazing experience working with them. They understood our requirements perfectly and executed beyond expectations.",
-    image: "https://static.vecteezy.com/system/resources/previews/026/497/723/large_2x/businessman-on-isolated-png.png",
-  },
-];
+        {
+            name: "Jessica M.",
+            role: "Operations Director, Retail Hub",
+            text: "Trinity TX Consulting transformed our digital strategy with their custom software development services. Their team is professional, attentive, and always goes above and beyond. We’re extremely satisfied with the results!",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5BKPyVgwi0Gm130HqeOGysQRnB56argEQMA&s",
+        },
+        {
+            name: "Rahul Sharma",
+            role: "CEO, TechNova",
+            text: "Their development team delivered a scalable and high-performance solution. Communication was excellent and deadlines were always met.",
+            image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?cs=srgb&dl=pexels-justin-shaifer-501272-1222271.jpg&fm=jpg",
+        },
+        {
+            name: "Anita Verma",
+            role: "Marketing Head, GrowthX",
+            text: "Amazing experience working with them. They understood our requirements perfectly and executed beyond expectations.",
+            image: "https://static.vecteezy.com/system/resources/previews/026/497/723/large_2x/businessman-on-isolated-png.png",
+        },
+    ];
 
-  
-  // Auto slide
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % testimonialsData.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+
+    // Auto slide
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % testimonialsData.length);
+        }, 4000);
+        return () => clearInterval(interval);
+    }, []);
 
     const next = () => goTo((current + 1) % slides.length);
     const prev = () => goTo((current - 1 + slides.length) % slides.length);
@@ -663,52 +663,52 @@ export default function Home({ onSlideChange }) {
             : animState === "leaving"
                 ? "opacity-0 -translate-y-5"
                 : "opacity-0 translate-y-5";
-    
-const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: ""
-  });
 
-  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby41cpL4OpuFxZaIoLHUCxu5l93xOQ8FAqGvqrV6aBAYGzXCp4CjtkSHUA54CetpGOW/exec"; // 👈 your /exec link
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      await fetch(GOOGLE_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      });
-
-      // clear form
-      setFormData({
+    const [formData, setFormData] = useState({
         name: "",
         email: "",
         phone: "",
         subject: "",
         message: ""
-      });
+    });
 
-      alert("Message sent successfully!");
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby41cpL4OpuFxZaIoLHUCxu5l93xOQ8FAqGvqrV6aBAYGzXCp4CjtkSHUA54CetpGOW/exec"; // 👈 your /exec link
 
-    } catch (error) {
-      console.error(error);
-      alert("Error submitting form");
-    }
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            await fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            // clear form
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                subject: "",
+                message: ""
+            });
+
+            alert("Message sent successfully!");
+
+        } catch (error) {
+            console.error(error);
+            alert("Error submitting form");
+        }
     };
 
     return (
@@ -732,7 +732,7 @@ const [formData, setFormData] = useState({
                 <div className="relative z-10 flex min-h-[500px]">
 
                     {/* Left: Pagination + Content */}
-                    <div className="flex flex-[0_0_56%] items-center px-8 py-14 pl-10">
+                    <div className="flex flex-[0_0_56%] items-center px-8 py-14 md:pl-10 pl-3">
 
                         {/* Pagination */}
                         <div className="flex flex-col items-center mr-7 gap-0 shrink-0">
@@ -762,15 +762,19 @@ const [formData, setFormData] = useState({
                                 <p className="text-blue-400 text-[14px] font-semibold mb-3 tracking-wide">
                                     {slide.tag}
                                 </p>
-                                <h1 className="text-[42px] font-black text-white leading-[1.15] mb-4">
+
+
+                                <h1 className="text-[28px] sm:text-[32px] md:text-[42px] font-extrabold text-white leading-[1.1] mb-3 max-w-[280px]">
                                     {slide.title.map((line, i) => (
-                                        <span key={i} className="block">{line}</span>
+                                        <span key={i} className="block whitespace-nowrap">
+                                            {line}
+                                        </span>
                                     ))}
                                 </h1>
                                 <p className="text-gray-300 text-[15px] leading-[1.7] mb-8 max-w-[460px]">
                                     {slide.desc}
                                 </p>
-                                <button className="bg-blue-500 hover:bg-blue-600 transition-colors text-white px-8 py-4 text-[15px] font-bold tracking-wide rounded-[2px]">
+                                <button className="bg-blue-500 hover:bg-blue-600 transition-colors text-white md:px-8 px-10 py-4 text-[15px] font-bold tracking-wide rounded-[2px]">
                                     Let's Get Started
                                 </button>
                             </div>
@@ -795,7 +799,7 @@ const [formData, setFormData] = useState({
 
             {/* Cards Section */}
             <div className="relative bottom-25">
-                <div className="flex gap-6 mt-6 px-10 justify-center max-w-6xl mx-auto">
+                <div className=" flex flex-col md:flex-row gap-6 mt-6 px-4 md:px-10 justify-center max-w-6xl mx-auto">
                     <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center">
                             <Mail size={28} className="text-blue-600" />
@@ -853,49 +857,77 @@ const [formData, setFormData] = useState({
 
             {/* About Section */}
             <section className="px-8">
-                <div className="max-w-6xl mx-auto flex gap-12 items-center">
-                    <div className="relative flex-[0_0_42%] min-h-[480px]">
-                        <div className="absolute left-[-40px] top-[50%] -translate-y-1/2 w-[340px] h-[340px] rounded-full bg-gray-200/60" />
-                        <div className="absolute left-[200px] top-0 w-[240px] h-[260px] overflow-hidden z-10">
+                <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row gap-8 md:gap-12 items-center">
+
+                    {/* Images */}
+                    <div className="relative w-full md:flex-[0_0_42%] min-h-[320px] md:min-h-[480px]">
+
+                        <div className="hidden md:block absolute left-[-40px] top-[50%] -translate-y-1/2 w-[340px] h-[340px] rounded-full bg-gray-200/60" />
+
+
+                        <div className="absolute left-[160px] md:left-[200px] top-0 w-[160px] md:w-[240px] h-[180px] md:h-[260px] overflow-hidden z-10">
                             <img src={img1} alt="consultant 1" className="w-full h-full object-cover" />
                         </div>
-                        <div className="absolute left-0 top-[80px] z-20 bg-blue-500 text-white p-5 w-[190px]">
-                            <p className="text-[36px] font-black leading-none">11<span className="text-[22px]">+</span></p>
-                            <p className="text-[14px] font-semibold">Years</p>
-                            <p className="text-[12px] mt-2 leading-snug">Experience in Consulting Service</p>
+
+                        {/* Blue Box */}
+                        <div className="absolute left-0 top-[70px] md:top-[80px] z-20 bg-blue-500 text-white p-3 md:p-5 w-[140px] md:w-[190px]">
+                            <p className="text-[24px] md:text-[36px] font-black leading-none">
+                                11<span className="text-[16px] md:text-[22px]">+</span>
+                            </p>
+                            <p className="text-[12px] md:text-[14px] font-semibold">Years</p>
+                            <p className="text-[10px] md:text-[12px] mt-1 md:mt-2 leading-snug">
+                                Experience in Consulting Service
+                            </p>
                         </div>
-                        <div className="absolute left-[30px] top-[230px] w-[270px] h-[260px] overflow-hidden z-10">
+
+                        {/* Image 2 */}
+                        <div className="absolute left-[60px] md:left-[30px] top-[180px] md:top-[230px] w-[180px] md:w-[270px] h-[180px] md:h-[260px] overflow-hidden z-10">
                             <img src={img2} alt="consultant 2" className="w-full h-full object-cover" />
                         </div>
+
                     </div>
+
+                    {/* Text */}
                     <div className="flex-1">
-                        <h2 className="text-[38px] font-black text-gray-900 leading-[1.2] mb-4">
+                        <h2 className="text-[28px] md:text-[38px] font-black text-gray-900 leading-[1.2] mb-4">
                             The Trinity{" "}
                             <span className="text-blue-500">Management</span>
                             <br />Consultancy
                         </h2>
-                        <p className="text-gray-500 text-[15px] leading-[1.8] mb-6 max-w-[500px]">
+
+                        <p className="text-gray-500 text-[14px] md:text-[15px] leading-[1.8] mb-6 max-w-[500px]">
                             Captivated & demoralized by the charms of pleasure of the moment so
                             blinded desire, that they cannot foresee the pain and trouble frequently
                             occur that pleasures have to be repudiated annoyances accepted the wise
                             man therefore always holds in these matters.
                         </p>
-                        <h3 className="text-[18px] font-black text-gray-900 mb-4">Focus on Results</h3>
-                        <div className="grid grid-cols-2 gap-4 mb-8">
+
+                        <h3 className="text-[16px] md:text-[18px] font-black text-gray-900 mb-4">
+                            Focus on Results
+                        </h3>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                             {points.map((point, i) => (
-                                <div key={i} className={`flex items-start gap-3 ${i === 2 ? "col-span-1" : ""}`}>
+                                <div key={i} className="flex items-start gap-3">
                                     <div className="mt-1 shrink-0 w-3 h-3 bg-blue-500 rotate-45" />
-                                    <p className="text-gray-500 text-[14px] leading-[1.7]">{point}</p>
+                                    <p className="text-gray-500 text-[13px] md:text-[14px] leading-[1.7]">
+                                        {point}
+                                    </p>
                                 </div>
                             ))}
                         </div>
-                        <a href="#" className="flex items-center gap-2 text-gray-900 font-bold text-[15px] border border-gray-300 w-fit px-4 py-3 hover:border-blue-500 transition-colors">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+
+                        <a
+                            href="#"
+                            className="flex items-center gap-2 text-gray-900 font-bold text-[14px] md:text-[15px] border border-gray-300 w-fit px-4 py-3 hover:border-blue-500 transition-colors"
+                        >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M7 17L17 7M7 7h10v10" />
                             </svg>
                             More About Us
                         </a>
                     </div>
+
                 </div>
             </section>
 
@@ -969,64 +1001,63 @@ const [formData, setFormData] = useState({
                 </a>
             </div> */}
 
-    
 
-    <section className="bg-gray-100 py-16">
-      <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-        Testimonials
-      </h2>
 
-      <div className="max-w-5xl mx-auto relative">
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
-          
-          {/* LEFT IMAGE + ORANGE PANEL */}
-          <div className="bg-blue-300 md:w-1/3 flex items-center justify-center p-8">
-            <img
-              src={testimonialsData[current].image}
-              alt="user"
-              className="w-40 h-40 rounded-full border-4 border-white object-cover"
-            />
-          </div>
+            <section className="bg-gray-100 py-16 mt-15 md:mt-0">
+                <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+                    Testimonials
+                </h2>
 
-          {/* RIGHT CONTENT */}
-          <div className="md:w-2/3 p-8">
-            <p className="text-gray-700 leading-relaxed text-[16px]">
-              {testimonialsData[current].text}
-            </p>
+                <div className="max-w-5xl mx-auto relative">
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
 
-            {/* STARS */}
-            <div className="flex gap-1 text-blue-500 mt-4 text-xl">
-              ★ ★ ★ ★ ★
-            </div>
+                        {/* LEFT IMAGE + ORANGE PANEL */}
+                        <div className="bg-blue-300 md:w-1/3 flex items-center justify-center p-8">
+                            <img
+                                src={testimonialsData[current].image}
+                                alt="user"
+                                className="w-40 h-40 rounded-full border-4 border-white object-cover"
+                            />
+                        </div>
 
-            {/* NAME */}
-            <h3 className="mt-4 text-xl font-bold text-gray-800">
-              {testimonialsData[current].name}
-            </h3>
+                        {/* RIGHT CONTENT */}
+                        <div className="md:w-2/3 p-8">
+                            <p className="text-gray-700 leading-relaxed text-[16px]">
+                                {testimonialsData[current].text}
+                            </p>
 
-            <p className="text-blue-500 text-sm">
-              {testimonialsData[current].role}
-            </p>
-          </div>
-        </div>
+                            {/* STARS */}
+                            <div className="flex gap-1 text-blue-500 mt-4 text-xl">
+                                ★ ★ ★ ★ ★
+                            </div>
 
-        {/* DOTS */}
-        <div className="flex justify-center mt-6 gap-3">
-          {testimonialsData.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrent(index)}
-              className={`w-3 h-3 rounded-full ${
-                current === index ? "bg-blue-500 scale-125" : "bg-gray-400"
-              }`}
-            ></button>
-          ))}
-        </div>
-      </div>
-    </section>
+                            {/* NAME */}
+                            <h3 className="mt-4 text-xl font-bold text-gray-800">
+                                {testimonialsData[current].name}
+                            </h3>
+
+                            <p className="text-blue-500 text-sm">
+                                {testimonialsData[current].role}
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* DOTS */}
+                    <div className="flex justify-center mt-6 gap-3">
+                        {testimonialsData.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setCurrent(index)}
+                                className={`w-3 h-3 rounded-full ${current === index ? "bg-blue-500 scale-125" : "bg-gray-400"
+                                    }`}
+                            ></button>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             {/* Industries */}
-            <h2 className="text-[40px] font-black text-gray-900 leading-[1.2] ml-28 mt-15">
+            <h2 className="md:text-[40px] text-[30px] font-black text-gray-900 leading-[1.2] md:ml-28 ml-4 mt-15">
                 Major {" "}
                 <span className="text-blue-500">  Industries </span> We Served
             </h2>
@@ -1044,176 +1075,176 @@ const [formData, setFormData] = useState({
                     </div>
                 </div> */}
                 <Link to="/ItConsultancy">
-  <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
-    
-    <img src={teamlogo1} alt="IT" className="w-full h-60 object-cover" />
-    
-    <div className="p-6 text-center">
-      <h3 className="text-lg font-bold text-[#123E6B]">IT Consulting</h3>
-      
-      <hr className="mt-4 border border-gray-200" />
-      
-      <div className="flex items-center justify-center gap-4 mt-2">
-        <MoveUpRight size={20} />
-        <h1 className="font-semibold text-[13px]">Read More</h1>
-      </div>
-    </div>
+                    <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
 
-  </div>
-</Link>
+                        <img src={teamlogo1} alt="IT" className="w-full h-60 object-cover" />
+
+                        <div className="p-6 text-center">
+                            <h3 className="text-lg font-bold text-[#123E6B]">IT Consulting</h3>
+
+                            <hr className="mt-4 border border-gray-200" />
+
+                            <div className="flex items-center justify-center gap-4 mt-2">
+                                <MoveUpRight size={20} />
+                                <h1 className="font-semibold text-[13px]">Read More</h1>
+                            </div>
+                        </div>
+
+                    </div>
+                </Link>
 
                 <Link to="/ProductEngineering">
-  <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
-                    <img src={teamlogo2} alt="Product" className="w-full h-60 object-cover" />
-                    <div className="p-6 text-center">
-                        <h3 className="text-lg font-bold text-[#123E6B]">Product Engineering</h3>
-                        <hr className="mt-4 border border-gray-200" />
-                        <div className="flex items-center justify-center gap-4 mt-2">
-                            <MoveUpRight size={20} />
-                            <h1 className="font-semibold text-[13px]">Read More</h1>
+                    <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
+                        <img src={teamlogo2} alt="Product" className="w-full h-60 object-cover" />
+                        <div className="p-6 text-center">
+                            <h3 className="text-lg font-bold text-[#123E6B]">Product Engineering</h3>
+                            <hr className="mt-4 border border-gray-200" />
+                            <div className="flex items-center justify-center gap-4 mt-2">
+                                <MoveUpRight size={20} />
+                                <h1 className="font-semibold text-[13px]">Read More</h1>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </Link>
 
                 <Link to="/DatabaseManagement">
-  <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
-                    <img src={teamlogo3} alt="Database" className="w-full h-60 object-cover" />
-                    <div className="p-6 text-center">
-                        <h3 className="text-lg font-bold text-[#123E6B]">Database Management</h3>
-                        <hr className="mt-4 border border-gray-200" />
-                        <div className="flex items-center justify-center gap-4 mt-2">
-                            <MoveUpRight size={20} />
-                            <h1 className="font-semibold text-[13px]">Read More</h1>
+                    <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
+                        <img src={teamlogo3} alt="Database" className="w-full h-60 object-cover" />
+                        <div className="p-6 text-center">
+                            <h3 className="text-lg font-bold text-[#123E6B]">Database Management</h3>
+                            <hr className="mt-4 border border-gray-200" />
+                            <div className="flex items-center justify-center gap-4 mt-2">
+                                <MoveUpRight size={20} />
+                                <h1 className="font-semibold text-[13px]">Read More</h1>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </Link>
                 <Link to="/MobileDevelopment">
-  <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
-                    <img src={teamlogo4} alt="Mobile" className="w-full h-60 object-cover" />
-                    <div className="p-6 text-center">
-                        <h3 className="text-lg font-bold text-[#123E6B]">Mobile Development</h3>
-                        <hr className="mt-4 border border-gray-200" />
-                        <div className="flex items-center justify-center gap-4 mt-2">
-                            <MoveUpRight size={20} />
-                            <h1 className="font-semibold text-[13px]">Read More</h1>
+                    <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
+                        <img src={teamlogo4} alt="Mobile" className="w-full h-60 object-cover" />
+                        <div className="p-6 text-center">
+                            <h3 className="text-lg font-bold text-[#123E6B]">Mobile Development</h3>
+                            <hr className="mt-4 border border-gray-200" />
+                            <div className="flex items-center justify-center gap-4 mt-2">
+                                <MoveUpRight size={20} />
+                                <h1 className="font-semibold text-[13px]">Read More</h1>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </Link>
             </div>
 
 
             {/* contact us */}
-        <section>
-              <div className="relative w-full mt-20">
-                
-                {/* Background Image */}
-                <img
-                  src={contactlogo}
-                  alt="Contact Banner"
-                  className="w-full h-[600px] object-cover"
-                />
-        
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/50"></div>
-        
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
-        
-                  <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
-                    Contact <span className="text-blue-400">Us</span>
-                  </h1>
-        
-                  <form onSubmit={handleSubmit} className="w-full max-w-3xl">
-                    <div className="p-6 rounded-xl">
-        
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        
-                        <input
-                          name="name"
-                          value={formData.name}
-                          onChange={handleChange}
-                          className="px-4 py-3 rounded-full bg-white"
-                          placeholder="Name"
-                          required
-                        />
-        
-                        <input
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          className="px-4 py-3 rounded-full bg-white"
-                          placeholder="Email"
-                          required
-                        />
-        
-                        <input
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          className="px-4 py-3 rounded-full bg-white"
-                          placeholder="Phone"
-                          required
-                        />
-        
-                        <input
-                          name="subject"
-                          value={formData.subject}
-                          onChange={handleChange}
-                          className="px-4 py-3 rounded-full bg-white"
-                          placeholder="Subject"
-                          required
-                        />
-        
-                        <textarea
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          placeholder="Message"
-                          className="col-span-2 px-4 py-3 rounded-xl bg-white h-32"
-                          required
-                        />
-        
-                      </div>
-        
-                      {/* Submit Button */}
-                      <div className="mt-6 text-center">
-                        <button
-                          type="submit"
-                          className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition"
-                        >
-                          Submit
-                        </button>
-                      </div>
-        
-                      {/* Status Messages */}
-                      <div className="mt-4 text-center">
-                        {status === "submitting" && (
-                          <p className="text-white">Submitting...</p>
-                        )}
-                        {status === "success" && (
-                          <p className="text-blue-400 font-semibold">
-                            ✅ Message sent successfully!
-                          </p>
-                        )}
-                        {status === "error" && (
-                          <p className="text-red-400 font-semibold">
-                            ❌ Failed to send message. Try again.
-                          </p>
-                        )}
-                      </div>
-        
+            <section>
+                <div className="relative w-full mt-20">
+
+                    {/* Background Image */}
+                    <img
+                        src={contactlogo}
+                        alt="Contact Banner"
+                        className="w-full h-[600px] object-cover"
+                    />
+
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/50"></div>
+
+                    {/* Content */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
+
+                        <h1 className="text-white text-4xl md:text-5xl font-bold mb-8 md:mt-0 mt-15">
+                            Contact <span className="text-blue-400">Us</span>
+                        </h1>
+
+                        <form onSubmit={handleSubmit} className="w-full max-w-3xl">
+                            <div className="p-6 rounded-xl">
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                                    <input
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        className="w-full block px-4 py-3 rounded-full bg-white"
+                                        placeholder="Name"
+                                        required
+                                    />
+
+                                    <input
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        className="w-full block px-4 py-3 rounded-full bg-white"
+                                        placeholder="Email"
+                                        required
+                                    />
+
+                                    <input
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        className="w-full block px-4 py-3 rounded-full bg-white"
+                                        placeholder="Phone"
+                                        required
+                                    />
+
+                                    <input
+                                        name="subject"
+                                        value={formData.subject}
+                                        onChange={handleChange}
+                                        className="w-full block px-4 py-3 rounded-full bg-white"
+                                        placeholder="Subject"
+                                        required
+                                    />
+
+                                    <textarea
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        placeholder="Message"
+                                        className="w-full md:col-span-2 px-4 py-3 rounded-xl bg-white h-32"
+                                        required
+                                    />
+
+                                </div>
+
+                                {/* Submit Button */}
+                                <div className="mt-6 text-center">
+                                    <button
+                                        type="submit"
+                                        className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition"
+                                    >
+                                        Submit
+                                    </button>
+                                </div>
+
+                                {/* Status Messages */}
+                                <div className="mt-4 text-center">
+                                    {status === "submitting" && (
+                                        <p className="text-white">Submitting...</p>
+                                    )}
+                                    {status === "success" && (
+                                        <p className="text-blue-400 font-semibold">
+                                            ✅ Message sent successfully!
+                                        </p>
+                                    )}
+                                    {status === "error" && (
+                                        <p className="text-red-400 font-semibold">
+                                            ❌ Failed to send message. Try again.
+                                        </p>
+                                    )}
+                                </div>
+
+                            </div>
+                        </form>
+
                     </div>
-                  </form>
-        
                 </div>
-              </div>
             </section>
 
-           
 
-        </div>
+
+        </div >
     );
 }

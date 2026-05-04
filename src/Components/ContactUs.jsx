@@ -171,9 +171,9 @@ function ContactUs() {
 
       {/* Banner */}
       <div className="relative w-full">
-        <img src={logo} alt="Home Banner" className="w-full h-full object-cover" />
+        <img src={logo} alt="Home Banner" className="md:w-full md:h-full w-full h-100 object-cover" />
 
-        <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
+        <h1 className="absolute inset-0 flex items-center justify-center text-white md:text-6xl text-4xl font-extrabold">
           Contact <span className="text-blue-500 ml-3 "> Us</span>
         </h1>
       </div>
@@ -184,7 +184,7 @@ function ContactUs() {
       </h2>
 
       {/* Cards */}
-      <div className="flex gap-6 mt-6 px-10 justify-center max-w-5xl mx-auto">
+      <div className="flex flex-col md:flex-row gap-6 mt-6 px-10 justify-center max-w-5xl mx-auto">
 
         <div className="border w-full bg-white rounded-xl shadow-lg p-6 mt-10 text-center">
           <Mail className="mx-auto text-blue-600" size={28} />
@@ -214,7 +214,7 @@ function ContactUs() {
       </h2>
 
       {/* FORM START */}
-      <form onSubmit={handleSubmit} className="flex flex-col items-center px-4 mt-7">
+      <form onSubmit={handleSubmit} className="flex flex-col  items-center px-4 mt-7">
 
         <div className="p-6 w-full max-w-4xl">
 
@@ -225,7 +225,7 @@ function ContactUs() {
               value={formData.name}
               onChange={handleChange}
               placeholder="Full Name"
-              className="px-4 py-3 rounded-full border bg-white"
+              className="w-full block px-4 py-3 rounded-full border bg-white"
               required
             />
 
@@ -234,7 +234,7 @@ function ContactUs() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Email Address"
-              className="px-4 py-3 rounded-full border bg-white"
+              className="w-full block px-4 py-3 rounded-full border bg-white"
               required
             />
 
@@ -243,7 +243,7 @@ function ContactUs() {
               value={formData.phone}
               onChange={handleChange}
               placeholder="Phone Number"
-              className="px-4 py-3 rounded-full border bg-white"
+              className="w-full block px-4 py-3 rounded-full border bg-white"
               required
             />
 
@@ -252,7 +252,7 @@ function ContactUs() {
               value={formData.subject}
               onChange={handleChange}
               placeholder="Subject"
-              className="px-4 py-3 rounded-full border bg-white"
+              className="w-full block px-4 py-3 rounded-full border bg-white"
               required
             />
 
@@ -261,7 +261,7 @@ function ContactUs() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Your Message"
-              className="col-span-2 px-4 py-3 rounded-xl border bg-white h-32"
+              className="w-full md:col-span-2 px-4 py-3 rounded-xl border bg-white h-32"
               required
             />
 

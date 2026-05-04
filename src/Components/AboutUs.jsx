@@ -4,7 +4,7 @@ import img1 from '../assets/About-Banner.jpg';
 import img2 from '../assets/About-Banner.jpg';
 import teamoflogo from '../assets/IT-Image.jpg';
 import teamoflogo1 from '../assets/Product-Image.jpg';
-import { Handshake, Mail, Trophy, Users,  FilesIcon, Monitor, Files } from "lucide-react";
+import { Handshake, Mail, Trophy, Users, FilesIcon, Monitor, Files } from "lucide-react";
 import { MailCheck } from "lucide-react";
 import { MoveUpRight } from "lucide-react";
 
@@ -25,15 +25,15 @@ function AboutUs() {
                 <img
                     src={logo}
                     alt="Home Banner"
-                    className="w-full h-full object-cover"
+                    className="md:w-full md:h-full w-full h-100 object-cover"
                 />
 
                 {/* Overlay Text */}
                 {/* <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
                     About <span className="text-blue-500">{" "} Us</span>
                 </h1> */}
-                <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
-                About <span className="text-blue-500 ml-3">Us</span>
+                <h1 className="absolute inset-0 flex items-center justify-center text-white md:text-6xl text-4xl font-extrabold">
+                    About <span className="text-blue-500 ml-3">Us</span>
                 </h1>
             </div>
             {/* <div className="max-w-8xl mx-auto flex justify-center items-center relative -top-30">
@@ -178,50 +178,78 @@ function AboutUs() {
                 </div>
             </div> */}
 
-            <section className="px-8 mt-15">
-                <div className="max-w-6xl mx-auto flex gap-12 items-center">
-                    <div className="relative flex-[0_0_42%] min-h-[480px]">
-                        <div className="absolute left-[-40px] top-[50%] -translate-y-1/2 w-[340px] h-[340px] rounded-full bg-gray-200/60" />
-                        <div className="absolute left-[200px] top-0 w-[240px] h-[260px] overflow-hidden z-10">
+            <section className="px-4 md:px-8 mt-10 md:mt-15">
+                <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row gap-8 md:gap-12 items-center">
+
+                    {/* Images */}
+                    <div className="relative w-full md:flex-[0_0_42%] min-h-[320px] md:min-h-[480px]">
+
+                        <div className="hidden md:block absolute left-[-40px] top-[50%] -translate-y-1/2 w-[340px] h-[340px] rounded-full bg-gray-200/60" />
+
+
+                        <div className="absolute left-[160px] md:left-[200px] top-0 w-[160px] md:w-[240px] h-[180px] md:h-[260px] overflow-hidden z-10">
                             <img src={img1} alt="consultant 1" className="w-full h-full object-cover" />
                         </div>
-                        <div className="absolute left-0 top-[80px] z-20 bg-blue-500 text-white p-5 w-[190px]">
-                            <p className="text-[36px] font-black leading-none">11<span className="text-[22px]">+</span></p>
-                            <p className="text-[14px] font-semibold">Years</p>
-                            <p className="text-[12px] mt-2 leading-snug">Experience in Consulting Service</p>
+
+                        {/* Blue Box */}
+                        <div className="absolute left-0 top-[70px] md:top-[80px] z-20 bg-blue-500 text-white p-3 md:p-5 w-[140px] md:w-[190px]">
+                            <p className="text-[24px] md:text-[36px] font-black leading-none">
+                                11<span className="text-[16px] md:text-[22px]">+</span>
+                            </p>
+                            <p className="text-[12px] md:text-[14px] font-semibold">Years</p>
+                            <p className="text-[10px] md:text-[12px] mt-1 md:mt-2 leading-snug">
+                                Experience in Consulting Service
+                            </p>
                         </div>
-                        <div className="absolute left-[30px] top-[230px] w-[270px] h-[260px] overflow-hidden z-10">
+
+                        {/* Image 2 */}
+                        <div className="absolute left-[60px] md:left-[30px] top-[180px] md:top-[230px] w-[180px] md:w-[270px] h-[180px] md:h-[260px] overflow-hidden z-10">
                             <img src={img2} alt="consultant 2" className="w-full h-full object-cover" />
                         </div>
+
                     </div>
+
+                    {/* Text */}
                     <div className="flex-1">
-                        <h2 className="text-[38px] font-black text-gray-900 leading-[1.2] mb-4">
+                        <h2 className="text-[28px] md:text-[38px] font-black text-gray-900 leading-[1.2] mb-4">
                             The Trinity{" "}
-                            <span className="text-blue-500"> Management</span>
+                            <span className="text-blue-500">Management</span>
                             <br />Consultancy
                         </h2>
-                        <p className="text-gray-500 text-[15px] leading-[1.8] mb-6 max-w-[500px]">
+
+                        <p className="text-gray-500 text-[14px] md:text-[15px] leading-[1.8] mb-6 max-w-[500px]">
                             Captivated & demoralized by the charms of pleasure of the moment so
                             blinded desire, that they cannot foresee the pain and trouble frequently
                             occur that pleasures have to be repudiated annoyances accepted the wise
                             man therefore always holds in these matters.
                         </p>
-                        <h3 className="text-[18px] font-black text-gray-900 mb-4">Focus on Results</h3>
-                        <div className="grid grid-cols-2 gap-4 mb-8">
+
+                        <h3 className="text-[16px] md:text-[18px] font-black text-gray-900 mb-4">
+                            Focus on Results
+                        </h3>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                             {points.map((point, i) => (
-                                <div key={i} className={`flex items-start gap-3 ${i === 2 ? "col-span-1" : ""}`}>
+                                <div key={i} className="flex items-start gap-3">
                                     <div className="mt-1 shrink-0 w-3 h-3 bg-blue-500 rotate-45" />
-                                    <p className="text-gray-500 text-[14px] leading-[1.7]">{point}</p>
+                                    <p className="text-gray-500 text-[13px] md:text-[14px] leading-[1.7]">
+                                        {point}
+                                    </p>
                                 </div>
                             ))}
                         </div>
-                        <a href="#" className="flex items-center gap-2 text-gray-900 font-bold text-[15px] border border-gray-300 w-fit px-4 py-3 hover:border-blue-500 transition-colors">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+
+                        <a
+                            href="#"
+                            className="flex items-center gap-2 text-gray-900 font-bold text-[14px] md:text-[15px] border border-gray-300 w-fit px-4 py-3 hover:border-blue-500 transition-colors"
+                        >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M7 17L17 7M7 7h10v10" />
                             </svg>
                             More About Us
                         </a>
                     </div>
+
                 </div>
             </section>
 
@@ -231,15 +259,15 @@ function AboutUs() {
                 <span className="text-blue-500"> Achievements</span>
             </h2>
 
-            <div className="flex gap-20 mt-6 px-10 justify-center max-w-7xl mx-auto">
-                
+            <div className="flex flex-col md:flex-row gap-20 mt-6 px-10 justify-center max-w-7xl mx-auto">
+
                 <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col w-[100%] pb-14 h-full gap-4">
                     <div className="p-5 bg-gray-100 w-fit">
                         <Trophy size={28} className="text-blue-600" />
                     </div>
                     <h3 className="font-semibold text-[17px] text-blue-500">USA's AWARD</h3>
                     <h1 className="font-semibold text-[18px]">Best International Consulting Firm IN USA</h1>
-                   
+
                     <h1 className="font-semibold text-[17px] text-gray-600">2025</h1>
                 </div>
                 <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col w-[100%] pb-14 h-full gap-4">
@@ -249,7 +277,7 @@ function AboutUs() {
                     <h1 className="font-semibold text-[18px] text-blue-500">Innovation Award</h1>
                     <h1 className="font-semibold text-[18px]">Best International Consulting Firm IN USA</h1>
                     <h1 className="font-semibold text-[17px] text-gray-600">2025</h1>
-                   
+
                 </div>
                 {/* <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col w-[100%] pb-14 h-full gap-4">
                     <div className="p-5 bg-gray-100 w-fit">
@@ -267,8 +295,9 @@ function AboutUs() {
             </h2>
 
             <div className="">
-                <div className="flex gap-6 mt-6 px-10 justify-center max-w-7xl mx-auto">
-                    <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4 rounded-2xl">
+                <div className="flex flex-col md:flex-row gap-6 mt-6 px-10 justify-center max-w-7xl mx-auto">
+
+                    <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex-1 flex flex-col items-center text-center gap-4 rounded-2xl">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center ">
                             <Handshake size={28} className="text-blue-600" />
                         </div>
@@ -281,7 +310,7 @@ function AboutUs() {
                             <h1 className="font-semibold text-[18px]">Read More</h1>
                         </div>
                     </div>
-                    <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4 rounded-2xl">
+                    <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex-1 flex flex-col items-center text-center gap-4 rounded-2xl">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center">
                             <Users size={28} className="text-blue-600" />
                         </div>
@@ -294,7 +323,7 @@ function AboutUs() {
                             <h1 className="font-semibold text-[18px]">Read More</h1>
                         </div>
                     </div>
-                    <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4 rounded-2xl">
+                    <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex-1 flex flex-col items-center text-center gap-4 rounded-2xl">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center">
                             <Monitor size={28} className="text-blue-600" />
                         </div>
@@ -307,7 +336,7 @@ function AboutUs() {
                             <h1 className="font-semibold text-[18px]">Read More</h1>
                         </div>
                     </div>
-                    <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4">
+                    <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex-1 flex flex-col items-center text-center gap-4 rounded-2xl">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center">
                             <Files size={28} className="text-blue-600" />
                         </div>
