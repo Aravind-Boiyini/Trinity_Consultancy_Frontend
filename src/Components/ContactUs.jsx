@@ -115,7 +115,7 @@
 // export default ContactUs;
 import React, { useState } from "react";
 import logo from '../assets/About-Banner.jpg';
-import { Mail, MailCheck } from "lucide-react";
+import { LocateIcon, Mail, MailCheck, Phone, } from "lucide-react";
 
 function ContactUs() {
 
@@ -187,7 +187,7 @@ function ContactUs() {
       <div className="flex flex-col md:flex-row gap-6 mt-6 px-10 justify-center max-w-5xl mx-auto">
 
         <div className="border w-full bg-white rounded-xl shadow-lg p-6 mt-10 text-center">
-          <Mail className="mx-auto text-blue-600" size={28} />
+          <LocateIcon className="mx-auto text-blue-600" size={28} />
           <h1 className="font-bold mt-2">Address</h1>
           <p className="text-gray-600 text-sm">
             1416 Shady Hollow Ct, Keller, TX 76248
@@ -195,15 +195,17 @@ function ContactUs() {
         </div>
 
         <div className="border w-full bg-white rounded-xl shadow-lg p-6 mt-10 text-center">
-          <Mail className="mx-auto text-blue-600" size={28} />
+          <Phone className="mx-auto text-blue-600" size={28} />
           <h1 className="font-bold mt-2">Phone</h1>
-          <p className="text-gray-600 text-sm"> (682) 392-9824</p>
+          <a
+            href="tel:6823929824"><p className="text-gray-600 text-sm"> (682) 392-9824</p></a>
         </div>
 
         <div className="border w-full bg-white rounded-xl shadow-lg p-6 mt-10 text-center">
           <MailCheck className="mx-auto text-blue-600" size={28} />
           <h1 className="font-bold mt-2">Email</h1>
-          <p className="text-gray-600 text-sm">hr@trinitytxconsulting.com</p>
+          <a
+            href="mailto:hr@trinitytxconsulting.com"><p className="text-gray-600 text-sm">hr@trinitytxconsulting.com</p></a>
         </div>
 
       </div>

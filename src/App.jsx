@@ -19,7 +19,7 @@ import WebDevelopment from './Components/OurServices/WebDevelopment'
 import CyberSecurity from './Components/OurServices/CyberSecurity'
 import NetworkSecurity from './Components/OurServices/NetworkSecurity'
 import ScrollToTop from './Components/Services/ScrollToTop'
-import { CircleUserRound, Cog, Handshake, House, Lightbulb, Menu, MonitorCloud, PersonStanding, UserRound, UsersRound, X } from 'lucide-react'
+import { CircleUserRound, Cog, Handshake, House, Lightbulb, Menu, MonitorCloud, PersonStanding, RectangleEllipsis, UserRound, UsersRound, X } from 'lucide-react'
 
 
 
@@ -56,18 +56,31 @@ function App() {
             } flex justify-between items-center px-12 py-4 text-[13px] text-gray-300 max-w-7xl mx-auto mt-3`}
         >
           <div className="flex justify-between sm:justify-start sm:gap-6 w-full items-center">
+
             <span className="whitespace-nowrap flex items-center gap-2 text-gray-300 font-semibold text-[12px] md:text-[15px]">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.02 2.18 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
-              </svg>
-              (682) 392-9824
+
+              <a
+                href="tel:6823929824"
+                className="whitespace-nowrap flex items-center gap-2 text-gray-300 font-semibold text-[12px] md:text-[15px]"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.02 2.18 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                </svg>
+                (682) 392-9824
+              </a>
+
             </span>
             <span className="whitespace-nowrap flex items-center gap-2 text-gray-300 font-semibold text-[12px] md:text-[15px]">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <polyline points="22,6 12,13 2,6" />
-              </svg>
-              hr@trinitytxconsulting.com
+              <a
+                href="mailto:hr@trinitytxconsulting.com"
+                className="whitespace-nowrap flex items-center gap-2 text-gray-300 font-semibold text-[12px] md:text-[15px]"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                hr@trinitytxconsulting.com
+              </a>
             </span>
           </div>
 
@@ -198,7 +211,7 @@ function App() {
 
             {/* MENU ITEMS */}
             <div className="flex flex-col p-4 space-y-4">
-              <NavLink to="/" onClick={() => setIsOpen(false)} className="flex gap-3 items-center"><House size={20} />Home</NavLink>
+              <NavLink to="/" onClick={() => setIsOpen(false)} className="flex gap-3 items-center"><House size={18} />Home</NavLink>
               <NavLink to="/about" onClick={() => setIsOpen(false)} className="flex gap-3 items-center"><UsersRound size={20} />About Us</NavLink>
               {/* <NavLink to="/services" onClick={() => setIsOpen(false)} className="flex gap-3 items-center"><Cog size={20} />Our Services</NavLink> */}
               <div>
@@ -256,7 +269,7 @@ function App() {
               <NavLink to="/blog" onClick={() => setIsOpen(false)} className="flex gap-3 items-center"><Lightbulb size={20} />Blog</NavLink>
               <NavLink to="/careers" onClick={() => setIsOpen(false)} className="flex gap-3 items-center"><PersonStanding size={20} />Careers</NavLink>
               <NavLink to="/contactus" onClick={() => setIsOpen(false)} className="flex gap-3 items-center">
-                <UserRound size={20} />Book a Consultation
+                <RectangleEllipsis size={20} />Book a Consultation
               </NavLink>
             </div>
           </div>

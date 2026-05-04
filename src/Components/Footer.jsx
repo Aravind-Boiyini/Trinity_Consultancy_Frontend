@@ -24,15 +24,15 @@ function Footer() {
                 className="h-20 w-60 object-contain"
               />
             </div> */}
-            <div>
-          <Link to="/">
-          <img
-          src={Logo2}
-          alt="Footer Logo"
-          className="h-20 w-60 object-contain cursor-pointer"
-          />
-          </Link>
-           </div>
+            <div className="hidden sm:flex">
+              <Link to="/">
+                <img
+                  src={Logo2}
+                  alt="Footer Logo"
+                  className="h-20 w-60 object-contain cursor-pointer"
+                />
+              </Link>
+            </div>
 
             {/* QUICK LINKS */}
             <div>
@@ -67,20 +67,27 @@ function Footer() {
 
               <p className="mt-3 flex gap-2 text-sm leading-relaxed">
                 <MapPin size={16} />
-                 1416 Shady Hollow Ct,<br />
-                 Keller,<br />
-                 TX 76244
+                1416 Shady Hollow Ct,<br />
+                Keller,<br />
+                TX 76244
               </p>
 
-              <p className="mt-3 flex items-center gap-2 text-sm">
-                <Mail size={16} />
-                hr@trinitytxconsulting.com
-              </p>
 
-              <p className="mt-2 flex items-center gap-2 text-sm">
-                <Phone size={16} />
-                (682) 392-9824
-              </p>
+              <a
+                href="mailto:hr@trinitytxconsulting.com">
+                <p className="mt-3 flex items-center gap-2 text-sm">
+                  <Mail size={16} />
+                  hr@trinitytxconsulting.com
+                </p>
+              </a>
+
+              <a
+                href="tel:6823929824">
+                <p className="mt-2 flex items-center gap-2 text-sm">
+                  <Phone size={16} />
+                  (682) 392-9824
+                </p>
+              </a>
             </div>
 
           </div>
@@ -96,21 +103,21 @@ function Footer() {
 
             {/* LEFT - PHONE */}
             <div className="flex items-center gap-2">
-              
-            <span></span>
+
+              <span></span>
             </div>
             <div className="text-white text-sm">
-  <div className="max-w-7xl mx-auto px-6 text-center">
-    © {new Date().getFullYear()} TrinityTxConsultancy. All rights reserved.
-  </div>
-</div>
+              <div className="max-w-7xl mx-auto px-6 text-center">
+                © {new Date().getFullYear()} TrinityTxConsultancy. All rights reserved.
+              </div>
+            </div>
 
             {/* EMPTY SPACE (keeps alignment clean) */}
             <div></div>
 
           </div>
         </div>
-        
+
 
         {/* PINK ANGLED SECTION */}
         <div
@@ -119,7 +126,7 @@ function Footer() {
             clipPath: "polygon(18% 0, 100% 0, 100% 100%, 0% 100%)",
           }}
         >
-          
+
           {/* <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-end">
             <Mail size={14} className="mr-2" />
             <span>info@trinityconsultancy.com</span>
@@ -127,7 +134,7 @@ function Footer() {
         </div>
 
       </div>
-      
+
     </>
   );
 }
