@@ -71,10 +71,10 @@ function WebDevelopment() {
         <img
           src={logo}
           alt="Home Banner"
-          className="w-full h-full object-cover"
+          className="wmd:w-full md:h-full w-full h-100 object-cover"
         />
 
-        <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
+        <h1 className="absolute inset-0 flex items-center justify-center text-white md:text-6xl text-4xl font-extrabold">
         Web <span className="text-blue-500 ml-3">Development</span>
         </h1>
       </div>
@@ -116,7 +116,7 @@ function WebDevelopment() {
         <div>
 
           {/* TITLE */}
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
+          <h2 className="text-2xl md:text-4xl  font-extrabold mb-6">
             Types Of{" "}
             <span className="text-blue-500">Web Development Services</span>
           </h2>
@@ -172,7 +172,7 @@ function WebDevelopment() {
 
           {/* KICK OFF */}
           <div>
-            <h2 className="text-3xl font-extrabold mb-3">
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-3">
               Kick-Of <span className="text-blue-500">Stage</span>
             </h2>
             <p className="text-gray-200 leading-relaxed">
@@ -185,7 +185,7 @@ function WebDevelopment() {
 
           {/* DEVELOPMENT */}
           <div>
-            <h2 className="text-3xl font-extrabold mb-3">
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-3">
               Development <span className="text-blue-500">Stage</span>
             </h2>
             <p className="text-gray-200 leading-relaxed">
@@ -198,7 +198,7 @@ function WebDevelopment() {
 
           {/* SUPPORT */}
           <div>
-            <h2 className="text-3xl font-extrabold mb-3">
+            <h2 className="md:text-3xl text-2xl font-extrabold mb-3">
               Support <span className="text-blue-500">Stage</span>
             </h2>
             <p className="text-gray-200 leading-relaxed">
@@ -210,7 +210,7 @@ function WebDevelopment() {
 
           {/* TECHNOLOGIES */}
           <div>
-            <h2 className="text-3xl font-extrabold mb-3">
+            <h2 className="md:text-3xl text-2xl font-extrabold mb-3">
               Our <span className="text-blue-500">Technologies</span>
             </h2>
             <p className="text-gray-200 leading-relaxed">
@@ -222,7 +222,7 @@ function WebDevelopment() {
 
           {/* ECOMMERCE */}
           <div>
-            <h2 className="text-3xl font-extrabold mb-3">
+            <h2 className="md:text-3xl text-2xl font-extrabold mb-3">
               E-Commerce Web{" "}
               <span className="text-blue-500">Development Services</span>
             </h2>
@@ -245,7 +245,7 @@ function WebDevelopment() {
         <div>
 
           {/* TITLE */}
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
+          <h2 className="text-2xl md:text-4xl font-extrabold mb-6">
             <span className="text-[#0B1F3A]">Web Application </span>
             <span className="text-blue-500">Development Process</span>
           </h2>
@@ -273,7 +273,7 @@ function WebDevelopment() {
           </p>
 
           {/* TECHNOLOGIES */}
-          <h2 className="text-3xl font-extrabold mb-4">
+          <h2 className="text-2xl font-extrabold mb-4">
             <span className="text-[#0B1F3A]">Our </span>
             <span className="text-blue-500">Technologies</span>
           </h2>
@@ -371,7 +371,7 @@ function WebDevelopment() {
 
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
 
-          <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
+          <h1 className="text-white text-4xl md:text-5xl font-bold mb-8 md:mt-0 mt-10">
             Contact <span className="text-blue-400">Us</span>
           </h1>
 
@@ -384,7 +384,7 @@ function WebDevelopment() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="px-4 py-3 rounded-full bg-white"
+                className="w-full block px-4 py-3 rounded-full bg-white"
                 placeholder="Full Name"
                 required
               />
@@ -393,7 +393,7 @@ function WebDevelopment() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="px-4 py-3 rounded-full bg-white"
+                className="w-full block px-4 py-3 rounded-full bg-white"
                 placeholder="Email Address"
                 required
               />
@@ -402,7 +402,7 @@ function WebDevelopment() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="px-4 py-3 rounded-full bg-white"
+                className="w-full block px-4 py-3 rounded-full bg-white"
                 placeholder="Phone Number"
                 required
               />
@@ -411,7 +411,7 @@ function WebDevelopment() {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className="px-4 py-3 rounded-full bg-white"
+                className="w-full block px-4 py-3 rounded-full bg-white"
                 placeholder="Subject"
                 required
               />
@@ -421,7 +421,7 @@ function WebDevelopment() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Your Message"
-                className="col-span-2 px-4 py-3 rounded-xl bg-white h-32"
+                className="w-full md:col-span-2 px-4 py-3 rounded-xl bg-white h-32"
                 required
               />
 

@@ -18,11 +18,11 @@ function Services() {
                 <img
                     src={logo}
                     alt="Home Banner"
-                    className="w-full h-full object-cover"
+                    className="md:w-full md:h-full w-full h-100 object-cover"
                 />
 
                 {/* Overlay Text */}
-                <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
+                <h1 className="absolute inset-0 flex items-center justify-center text-white md:text-6xl text-4xl font-extrabold">
                     Our <span className="text-blue-600 ml-3"> Services</span>
                 </h1>
             </div>

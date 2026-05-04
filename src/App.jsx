@@ -19,6 +19,7 @@ import WebDevelopment from './Components/OurServices/WebDevelopment'
 import CyberSecurity from './Components/OurServices/CyberSecurity'
 import NetworkSecurity from './Components/OurServices/NetworkSecurity'
 import ScrollToTop from './Components/Services/ScrollToTop'
+import { CircleUserRound, Cog, Handshake, House, Lightbulb, Menu, MonitorCloud, PersonStanding, UserRound, UsersRound, X } from 'lucide-react'
 
 
 
@@ -26,6 +27,8 @@ import ScrollToTop from './Components/Services/ScrollToTop'
 function App() {
   // const navigate = useNavigate();
   const [showTopBar, setShowTopBar] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [openService, setOpenService] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,14 +55,14 @@ function App() {
           className={`transition-all duration-300 ${showTopBar ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"
             } flex justify-between items-center px-12 py-4 text-[13px] text-gray-300 max-w-7xl mx-auto mt-3`}
         >
-          <div className="flex gap-6 items-center">
-            <span className="flex items-center gap-2 text-gray-300 font-semibold text-[15px]">
+          <div className="flex justify-between sm:justify-start sm:gap-6 w-full items-center">
+            <span className="whitespace-nowrap flex items-center gap-2 text-gray-300 font-semibold text-[12px] md:text-[15px]">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.02 2.18 2 2 0 012 .02h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
               </svg>
               (682) 392-9824
             </span>
-            <span className="flex items-center gap-2 text-gray-300 font-semibold text-[15px]">
+            <span className="whitespace-nowrap flex items-center gap-2 text-gray-300 font-semibold text-[12px] md:text-[15px]">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
@@ -71,17 +74,24 @@ function App() {
         </div>
 
         {/* Main Navbar */}
-        <div className="    bg-gradient-to-r from-black/80 via-black/60 to-pink-600/80 flex justify-between items-center pl-12 p-10 pr-0 h-16 max-w-7xl mx-auto  ">
+        <div className="    bg-gradient-to-r from-black/80 via-black/60 to-pink-600/80 flex justify-between items-center md:pl-12 pl-3 p-10 pr-0 h-16 max-w-7xl mx-auto  ">
           {/* <div className="flex items-center gap-3 text-white font-bold text-xl">
             <img src={logo3} alt="Logo" className="h-18 w-30" />
          
           </div> */}
           <div className="flex items-center gap-3 text-white font-bold text-xl">
+            {/* MOBILE TOGGLE */}
+            <button
+              className="md:hidden text-white"
+              onClick={() => setIsOpen(true)}
+            >
+              <Menu size={28} />
+            </button>
             <Link to="/">
-              <img src={logo3} alt="Logo" className="h-18 w-30 cursor-pointer" />
+              <img src={logo3} alt="Logo" className=" h-18 w-30 cursor-pointer" />
             </Link>
           </div>
-          <nav className="flex items-center h-16">
+          <nav className="hidden md:flex items-center h-16">
             {[
               { name: "Home", path: "/" },
               { name: "About Us", path: "/about" },
@@ -164,6 +174,92 @@ function App() {
             </svg>
             <span>Book a<br />Consultation</span>
           </NavLink>
+
+          {/* MOBILE SIDEBAR */}
+          {/* {isOpen && (
+            <div
+              className="fixed inset-0 bg-black/40 z-40"
+              onClick={() => setIsOpen(false)}
+            />
+          )} */}
+          <div
+            className={`fixed top-0 left-0 h-full w-[280px] bg-black text-white z-50 transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"
+              }`}
+          >
+            {/* HEADER */}
+            <div className="flex justify-between items-center p-4 border-b border-gray-700">
+              <Link to="/">
+                <img src={logo3} alt="Logo" className=" h-16 w-26 cursor-pointer" />
+              </Link>
+              <button onClick={() => setIsOpen(false)}>
+                <X size={28} />
+              </button>
+            </div>
+
+            {/* MENU ITEMS */}
+            <div className="flex flex-col p-4 space-y-4">
+              <NavLink to="/" onClick={() => setIsOpen(false)} className="flex gap-3 items-center"><House size={20} />Home</NavLink>
+              <NavLink to="/about" onClick={() => setIsOpen(false)} className="flex gap-3 items-center"><UsersRound size={20} />About Us</NavLink>
+              {/* <NavLink to="/services" onClick={() => setIsOpen(false)} className="flex gap-3 items-center"><Cog size={20} />Our Services</NavLink> */}
+              <div>
+                {/* CLICKABLE HEADER */}
+                <div
+                  onClick={() => setOpenService(!openService)}
+                  className="flex justify-between items-center cursor-pointer"
+                >
+                  <div className="flex gap-3 items-center">
+
+                    <NavLink to="/services" onClick={() => setIsOpen(false)} className="flex gap-3 items-center"> <MonitorCloud size={18} />Our Services</NavLink>
+
+                  </div>
+
+                  {/* ARROW */}
+                  <svg
+                    className={`transition-transform ${openService ? "rotate-180" : ""}`}
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="2"
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </div>
+
+                {/* DROPDOWN ITEMS */}
+                {openService && (
+                  <div className="ml-8 mt-2 flex flex-col gap-2">
+                    {[
+                      { name: "IT Consultancy", path: "/ItConsultancy" },
+                      { name: "Product Engineering", path: "/ProductEngineering" },
+                      { name: "Database Management", path: "/DatabaseManagement" },
+                      { name: "Mobile Development", path: "/MobileDevelopment" },
+                      { name: "IT Data Engineering", path: "/ItDataEngineering" },
+                      { name: "Software Support", path: "/SoftwareSupport" },
+                      { name: "Web Development", path: "/WebDevelopment" },
+                      { name: "Cyber Security", path: "/CyberSecurity" },
+                      { name: "Network Security", path: "/NetworkSecurity" },
+                    ].map((sub) => (
+                      <NavLink
+                        key={sub.path}
+                        to={sub.path}
+                        onClick={() => setIsOpen(false)}
+                        className="text-sm text-gray-300"
+                      >
+                        {sub.name}
+                      </NavLink>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <NavLink to="/blog" onClick={() => setIsOpen(false)} className="flex gap-3 items-center"><Lightbulb size={20} />Blog</NavLink>
+              <NavLink to="/careers" onClick={() => setIsOpen(false)} className="flex gap-3 items-center"><PersonStanding size={20} />Careers</NavLink>
+              <NavLink to="/contactus" onClick={() => setIsOpen(false)} className="flex gap-3 items-center">
+                <UserRound size={20} />Book a Consultation
+              </NavLink>
+            </div>
+          </div>
         </div>
 
       </div>

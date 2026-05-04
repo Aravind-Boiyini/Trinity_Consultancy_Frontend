@@ -68,10 +68,10 @@ function SoftwareSupport() {
         <img
           src={logo}
           alt="Home Banner"
-          className="w-full h-full object-cover"
+          className="wmd:w-full md:h-full w-full h-100 object-cover"
         />
 
-        <h1 className="absolute inset-0 flex items-center justify-center text-white text-6xl font-extrabold">
+        <h1 className="absolute inset-0 flex items-center justify-center text-white md:text-6xl text-4xl font-extrabold">
         Software <span className="text-blue-500 ml-3">Support</span>
         </h1>
       </div>
@@ -197,7 +197,7 @@ function SoftwareSupport() {
 
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
 
-          <h1 className="text-white text-4xl md:text-5xl font-bold mb-8">
+          <h1 className="text-white text-4xl md:text-5xl font-bold mb-8 md:mt-0 mt-10">
             Contact <span className="text-blue-400">Us</span>
           </h1>
 
@@ -210,7 +210,7 @@ function SoftwareSupport() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="px-4 py-3 rounded-full bg-white"
+                className="w-full block px-4 py-3 rounded-full bg-white"
                 placeholder="Full Name"
                 required
               />
@@ -219,7 +219,7 @@ function SoftwareSupport() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="px-4 py-3 rounded-full bg-white"
+                className="w-full block px-4 py-3 rounded-full bg-white"
                 placeholder="Email Address"
                 required
               />
@@ -228,7 +228,7 @@ function SoftwareSupport() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="px-4 py-3 rounded-full bg-white"
+                className="w-full block px-4 py-3 rounded-full bg-white"
                 placeholder="Phone Number"
                 required
               />
@@ -237,7 +237,7 @@ function SoftwareSupport() {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className="px-4 py-3 rounded-full bg-white"
+                className="w-full block px-4 py-3 rounded-full bg-white"
                 placeholder="Subject"
                 required
               />
@@ -247,7 +247,7 @@ function SoftwareSupport() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Your Message"
-                className="col-span-2 px-4 py-3 rounded-xl bg-white h-32"
+                className="w-full md:col-span-2 px-4 py-3 rounded-xl bg-white h-32"
                 required
               />
 
