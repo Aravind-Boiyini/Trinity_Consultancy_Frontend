@@ -7,140 +7,76 @@ import teamlogo4 from '../assets/Mobile-Image.jpg';
 import { MoveUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-
-
 function Services() {
     const navigate = useNavigate();
-    return (
-        <div>
-            <div className="relative w-full">
 
+    // Data array to keep the code DRY and easy to maintain
+    const servicesData = [
+        { title: "IT Consulting", img: teamlogo1, path: "/ItConsultancy" },
+        { title: "Product Engineering", img: teamlogo2, path: "/ProductEngineering" },
+        { title: "Database Management", img: teamlogo3, path: "/DatabaseManagement" },
+        { title: "Mobile Development", img: teamlogo4, path: "/MobileDevelopment" },
+        { title: "IT Data Engineering", img: teamlogo1, path: "/ItDataEngineering" },
+        { title: "Software Support", img: teamlogo2, path: "/SoftwareSupport" },
+        { title: "Web Development", img: teamlogo3, path: "/WebDevelopment" },
+        { title: "Cyber Security", img: teamlogo2, path: "/CyberSecurity" },
+        { title: "Network Security", img: teamlogo2, path: "/NetworkSecurity" },
+    ];
+
+    return (
+        <div className="w-full bg-gray-50 pb-20">
+            {/* Banner Section */}
+            <div className="relative w-full h-[250px] md:h-[400px] overflow-hidden">
                 <img
                     src={logo}
-                    alt="Home Banner"
-                    className="md:w-full md:h-full w-full h-100 object-cover"
+                    alt="Services Banner"
+                    className="w-full h-full object-cover"
                 />
-
                 {/* Overlay Text */}
-                <h1 className="absolute inset-0 flex items-center justify-center text-white md:text-6xl text-4xl font-extrabold">
-                    Our <span className="text-blue-600 ml-3"> Services</span>
-                </h1>
+                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <h1 className="text-white text-4xl md:text-6xl font-extrabold flex flex-wrap justify-center">
+                        Our <span className="text-blue-500 ml-3">Services</span>
+                    </h1>
+                </div>
             </div>
 
-            <div>
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <div className="bg-white overflow-hidden shadow-lg rounded-lg">
-                        <img src={teamlogo1} alt="IT" className="w-full h-60 object-cover" />
-                        <div className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">IT Consulting</h3> <p className="mt-2 text-sm ">Yes, we can! At Trinity TX Consulting, we offer expert IT consulting by analyzing your business needs and providing tailored.</p>
+            {/* Services Grid Section */}
+            <div className="px-6 md:px-12 lg:px-20 mt-12">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                        {servicesData.map((service, index) => (
+                            <div 
+                                key={index}
+                                className="bg-white overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 rounded-2xl flex flex-col"
+                            >
+                                <div className="relative h-56 w-full">
+                                    <img 
+                                        src={service.img} 
+                                        alt={service.title} 
+                                        className="w-full h-full object-cover" 
+                                    />
+                                </div>
+                                
+                                <div className="p-6 flex flex-col flex-grow text-center">
+                                    <h3 className="text-xl font-bold text-[#123E6B]">
+                                        {service.title}
+                                    </h3>
+                                    <p className="mt-3 text-gray-600 text-sm leading-relaxed flex-grow">
+                                        Yes, we can! At Trinity TX Consulting, we offer expert IT consulting by analyzing your business needs and providing tailored solutions.
+                                    </p>
 
-                            <hr className="mt-4 border border-gray-200" />
-                            <div onClick={() => navigate("/ItConsultancy")} className="flex items-center justify-center gap-4 mt-2 border border-gray-200 w-50 mx-auto rounded-full bg-blue-500 py-3">
-                                <MoveUpRight size={20} className="text-white" />
-                                <h1 className="font-semibold text-[16px] text-white">Read More</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white overflow-hidden shadow-lg rounded-lg">
-                        <img src={teamlogo2} alt="Product" className="w-full h-60 object-cover" />
-                        <div className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">Product Engineering</h3>
-                            <p className="mt-2 text-sm ">Yes, we can! At Trinity TX Consulting, we offer expert IT consulting by analyzing your business needs and providing tailored.</p>
+                                    <hr className="my-5 border-gray-100" />
 
-                            <hr className="mt-4 border border-gray-200" />
-                            <div onClick={() => navigate("/ProductEngineering")} className="flex items-center justify-center gap-4 mt-2 border border-gray-200 w-50 mx-auto rounded-full bg-blue-500 py-3">
-                                <MoveUpRight size={20} className="text-white" />
-                                <h1 className="font-semibold text-[16px] text-white">Read More</h1>
+                                    <button
+                                        onClick={() => navigate(service.path)}
+                                        className="flex items-center justify-center gap-3 w-full sm:w-4/5 mx-auto rounded-full bg-blue-600 hover:bg-blue-700 transition-colors py-3 text-white shadow-md active:scale-95"
+                                    >
+                                        <MoveUpRight size={18} />
+                                        <span className="font-semibold text-base">Read More</span>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="bg-white overflow-hidden shadow-lg rounded-lg">
-                        <img src={teamlogo3} alt="Database" className="w-full h-60 object-cover" />
-                        <div className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">Database Management</h3>
-                            <p className="mt-2 text-sm ">Yes, we can! At Trinity TX Consulting, we offer expert IT consulting by analyzing your business needs and providing tailored.</p>
-
-                            <hr className="mt-4 border border-gray-200" />
-                            <div onClick={() => navigate("/DatabaseManagement")} className="flex items-center justify-center gap-4 mt-2 border border-gray-200 w-50 mx-auto rounded-full bg-blue-500 py-3">
-                                <MoveUpRight size={20} className="text-white" />
-                                <h1 className="font-semibold text-[16px] text-white">Read More</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white overflow-hidden shadow-lg rounded-lg">
-                        <img src={teamlogo4} alt="Mobile" className="w-full h-60 object-cover" />
-                        <div onClick={()=> navigate("/MobileDevelopment")} className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">Mobile Development</h3>
-                            <p className="mt-2 text-sm ">Yes, we can! At Trinity TX Consulting, we offer expert IT consulting by analyzing your business needs and providing tailored.</p>
-
-                            <hr className="mt-4 border border-gray-200" />
-                            <div className="flex items-center justify-center gap-4 mt-2  border border-gray-200 w-50 mx-auto rounded-full bg-blue-500 py-3">
-                                <MoveUpRight size={20} className="text-white" />
-                                <h1 className="font-semibold text-[16px] text-white">Read More</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white overflow-hidden shadow-lg rounded-lg">
-                        <img src={teamlogo1} alt="IT" className="w-full h-60 object-cover" />
-                        <div onClick={() => navigate("/ItDataEngineering")} className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">IT Data Engineering</h3>
-                            <p className="mt-2 text-sm ">Yes, we can! At Trinity TX Consulting, we offer expert IT consulting by analyzing your business needs and providing tailored.</p>
-
-                            <hr className="mt-4 border border-gray-200" />
-                            <div className="flex items-center justify-center gap-4 mt-2  border border-gray-200 w-50 mx-auto rounded-full bg-blue-500 py-3">
-                                <MoveUpRight size={20} className="text-white" />
-                                <h1 className="font-semibold text-[16px] text-white">Read More</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white overflow-hidden shadow-lg rounded-lg">
-                        <img src={teamlogo2} alt="Product" className="w-full h-60 object-cover" />
-                        <div onClick={() => navigate("/SoftwareSupport")} className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">Software Support</h3>
-                            <p className="mt-2 text-sm ">Yes, we can! At Trinity TX Consulting, we offer expert IT consulting by analyzing your business needs and providing tailored.</p>
-                            <hr className="mt-4 border border-gray-200" />
-                            <div className="flex items-center justify-center gap-4 mt-2 border border-gray-200 w-50 mx-auto rounded-full bg-blue-500 py-3">
-                                <MoveUpRight size={20} className="text-white" />
-                                <h1 className="font-semibold text-[16px] text-white">Read More</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white overflow-hidden shadow-lg rounded-lg">
-                        <img src={teamlogo3} alt="Database" className="w-full h-60 object-cover" />
-                        <div onClick={() => navigate("/WebDevelopment")} className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">Web Development</h3>
-                            <p className="mt-2 text-sm ">Yes, we can! At Trinity TX Consulting, we offer expert IT consulting by analyzing your business needs and providing tailored.</p>
-
-                            <hr className="mt-4 border border-gray-200" />
-                            <div className="flex items-center justify-center gap-4 mt-2 border border-gray-200 w-50 mx-auto rounded-full bg-blue-500 py-3">
-                                <MoveUpRight size={20} className="text-white" />
-                                <h1 className="font-semibold text-[16px] text-white">Read More</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white overflow-hidden shadow-lg rounded-lg">
-                        <img src={teamlogo2} alt="Product" className="w-full h-60 object-cover" />
-                        <div onClick={() => navigate("/CyberSecurity")} className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">Cyber Security</h3>
-                            <p className="mt-2 text-sm ">Yes, we can! At Trinity TX Consulting, we offer expert IT consulting by analyzing your business needs and providing tailored.</p>
-                            <hr className="mt-4 border border-gray-200" />
-                            <div className="flex items-center justify-center gap-4 mt-2 border border-gray-200 w-50 mx-auto rounded-full bg-blue-500 py-3">
-                                <MoveUpRight size={20} className="text-white" />
-                                <h1 className="font-semibold text-[16px] text-white">Read More</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bg-white overflow-hidden shadow-lg rounded-lg">
-                        <img src={teamlogo2} alt="Product" className="w-full h-60 object-cover" />
-                        <div onClick={() => navigate("/NetworkSecurity")} className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">Network Security</h3>
-                            <p className="mt-2 text-sm ">Yes, we can! At Trinity TX Consulting, we offer expert IT consulting by analyzing your business needs and providing tailored.</p>
-                            <hr className="mt-4 border border-gray-200" />
-                            <div className="flex items-center justify-center gap-4 mt-2 border border-gray-200 w-50 mx-auto rounded-full bg-blue-500 py-3">
-                                <MoveUpRight size={20} className="text-white" />
-                                <h1 className="font-semibold text-[16px] text-white">Read More</h1>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>

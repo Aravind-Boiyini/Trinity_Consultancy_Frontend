@@ -1003,245 +1003,195 @@ export default function Home({ onSlideChange }) {
 
 
 
-            <section className="bg-gray-100 py-16 mt-15 md:mt-0">
-                <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-                    Testimonials
-                </h2>
+         <section className="bg-gray-100 py-12 md:py-20 mt-10 md:mt-0 px-4">
+    <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 md:mb-12">
+        Testimonials
+    </h2>
 
-                <div className="max-w-5xl mx-auto relative">
-                    <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
-
-                        {/* LEFT IMAGE + ORANGE PANEL */}
-                        <div className="bg-blue-300 md:w-1/3 flex items-center justify-center p-8">
-                            <img
-                                src={testimonialsData[current].image}
-                                alt="user"
-                                className="w-40 h-40 rounded-full border-4 border-white object-cover"
-                            />
-                        </div>
-
-                        {/* RIGHT CONTENT */}
-                        <div className="md:w-2/3 p-8">
-                            <p className="text-gray-700 leading-relaxed text-[16px]">
-                                {testimonialsData[current].text}
-                            </p>
-
-                            {/* STARS */}
-                            <div className="flex gap-1 text-blue-500 mt-4 text-xl">
-                                ★ ★ ★ ★ ★
-                            </div>
-
-                            {/* NAME */}
-                            <h3 className="mt-4 text-xl font-bold text-gray-800">
-                                {testimonialsData[current].name}
-                            </h3>
-
-                            <p className="text-blue-500 text-sm">
-                                {testimonialsData[current].role}
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* DOTS */}
-                    <div className="flex justify-center mt-6 gap-3">
-                        {testimonialsData.map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setCurrent(index)}
-                                className={`w-3 h-3 rounded-full ${current === index ? "bg-blue-500 scale-125" : "bg-gray-400"
-                                    }`}
-                            ></button>
-                        ))}
+    <div className="max-w-5xl mx-auto">
+        <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row min-h-[400px]">
+            
+            {/* LEFT IMAGE PANEL */}
+            <div className="bg-blue-300 md:w-1/3 flex items-center justify-center p-10">
+                <div className="relative">
+                    <img
+                        src={testimonialsData[current].image}
+                        alt="user"
+                        className="w-32 h-32 md:w-44 md:h-44 rounded-full border-4 border-white object-cover shadow-md"
+                    />
+                    {/* Decorative quote mark for mobile */}
+                    <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center md:hidden">
+                        "
                     </div>
                 </div>
-            </section>
-
-            {/* Industries */}
-            <h2 className="md:text-[40px] text-[30px] font-black text-gray-900 leading-[1.2] md:ml-28 ml-4 mt-15">
-                Major {" "}
-                <span className="text-blue-500">  Industries </span> We Served
-            </h2>
-
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                {/* <div className="bg-white overflow-hidden shadow-lg">
-                    <img src={teamlogo1} alt="IT" className="w-full h-60 object-cover" />
-                    <div className="p-6 text-center">
-                        <h3 className="text-lg font-bold text-[#123E6B]">IT Consulting</h3>
-                        <hr className="mt-4 border border-gray-200" />
-                        <div className="flex items-center justify-center gap-4 mt-2">
-                            <MoveUpRight size={20} />
-                            <h1 className="font-semibold text-[13px]">Read More</h1>
-                        </div>
-                    </div>
-                </div> */}
-                <Link to="/ItConsultancy">
-                    <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
-
-                        <img src={teamlogo1} alt="IT" className="w-full h-60 object-cover" />
-
-                        <div className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">IT Consulting</h3>
-
-                            <hr className="mt-4 border border-gray-200" />
-
-                            <div className="flex items-center justify-center gap-4 mt-2">
-                                <MoveUpRight size={20} />
-                                <h1 className="font-semibold text-[13px]">Read More</h1>
-                            </div>
-                        </div>
-
-                    </div>
-                </Link>
-
-                <Link to="/ProductEngineering">
-                    <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
-                        <img src={teamlogo2} alt="Product" className="w-full h-60 object-cover" />
-                        <div className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">Product Engineering</h3>
-                            <hr className="mt-4 border border-gray-200" />
-                            <div className="flex items-center justify-center gap-4 mt-2">
-                                <MoveUpRight size={20} />
-                                <h1 className="font-semibold text-[13px]">Read More</h1>
-                            </div>
-                        </div>
-                    </div>
-                </Link>
-
-                <Link to="/DatabaseManagement">
-                    <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
-                        <img src={teamlogo3} alt="Database" className="w-full h-60 object-cover" />
-                        <div className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">Database Management</h3>
-                            <hr className="mt-4 border border-gray-200" />
-                            <div className="flex items-center justify-center gap-4 mt-2">
-                                <MoveUpRight size={20} />
-                                <h1 className="font-semibold text-[13px]">Read More</h1>
-                            </div>
-                        </div>
-                    </div>
-                </Link>
-                <Link to="/MobileDevelopment">
-                    <div className="bg-white overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition rounded-2xl">
-                        <img src={teamlogo4} alt="Mobile" className="w-full h-60 object-cover" />
-                        <div className="p-6 text-center">
-                            <h3 className="text-lg font-bold text-[#123E6B]">Mobile Development</h3>
-                            <hr className="mt-4 border border-gray-200" />
-                            <div className="flex items-center justify-center gap-4 mt-2">
-                                <MoveUpRight size={20} />
-                                <h1 className="font-semibold text-[13px]">Read More</h1>
-                            </div>
-                        </div>
-                    </div>
-                </Link>
             </div>
 
+            {/* RIGHT CONTENT */}
+            <div className="md:w-2/3 p-6 md:p-12 flex flex-col justify-center text-center md:text-left">
+                <p className="text-gray-700 italic leading-relaxed text-base md:text-lg">
+                    "{testimonialsData[current].text}"
+                </p>
 
-            {/* contact us */}
-            <section>
-                <div className="relative w-full mt-20">
+                {/* STARS */}
+                <div className="flex justify-center md:justify-start gap-1 text-yellow-500 mt-6 text-xl">
+                    ★ ★ ★ ★ ★
+                </div>
 
-                    {/* Background Image */}
-                    <img
-                        src={contactlogo}
-                        alt="Contact Banner"
-                        className="w-full h-[600px] object-cover"
-                    />
+                {/* NAME */}
+                <h3 className="mt-4 text-xl font-bold text-gray-800">
+                    {testimonialsData[current].name}
+                </h3>
+                <p className="text-blue-600 font-medium text-sm">
+                    {testimonialsData[current].role}
+                </p>
+            </div>
+        </div>
 
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/50"></div>
+        {/* DOTS */}
+        <div className="flex justify-center mt-8 gap-3">
+            {testimonialsData.map((_, index) => (
+                <button
+                    key={index}
+                    onClick={() => setCurrent(index)}
+                    className={`h-2 transition-all duration-300 rounded-full ${
+                        current === index ? "w-8 bg-blue-600" : "w-2 bg-gray-300 hover:bg-gray-400"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                ></button>
+            ))}
+        </div>
+    </div>
+</section>
 
-                    {/* Content */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
+{/* Industries Section */}
+<section className="py-16 px-4 md:px-10 lg:px-20">
+    <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight text-center md:text-left mb-12">
+        Major <span className="text-blue-500">Industries</span> We Served
+    </h2>
 
-                        <h1 className="text-white text-4xl md:text-5xl font-bold mb-8 md:mt-0 mt-15">
-                            Contact <span className="text-blue-400">Us</span>
-                        </h1>
-
-                        <form onSubmit={handleSubmit} className="w-full max-w-3xl">
-                            <div className="p-6 rounded-xl">
-
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-                                    <input
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        className="w-full block px-4 py-3 rounded-full bg-white"
-                                        placeholder="Name"
-                                        required
-                                    />
-
-                                    <input
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        className="w-full block px-4 py-3 rounded-full bg-white"
-                                        placeholder="Email"
-                                        required
-                                    />
-
-                                    <input
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        className="w-full block px-4 py-3 rounded-full bg-white"
-                                        placeholder="Phone"
-                                        required
-                                    />
-
-                                    <input
-                                        name="subject"
-                                        value={formData.subject}
-                                        onChange={handleChange}
-                                        className="w-full block px-4 py-3 rounded-full bg-white"
-                                        placeholder="Subject"
-                                        required
-                                    />
-
-                                    <textarea
-                                        name="message"
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                        placeholder="Message"
-                                        className="w-full md:col-span-2 px-4 py-3 rounded-xl bg-white h-32"
-                                        required
-                                    />
-
-                                </div>
-
-                                {/* Submit Button */}
-                                <div className="mt-6 text-center">
-                                    <button
-                                        type="submit"
-                                        className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition"
-                                    >
-                                        Submit
-                                    </button>
-                                </div>
-
-                                {/* Status Messages */}
-                                <div className="mt-4 text-center">
-                                    {status === "submitting" && (
-                                        <p className="text-white">Submitting...</p>
-                                    )}
-                                    {status === "success" && (
-                                        <p className="text-blue-400 font-semibold">
-                                            ✅ Message sent successfully!
-                                        </p>
-                                    )}
-                                    {status === "error" && (
-                                        <p className="text-red-400 font-semibold">
-                                            ❌ Failed to send message. Try again.
-                                        </p>
-                                    )}
-                                </div>
-
-                            </div>
-                        </form>
-
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        {[
+            { title: "IT Consulting", img: teamlogo1, path: "/ItConsultancy" },
+            { title: "Product Engineering", img: teamlogo2, path: "/ProductEngineering" },
+            { title: "Database Management", img: teamlogo3, path: "/DatabaseManagement" },
+            { title: "Mobile Development", img: teamlogo4, path: "/MobileDevelopment" }
+        ].map((industry, index) => (
+            <Link key={index} to={industry.path} className="group">
+                <div className="bg-white overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 rounded-2xl h-full flex flex-col border border-gray-100">
+                    <div className="relative overflow-hidden h-52">
+                        <img 
+                            src={industry.img} 
+                            alt={industry.title} 
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                        />
+                    </div>
+                    <div className="p-5 text-center flex flex-col flex-grow">
+                        <h3 className="text-lg font-bold text-[#123E6B] mb-4">{industry.title}</h3>
+                        <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-center gap-2 text-blue-600 group-hover:text-blue-800 transition-colors">
+                            <span className="font-semibold text-xs uppercase tracking-wider">Read More</span>
+                            <MoveUpRight size={16} />
+                        </div>
                     </div>
                 </div>
-            </section>
+            </Link>
+        ))}
+    </div>
+</section>
+
+{/* Contact Us Section */}
+<section className="relative w-full min-h-[700px] md:h-[800px] flex items-center">
+    {/* Background Image & Overlay */}
+    <div className="absolute inset-0">
+        <img
+            src={contactlogo}
+            alt="Contact Banner"
+            className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-slate-900/70 backdrop-blur-[2px]"></div>
+    </div>
+
+    {/* Content Container */}
+    <div className="relative z-10 w-full max-w-4xl mx-auto px-6 py-12">
+        <div className="text-center mb-10">
+            <h1 className="text-white text-4xl md:text-5xl font-bold">
+                Contact <span className="text-blue-400">Us</span>
+            </h1>
+            <p className="text-gray-300 mt-4 max-w-md mx-auto text-sm md:text-base">
+                Have a question or looking to start a project? Reach out to our team today.
+            </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-5 py-3.5 rounded-full bg-white/95 focus:bg-white focus:ring-2 ring-blue-400 outline-none transition-all shadow-lg"
+                    placeholder="Full Name"
+                    required
+                />
+                <input
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-5 py-3.5 rounded-full bg-white/95 focus:bg-white focus:ring-2 ring-blue-400 outline-none transition-all shadow-lg"
+                    placeholder="Email Address"
+                    required
+                />
+                <input
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-5 py-3.5 rounded-full bg-white/95 focus:bg-white focus:ring-2 ring-blue-400 outline-none transition-all shadow-lg"
+                    placeholder="Phone Number"
+                    required
+                />
+                <input
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full px-5 py-3.5 rounded-full bg-white/95 focus:bg-white focus:ring-2 ring-blue-400 outline-none transition-all shadow-lg"
+                    placeholder="Subject"
+                    required
+                />
+                <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell us about your project..."
+                    className="w-full md:col-span-2 px-6 py-4 rounded-3xl bg-white/95 focus:bg-white focus:ring-2 ring-blue-400 outline-none transition-all shadow-lg h-32 resize-none"
+                    required
+                />
+            </div>
+
+            <div className="pt-4 text-center">
+                <button
+                    type="submit"
+                    disabled={status === "submitting"}
+                    className="bg-blue-600 hover:bg-blue-500 text-white font-bold px-12 py-4 rounded-full transition-all transform active:scale-95 shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                    {status === "submitting" ? "Sending..." : "Send Message"}
+                </button>
+            </div>
+
+            {/* Status Messages */}
+            <div className="mt-6 min-h-[24px]">
+                {status === "success" && (
+                    <p className="text-green-400 font-medium bg-green-900/20 py-2 rounded-lg inline-block px-4">
+                        ✅ Message sent successfully! We'll be in touch soon.
+                    </p>
+                )}
+                {status === "error" && (
+                    <p className="text-red-400 font-medium bg-red-900/20 py-2 rounded-lg inline-block px-4">
+                        ❌ Failed to send message. Please check your connection.
+                    </p>
+                )}
+            </div>
+        </form>
+    </div>
+</section>
 
 
 
