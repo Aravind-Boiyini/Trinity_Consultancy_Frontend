@@ -4,7 +4,7 @@ import img1 from '../assets/About-Banner.jpg';
 import img2 from '../assets/About-Banner.jpg';
 import teamoflogo from '../assets/IT-Image.jpg';
 import teamoflogo1 from '../assets/Product-Image.jpg';
-import { Handshake, Mail, Trophy, Users, FilesIcon, Monitor, Files } from "lucide-react";
+import { Handshake, Mail, Trophy, Users, FilesIcon, Monitor, Files, Ribbon } from "lucide-react";
 import { MailCheck } from "lucide-react";
 import { MoveUpRight } from "lucide-react";
 
@@ -272,7 +272,7 @@ function AboutUs() {
                 </div>
                 <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col w-[100%] pb-14 h-full gap-4">
                     <div className="p-5 bg-gray-100 w-fit">
-                        <Trophy size={28} className="text-blue-600" />
+                        <Ribbon size={28} className="text-blue-600" />
                     </div>
                     <h1 className="font-semibold text-[18px] text-blue-500">Innovation Award</h1>
                     <h1 className="font-semibold text-[18px]">Best International Consulting Firm IN USA</h1>

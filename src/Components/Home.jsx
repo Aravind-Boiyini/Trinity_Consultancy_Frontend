@@ -533,7 +533,7 @@ import { useState, useEffect, useRef } from "react";
 import Slider_home_31 from '../assets/slider_home_31.png';
 import Slider_home_32 from '../assets/slider_home_32.png';
 import Slider_home_33 from '../assets/slider_home_33.png';
-import { Mail, MailCheck, MoveUpRight } from "lucide-react";
+import { ActivityIcon, Brush, Eye, Mail, MailCheck, MoveUpRight, Shield } from "lucide-react";
 import img1 from '../assets/About-Banner.jpg';
 import img2 from '../assets/About-Banner.jpg';
 import teamlogo1 from '../assets/IT-Image.jpg';
@@ -802,7 +802,7 @@ export default function Home({ onSlideChange }) {
                 <div className=" flex flex-col md:flex-row gap-6 mt-6 px-4 md:px-10 justify-center max-w-6xl mx-auto">
                     <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center">
-                            <Mail size={28} className="text-blue-600" />
+                            <Eye size={28} className="text-blue-600" />
                         </div>
                         <h1 className="font-semibold text-[18px]">Our Vision</h1>
                         <p className="text-gray-600 text-[13px] font-semibold leading-relaxed">
@@ -815,7 +815,7 @@ export default function Home({ onSlideChange }) {
                     </div>
                     <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center">
-                            <Mail size={28} className="text-blue-600" />
+                            <ActivityIcon size={28} className="text-blue-600" />
                         </div>
                         <h1 className="font-semibold text-[18px]">Our Plan</h1>
                         <p className="text-gray-600 text-[13px] font-semibold leading-relaxed">
@@ -828,7 +828,7 @@ export default function Home({ onSlideChange }) {
                     </div>
                     <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center">
-                            <MailCheck size={28} className="text-blue-600" />
+                            <Brush size={28} className="text-blue-600" />
                         </div>
                         <h1 className="font-semibold text-[18px]">Design</h1>
                         <p className="text-gray-600 text-[13px] font-semibold leading-relaxed">
@@ -841,7 +841,7 @@ export default function Home({ onSlideChange }) {
                     </div>
                     <div className="border border-gray-200 bg-white shadow-xl p-6 mt-10 flex flex-col items-center text-center gap-4">
                         <div className="border border-black p-6 rounded-full flex items-center justify-center">
-                            <Mail size={28} className="text-blue-600" />
+                            <Shield size={28} className="text-blue-600" />
                         </div>
                         <h1 className="font-semibold text-[18px]">Quality</h1>
                         <p className="text-gray-600 text-[13px] font-semibold leading-relaxed">

@@ -25,7 +25,7 @@ function Careers() {
 
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 
-                    <div className="relative">
+                    <div className="relative md:p-0 p-4">
 
                         <img
                             src={logo}
@@ -34,7 +34,8 @@ function Careers() {
                         />
 
                     </div>
-                    <div>
+
+                    <div className="md:p-5 p-6">
 
                         <h2 className="text-3xl md:text-3xl font-extrabold text-black leading-snug">
                             Get To Know Us{" "}
